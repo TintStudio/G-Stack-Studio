@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Agency Support | G-Stack Studio</title>
+  <meta name="description" content="Get in touch with G-Stack Studio sales, agency onboarding specialists, or technical support engineers.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='12 2 2 7 12 12 22 7 12 2'></polygon><polyline points='2 17 12 22 22 17'></polyline><polyline points='2 12 12 17 22 12'></polyline></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-[#09090b] text-zinc-100 min-h-screen relative selection:bg-sky-500/30 selection:text-white">
+
+  <div class="ambient-glow ambient-blue w-[400px] h-[400px] -top-20 left-1/3"></div>
+  <div class="ambient-glow ambient-cyan w-[400px] h-[400px] top-[900px] -right-20"></div>
+  <div class="absolute inset-0 bg-grid-pattern pointer-events-none opacity-40"></div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#09090b]/80 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 via-sky-500 to-cyan-400 p-[1px] shadow-lg shadow-sky-500/20">
+            <div class="w-full h-full bg-[#09090b] rounded-[11px] flex items-center justify-center">
+              <i data-lucide="layers" class="w-5 h-5 text-sky-400"></i>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+              G-Stack <span class="text-sky-400 font-extrabold">Studio</span>
+            </span>
+            <span class="text-[10px] tracking-wider text-zinc-400 uppercase font-medium">Support & Sales</span>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-300">
+          <a href="index.html" class="hover:text-sky-400 transition-colors">Home</a>
+          <a href="features.html" class="hover:text-sky-400 transition-colors">20 Assets</a>
+          <a href="pricing.html" class="hover:text-sky-400 transition-colors">Pricing</a>
+          <a href="privacy.html" class="hover:text-sky-400 transition-colors">Privacy</a>
+          <a href="contact.html" class="text-sky-400 font-semibold">Contact</a>
+        </nav>
+
+        <div class="hidden md:flex items-center gap-4">
+          <a href="pricing.html" class="btn-glow-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white">
+            <i data-lucide="zap" class="w-4 h-4 text-sky-300"></i> Get Access
+          </a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-zinc-400 hover:text-white" aria-label="Toggle menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 right-0 bottom-0 w-80 bg-[#121217] border-l border-zinc-800 z-50 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+        <div class="flex items-center gap-2">
+          <i data-lucide="layers" class="w-6 h-6 text-sky-400"></i>
+          <span class="font-bold text-white text-lg">G-Stack Studio</span>
+        </div>
+        <button id="mobile-menu-close" class="text-zinc-400 hover:text-white" aria-label="Close menu">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+      <div class="flex flex-col gap-4 mt-6 text-base font-medium">
+        <a href="index.html" class="text-zinc-300 hover:text-sky-400 py-1">Home</a>
+        <a href="features.html" class="text-zinc-300 hover:text-sky-400 py-1">Features</a>
+        <a href="pricing.html" class="text-zinc-300 hover:text-sky-400 py-1">Pricing</a>
+        <a href="privacy.html" class="text-zinc-300 hover:text-sky-400 py-1">Privacy</a>
+        <a href="terms.html" class="text-zinc-300 hover:text-sky-400 py-1">Terms</a>
+        <a href="contact.html" class="text-sky-400 py-1 font-semibold">Contact & Support</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="py-12 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Title -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-4">
+          <i data-lucide="message-square" class="w-3.5 h-3.5"></i> Dedicated Human Support
+        </div>
+        <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
+          How Can We Help Your Agency Scale?
+        </h1>
+        <p class="mt-4 text-base sm:text-lg text-zinc-400">
+          Have technical questions about Google OAuth scopes, custom batch queues, or enterprise licensing? Our engineering and sales team is here for you.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-6xl mx-auto">
+        
+        <!-- Left: Contact Form (7 cols) -->
+        <div class="lg:col-span-7 glass-panel rounded-3xl p-6 sm:p-10 border border-zinc-800 relative">
+          <div class="flex items-center justify-between pb-6 border-b border-zinc-800 mb-6">
+            <h2 class="text-xl font-bold text-white flex items-center gap-2">
+              <i data-lucide="send" class="w-5 h-5 text-sky-400"></i> Send Us a Message
+            </h2>
+            <div class="flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              Live Desk Active
+            </div>
+          </div>
+
+          <form id="contact-form" onsubmit="event.preventDefault(); showToast('Message dispatched! An engineer will reply shortly.'); this.reset();" class="space-y-4">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-zinc-300 mb-1.5" for="name">Your Name</label>
+                <input type="text" id="name" required placeholder="John Miller" class="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-xs placeholder:text-zinc-600 focus:outline-none focus:border-sky-500 transition-colors">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-zinc-300 mb-1.5" for="email">Work Email</label>
+                <input type="email" id="email" required placeholder="john@apexmarketing.com" class="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-xs placeholder:text-zinc-600 focus:outline-none focus:border-sky-500 transition-colors">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-zinc-300 mb-1.5" for="agency">Agency / Company Name</label>
+                <input type="text" id="agency" placeholder="Apex SEO Agency" class="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-xs placeholder:text-zinc-600 focus:outline-none focus:border-sky-500 transition-colors">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-zinc-300 mb-1.5" for="subject">Inquiry Type</label>
+                <select id="subject" class="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-xs focus:outline-none focus:border-sky-500 transition-colors">
+                  <option value="sales">Sales & Agency Fleet Inquiries</option>
+                  <option value="vip">VIP Agency 1-on-1 Onboarding</option>
+                  <option value="tech">Technical & Google Cloud OAuth Support</option>
+                  <option value="billing">License Key & Billing Assistance</option>
+                  <option value="partner">Affiliate & Partner Program</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-zinc-300 mb-1.5" for="message">Your Message or Question</label>
+              <textarea id="message" rows="5" required placeholder="Tell us about your agency client volume or any technical questions..." class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-xs placeholder:text-zinc-600 focus:outline-none focus:border-sky-500 transition-colors"></textarea>
+            </div>
+
+            <button type="submit" class="btn-glow-primary w-full py-3.5 rounded-xl text-xs font-bold text-white flex items-center justify-center gap-2 shadow-lg shadow-sky-500/20">
+              <i data-lucide="send" class="w-4 h-4"></i> Dispatch Inquiry to Support Queue
+            </button>
+
+            <p class="text-[11px] text-zinc-500 text-center mt-2">
+              We respect your privacy. Zero spam. We typically reply within 15 to 45 minutes during business hours.
+            </p>
+          </form>
+        </div>
+
+        <!-- Right: Direct Channels & Office Info (5 cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Channel 1: Email Support -->
+          <div class="glass-panel rounded-2xl p-6 border border-zinc-800 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center shrink-0">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-sm font-bold text-white">Direct Support Email</h3>
+              <p class="text-xs text-zinc-400 mt-0.5">Direct line to our technical engineering staff.</p>
+              <a href="mailto:support@gstackstudio.com" class="text-xs font-mono text-sky-400 font-semibold hover:underline block mt-2">
+                support@gstackstudio.com
+              </a>
+            </div>
+          </div>
+
+          <!-- Channel 2: Sales & VIP Demo -->
+          <div class="glass-panel rounded-2xl p-6 border border-zinc-800 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0">
+              <i data-lucide="video" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-sm font-bold text-white">Book VIP Live Onboarding</h3>
+              <p class="text-xs text-zinc-400 mt-0.5">Get a personalized 20-minute screen walkthrough for your agency team.</p>
+              <button onclick="showToast('VIP Calendar opened!')" class="text-xs text-cyan-400 font-semibold hover:underline flex items-center gap-1 mt-2">
+                Schedule Zoom Screen-Share <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Channel 3: Office Headquarters -->
+          <div class="glass-panel rounded-2xl p-6 border border-zinc-800 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center shrink-0">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-sm font-bold text-white">Office Headquarters</h3>
+              <p class="text-xs text-zinc-400 mt-0.5">G-Stack Studio Software LLC</p>
+              <div class="text-xs font-mono text-zinc-400 mt-2 space-y-0.5">
+                <div>1201 Elm Street, Suite 3200</div>
+                <div>Dallas, TX 75270, United States</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Channel 4: Live Service Status Badge -->
+          <div class="p-5 rounded-2xl bg-zinc-950/80 border border-zinc-800 text-xs">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-mono text-zinc-400">Google Cloud API Gateway</span>
+              <span class="text-emerald-400 font-mono font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> 99.98% OPERATIONAL
+              </span>
+            </div>
+            <div class="flex items-center justify-between text-zinc-500 font-mono text-[11px]">
+              <span>Average License Verification Time</span>
+              <span class="text-zinc-300">0.42 seconds</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="border-t border-zinc-800 bg-[#070709] text-zinc-400 text-sm mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-2">
+          <i data-lucide="layers" class="w-5 h-5 text-sky-400"></i>
+          <span class="font-bold text-white">G-Stack Studio</span>
+          <span class="text-xs text-zinc-500">© 2026 All Rights Reserved</span>
+        </div>
+        <div class="flex items-center gap-6 text-xs">
+          <a href="index.html" class="hover:text-white">Home</a>
+          <a href="features.html" class="hover:text-white">Features</a>
+          <a href="pricing.html" class="hover:text-white">Pricing</a>
+          <a href="privacy.html" class="hover:text-white">Privacy Policy</a>
+          <a href="terms.html" class="hover:text-white">Terms</a>
+          <a href="contact.html" class="text-sky-400 font-semibold">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

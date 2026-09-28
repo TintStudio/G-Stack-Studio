@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>20-Asset Google Cloud Architecture & Features | G-Stack Studio</title>
+  <meta name="description" content="Explore the full 20 Google Cloud asset stack, multi-architecture silo modes, circular interlinking engine, and client-side privacy in G-Stack Studio.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='12 2 2 7 12 12 22 7 12 2'></polygon><polyline points='2 17 12 22 22 17'></polyline><polyline points='2 12 12 17 22 12'></polyline></svg>">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-[#09090b] text-zinc-100 min-h-screen relative selection:bg-sky-500/30 selection:text-white">
+
+  <!-- Ambient Glow -->
+  <div class="ambient-glow ambient-blue w-[500px] h-[500px] -top-32 left-1/3"></div>
+  <div class="ambient-glow ambient-cyan w-[400px] h-[400px] top-[1400px] right-10"></div>
+  <div class="absolute inset-0 bg-grid-pattern pointer-events-none opacity-40"></div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#09090b]/80 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 via-sky-500 to-cyan-400 p-[1px] shadow-lg shadow-sky-500/20">
+            <div class="w-full h-full bg-[#09090b] rounded-[11px] flex items-center justify-center">
+              <i data-lucide="layers" class="w-5 h-5 text-sky-400"></i>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+              G-Stack <span class="text-sky-400 font-extrabold">Studio</span>
+            </span>
+            <span class="text-[10px] tracking-wider text-zinc-400 uppercase font-medium">Architecture Breakdown</span>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-300">
+          <a href="index.html" class="hover:text-sky-400 transition-colors">Home</a>
+          <a href="features.html" class="text-sky-400 font-semibold flex items-center gap-1.5">
+            <i data-lucide="cpu" class="w-4 h-4 text-sky-400"></i> 20 Assets
+          </a>
+          <a href="#architectures" class="hover:text-sky-400 transition-colors">Silo Modes</a>
+          <a href="#circular" class="hover:text-sky-400 transition-colors">Circular Linking</a>
+          <a href="pricing.html" class="hover:text-sky-400 transition-colors">Pricing</a>
+          <a href="contact.html" class="hover:text-sky-400 transition-colors">Contact</a>
+        </nav>
+
+        <div class="hidden md:flex items-center gap-4">
+          <a href="pricing.html" class="btn-glow-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white">
+            <i data-lucide="zap" class="w-4 h-4 text-sky-300"></i> Get Instant Access
+          </a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-zinc-400 hover:text-white" aria-label="Toggle menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 right-0 bottom-0 w-80 bg-[#121217] border-l border-zinc-800 z-50 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+        <div class="flex items-center gap-2">
+          <i data-lucide="layers" class="w-6 h-6 text-sky-400"></i>
+          <span class="font-bold text-white text-lg">G-Stack Studio</span>
+        </div>
+        <button id="mobile-menu-close" class="text-zinc-400 hover:text-white" aria-label="Close menu">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+      <div class="flex flex-col gap-4 mt-6 text-base font-medium">
+        <a href="index.html" class="text-zinc-300 hover:text-sky-400 py-1">Home</a>
+        <a href="features.html" class="text-sky-400 py-1 font-semibold">20 Google Assets</a>
+        <a href="#architectures" class="text-zinc-300 hover:text-sky-400 py-1">Multi-Architecture Modes</a>
+        <a href="#circular" class="text-zinc-300 hover:text-sky-400 py-1">Circular Silo Interlinking</a>
+        <a href="pricing.html" class="text-zinc-300 hover:text-sky-400 py-1">Pricing & Licenses</a>
+        <a href="contact.html" class="text-zinc-300 hover:text-sky-400 py-1">Contact & Support</a>
+      </div>
+    </div>
+    <a href="pricing.html" class="btn-glow-primary w-full py-3 rounded-xl text-center text-sm font-semibold text-white">
+      Get Instant Access
+    </a>
+  </div>
+
+  <main class="py-12 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Page Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-4">
+          <i data-lucide="cpu" class="w-3.5 h-3.5"></i> Google Cloud Authority Blueprints
+        </div>
+        <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
+          The 20-Asset Google Cloud Authority Architecture.
+        </h1>
+        <p class="mt-4 text-base sm:text-lg text-zinc-400 leading-relaxed">
+          Discover how G-Stack Studio mathematically maps, generates, and links 20 official Google Cloud assets into a unified authority ecosystem that dominates organic rankings.
+        </p>
+      </div>
+
+      <!-- ==================== 20 ASSETS GRID ==================== -->
+      <section class="mb-24">
+        <div class="flex items-center justify-between mb-8 border-b border-zinc-800 pb-4">
+          <div>
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+              <i data-lucide="layers" class="w-6 h-6 text-sky-400"></i>
+              The Complete 20-Asset Ecosystem
+            </h2>
+            <p class="text-xs text-zinc-400 mt-1">Built automatically via official Google Cloud REST API endpoints in &lt; 120s.</p>
+          </div>
+          <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full hidden sm:inline-block">
+            All 20 Generated in Parallel
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Asset 1 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #01</span>
+                <i data-lucide="folder" class="w-5 h-5 text-amber-400"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">Google Drive Root Hub</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Centralized authority parent folder configured with public viewing permissions, geotagged metadata, and client entity descriptions.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>Scope: Drive API v3</span>
+              <span class="text-emerald-400">Public Live</span>
+            </div>
+          </div>
+
+          <!-- Asset 2 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #02</span>
+                <i data-lucide="globe" class="w-5 h-5 text-sky-400"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">Google Site Authority Portal</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Clean, modern multi-page responsive Google Site hosting rich client NAP data, embedded maps, drive folder embeds, and keyword silos.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>sites.google.com</span>
+              <span class="text-emerald-400">Ranked Node</span>
+            </div>
+          </div>
+
+          <!-- Asset 3 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #03</span>
+                <i data-lucide="table" class="w-5 h-5 text-emerald-400"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">Master Sheets Directory</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Central dynamic spreadsheet cataloging every asset link, anchor text variations, citation targets, and 2-way cross-reference formulas.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>Sheets API v4</span>
+              <span class="text-emerald-400">Auto-Indexed</span>
+            </div>
+          </div>
+
+          <!-- Asset 4 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #04</span>
+                <i data-lucide="file-text" class="w-5 h-5 text-blue-400"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">Google Docs Keyword Silos</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                1,500+ word AI-written authority articles with H1/H2 semantic hierarchy, local schema markup, LSI clusters, and outbound citations.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>Docs API v1</span>
+              <span class="text-emerald-400">Circular Links</span>
+            </div>
+          </div>
+
+          <!-- Asset 5 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #05</span>
+                <i data-lucide="map-pin" class="w-5 h-5 text-rose-400"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">Custom Google MyMaps</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Geographic entity anchor with up to 100 neighborhood pins, driving direction vectors, business description, and coordinate boundaries.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>KML Layer Sync</span>
+              <span class="text-emerald-400">Local 3-Pack</span>
+            </div>
+          </div>
+
+          <!-- Asset 6 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #06</span>
+                <i data-lucide="calendar" class="w-5 h-5 text-cyan-400"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">Google Calendar Entity</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Publicly shared Google Calendar broadcasting recurring business operating hours, seasonal promotions, and localized event coordinates.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>Calendar API v3</span>
+              <span class="text-emerald-400">Active Signals</span>
+            </div>
+          </div>
+
+          <!-- Asset 7 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #07</span>
+                <i data-lucide="presentation" class="w-5 h-5 text-amber-500"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">Google Slides Presentation</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Multi-slide visual deck highlighting brand services, customer testimonials, and embedded anchor links for rich media crawling.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>Slides API v1</span>
+              <span class="text-emerald-400">High Trust</span>
+            </div>
+          </div>
+
+          <!-- Asset 8 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #08</span>
+                <i data-lucide="clipboard-list" class="w-5 h-5 text-purple-400"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">Google Forms Ingestion</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Custom branded customer contact/quote form embedded into the Google Site and linked in Docs to establish two-way client interaction.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>Forms API</span>
+              <span class="text-emerald-400">Lead Capture</span>
+            </div>
+          </div>
+
+          <!-- Asset 9 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #09</span>
+                <i data-lucide="file-check" class="w-5 h-5 text-red-400"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">Google PDF Whitepaper</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Exported authority whitepaper rendered as a standalone indexed PDF document directly hosted on Google Drive's high-speed CDN.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>Drive PDF Render</span>
+              <span class="text-emerald-400">Direct Search</span>
+            </div>
+          </div>
+
+          <!-- Asset 10 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #10</span>
+                <i data-lucide="git-branch" class="w-5 h-5 text-teal-400"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">Google Drawing Schema</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Vector entity schema architecture drawing linking brand entities, parent organizations, and target geo-regions with clickable hotlinks.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>Drawings SVG</span>
+              <span class="text-emerald-400">Visual Schema</span>
+            </div>
+          </div>
+
+          <!-- Asset 11 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #11</span>
+                <i data-lucide="folder-tree" class="w-5 h-5 text-sky-500"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">13 Subfolder Silo Hierarchy</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Specialized subfolders for Images, Videos, Audio, PDFs, Citations, Reviews, Maps, and Structured Data to create profound topical depth.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>13 Categorized Nodes</span>
+              <span class="text-emerald-400">Topical Silo</span>
+            </div>
+          </div>
+
+          <!-- Asset 12 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #12</span>
+                <i data-lucide="rss" class="w-5 h-5 text-orange-400"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">Google Drive RSS Feed</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Syndication-ready XML feed URL broadcasting public folder changes to ping indexing crawlers and content aggregators on autopilot.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>XML Feed</span>
+              <span class="text-emerald-400">Pings Crawlers</span>
+            </div>
+          </div>
+
+          <!-- Asset 13 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #13</span>
+                <i data-lucide="image" class="w-5 h-5 text-pink-400"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">Geotagged EXIF Gallery</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Images injected with GPS coordinates, client NAP, copyright metadata, and target keywords placed in the public image silo.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>EXIF GPS Injector</span>
+              <span class="text-emerald-400">Geo-Tagged</span>
+            </div>
+          </div>
+
+          <!-- Asset 14 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #14</span>
+                <i data-lucide="compass" class="w-5 h-5 text-indigo-400"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">KML / KMZ Map Layers</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Raw Keyhole Markup Language boundary files generated for Google Earth integration and third-party local GIS authority verification.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>GIS Coordinate Spec</span>
+              <span class="text-emerald-400">Google Earth</span>
+            </div>
+          </div>
+
+          <!-- Asset 15 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #15</span>
+                <i data-lucide="navigation" class="w-5 h-5 text-sky-300"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">GPX Route Waypoints</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                GPS exchange format tracks providing simulated travel routes from surrounding city centers directly to the business premises.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>Turn-by-Turn GPS</span>
+              <span class="text-emerald-400">Map Proximity</span>
+            </div>
+          </div>
+
+          <!-- Asset 16 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #16</span>
+                <i data-lucide="layout" class="w-5 h-5 text-cyan-300"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">Google Sites Live Embeds</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Interactive iframes embedding the MyMap, Calendar, Sheets Directory, and Forms seamlessly into the Google Site body.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>Dynamic iFrames</span>
+              <span class="text-emerald-400">Interactive</span>
+            </div>
+          </div>
+
+          <!-- Asset 17 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #17</span>
+                <i data-lucide="link" class="w-5 h-5 text-emerald-400"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">Citation Anchor Matrix</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Synchronized indexing sheet linking all tier 1 citations (Yelp, BBB, YellowPages, Chamber of Commerce) into the stack.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>Tier 1 Citations</span>
+              <span class="text-emerald-400">Entity Reinforce</span>
+            </div>
+          </div>
+
+          <!-- Asset 18 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #18</span>
+                <i data-lucide="file-spreadsheet" class="w-5 h-5 text-emerald-500"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">White-Label Client .xlsx</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Formatted Excel workbook stamped with your agency branding, public asset URLs, and audit verification links ready for client handoff.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>Agency Brand Kit</span>
+              <span class="text-emerald-400">Deliverable</span>
+            </div>
+          </div>
+
+          <!-- Asset 19 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #19</span>
+                <i data-lucide="external-link" class="w-5 h-5 text-violet-400"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">Interactive Client Portal</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Lightweight static HTML dashboard you can host on any sub-domain to give VIP clients a live clickable preview of their stack.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>Web Portal</span>
+              <span class="text-emerald-400">Agency Pro</span>
+            </div>
+          </div>
+
+          <!-- Asset 20 -->
+          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #20</span>
+                <i data-lucide="hard-drive" class="w-5 h-5 text-cyan-400"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-1.5">Cloud Storage Mirror Sync</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Optional mirror copy exported to Google Cloud Storage (storage.googleapis.com) for secondary static HTML and image redundancy.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
+              <span>GCS Bucket Sync</span>
+              <span class="text-emerald-400">Redundant Node</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================== MULTI-ARCHITECTURE MODES ==================== -->
+      <section id="architectures" class="py-16 border-t border-zinc-800">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <i data-lucide="git-merge" class="w-3.5 h-3.5"></i> Custom Topology Engine
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            3 Multi-Architecture Silo Modes
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-zinc-400">
+            Tailor the Google Drive structure to fit local single-location businesses, multi-service companies, or national franchise chains.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          <!-- Mode 1 Card -->
+          <div class="glass-panel rounded-2xl p-7 border border-zinc-800 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-mono text-sky-400 font-bold bg-sky-500/10 px-2.5 py-1 rounded border border-sky-500/20">
+                ARCHITECTURE MODE 1
+              </span>
+              <h3 class="text-xl font-bold text-white mt-4 mb-2">Single Authority Hub</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+                13 Categorized subfolders inside a unified parent Google Drive folder. Consolidates all entity signals into one master brand node.
+              </p>
+              
+              <div class="bg-zinc-950/80 p-4 rounded-xl border border-zinc-800 font-mono text-xs space-y-2 text-zinc-300">
+                <div class="text-sky-400 font-bold">📁 [Client_Brand]_Authority_Hub/</div>
+                <div class="pl-4 text-zinc-400">├── 📁 01_Articles/ (Docs)</div>
+                <div class="pl-4 text-zinc-400">├── 📁 02_Maps_GeoData/ (KML)</div>
+                <div class="pl-4 text-zinc-400">├── 📁 03_Sheets_Directory/</div>
+                <div class="pl-4 text-zinc-400">├── 📁 04_Presentations/</div>
+                <div class="pl-4 text-zinc-400">└── 📁 05_Whitepapers/ (PDFs)</div>
+              </div>
+
+              <div class="mt-6 space-y-2 text-xs text-zinc-300">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Best for single-location local businesses
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Maximum domain juice consolidation
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 pt-4 border-t border-zinc-800 text-xs font-mono text-zinc-500">
+              Ideal for: Plumbers, Roofers, Law Firms
+            </div>
+          </div>
+
+          <!-- Mode 2 Card -->
+          <div class="glass-panel rounded-2xl p-7 border border-sky-500/40 flex flex-col justify-between shadow-xl shadow-sky-950/30">
+            <div>
+              <span class="text-xs font-mono text-cyan-400 font-bold bg-cyan-500/10 px-2.5 py-1 rounded border border-cyan-500/20">
+                ARCHITECTURE MODE 2
+              </span>
+              <h3 class="text-xl font-bold text-white mt-4 mb-2">Keyword Stacks: Inside Main Folder</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+                Creates dedicated subfolder silos for each target keyword group within the main client folder. Combines separation with central authority.
+              </p>
+              
+              <div class="bg-zinc-950/80 p-4 rounded-xl border border-zinc-800 font-mono text-xs space-y-2 text-zinc-300">
+                <div class="text-cyan-400 font-bold">📁 [Client_Brand]_Authority_Hub/</div>
+                <div class="pl-4 text-zinc-400">├── 📁 Silo_Emergency_Roofing/</div>
+                <div class="pl-8 text-zinc-500">└── (Docs, Map, Sheet, Form)</div>
+                <div class="pl-4 text-zinc-400">├── 📁 Silo_Commercial_Roofing/</div>
+                <div class="pl-8 text-zinc-500">└── (Docs, Map, Sheet, Form)</div>
+                <div class="pl-4 text-zinc-400">└── 📁 Silo_Gutter_Installation/</div>
+              </div>
+
+              <div class="mt-6 space-y-2 text-xs text-zinc-300">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Perfect for multi-service contractors
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Interlinks sub-services circularly
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 pt-4 border-t border-zinc-800 text-xs font-mono text-zinc-400">
+              Ideal for: Multi-Specialty Clinics, Agencies
+            </div>
+          </div>
+
+          <!-- Mode 3 Card -->
+          <div class="glass-panel rounded-2xl p-7 border border-zinc-800 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-mono text-emerald-400 font-bold bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/20">
+                ARCHITECTURE MODE 3
+              </span>
+              <h3 class="text-xl font-bold text-white mt-4 mb-2">Keyword Stacks: Separate Folders</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+                Produces completely isolated standalone Drive hubs for different cities or brand entities with individual permission controls.
+              </p>
+              
+              <div class="bg-zinc-950/80 p-4 rounded-xl border border-zinc-800 font-mono text-xs space-y-2 text-zinc-300">
+                <div class="text-emerald-400 font-bold">📁 [Brand]_Dallas_Location/</div>
+                <div class="pl-4 text-zinc-500">└── Standalone 20 Assets Stack</div>
+                <div class="text-emerald-400 font-bold mt-2">📁 [Brand]_FortWorth_Location/</div>
+                <div class="pl-4 text-zinc-500">└── Standalone 20 Assets Stack</div>
+                <div class="text-emerald-400 font-bold mt-2">📁 [Brand]_Austin_Location/</div>
+                <div class="pl-4 text-zinc-500">└── Standalone 20 Assets Stack</div>
+              </div>
+
+              <div class="mt-6 space-y-2 text-xs text-zinc-300">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Built for national franchise networks
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Clean, separate client deliverable URLs
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 pt-4 border-t border-zinc-800 text-xs font-mono text-zinc-500">
+              Ideal for: Franchises, Multi-City Chains
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================== CIRCULAR SILO INTERLINKING ==================== -->
+      <section id="circular" class="py-16 border-t border-zinc-800">
+        <div class="rounded-3xl glass-panel p-8 sm:p-12 border border-zinc-800 relative overflow-hidden">
+          
+          <div class="max-w-3xl">
+            <span class="text-xs font-mono text-sky-400 font-bold bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20 uppercase tracking-wider">
+              Mathematical Silo Logic
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4 mb-4">
+              Circular Authority Silo Interlinking: Eliminating Googlebot Dead Ends.
+            </h2>
+            <p class="text-sm sm:text-base text-zinc-400 leading-relaxed">
+              When Googlebot discovers an asset, it follows links to index subsequent pages. Typical manual stacking creates isolated orphan files. G-Stack Studio executes a closed-loop algorithmic linking pattern:
+            </p>
+          </div>
+
+          <!-- Circular Interlinking Diagram Card -->
+          <div class="mt-10 grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+            
+            <div class="p-5 rounded-xl bg-zinc-950/80 border border-sky-500/30 flex flex-col items-center justify-center">
+              <span class="w-8 h-8 rounded-full bg-sky-500/20 text-sky-400 font-mono font-bold flex items-center justify-center text-xs mb-3">1</span>
+              <h4 class="text-sm font-bold text-white mb-1">KW Doc 01</h4>
+              <p class="text-[11px] text-zinc-400">Primary Core Keyword</p>
+              <div class="mt-3 text-sky-400 font-mono text-xs flex items-center gap-1">
+                Links to KW 02 <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-xl bg-zinc-950/80 border border-sky-500/30 flex flex-col items-center justify-center">
+              <span class="w-8 h-8 rounded-full bg-sky-500/20 text-sky-400 font-mono font-bold flex items-center justify-center text-xs mb-3">2</span>
+              <h4 class="text-sm font-bold text-white mb-1">KW Doc 02</h4>
+              <p class="text-[11px] text-zinc-400">Secondary High-Intent Term</p>
+              <div class="mt-3 text-sky-400 font-mono text-xs flex items-center gap-1">
+                Links to KW 03 <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-xl bg-zinc-950/80 border border-sky-500/30 flex flex-col items-center justify-center">
+              <span class="w-8 h-8 rounded-full bg-sky-500/20 text-sky-400 font-mono font-bold flex items-center justify-center text-xs mb-3">3</span>
+              <h4 class="text-sm font-bold text-white mb-1">KW Doc 03</h4>
+              <p class="text-[11px] text-zinc-400">Long-Tail Geo Phrase</p>
+              <div class="mt-3 text-sky-400 font-mono text-xs flex items-center gap-1">
+                Loops to KW 01 <i data-lucide="rotate-ccw" class="w-3 h-3"></i>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-xl bg-gradient-to-b from-sky-950/40 to-zinc-950 border border-cyan-500/40 flex flex-col items-center justify-center">
+              <span class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-300 font-mono font-bold flex items-center justify-center text-xs mb-3">HUB</span>
+              <h4 class="text-sm font-bold text-white mb-1">Central Google Site</h4>
+              <p class="text-[11px] text-zinc-400">Receives & Reciprocates Juice</p>
+              <div class="mt-3 text-cyan-300 font-mono text-xs flex items-center gap-1">
+                2-Way Sheets Sync <i data-lucide="repeat" class="w-3 h-3"></i>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Feature Breakdown -->
+          <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-zinc-800 text-sm">
+            <div>
+              <h5 class="font-bold text-white mb-2 flex items-center gap-2">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> No Over-Optimization Penalties
+              </h5>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Anchors are dynamically rotated between Brand, Partial Match, URL string, and Generic calls-to-action to simulate organic entity citations.
+              </p>
+            </div>
+            <div>
+              <h5 class="font-bold text-white mb-2 flex items-center gap-2">
+                <i data-lucide="refresh-cw" class="w-4 h-4 text-sky-400"></i> Continuous Crawl Loops
+              </h5>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                By looping KW3 back to KW1 and feeding the Master Sheets Directory, search engine crawlers cycle through your entity stack repeatedly.
+              </p>
+            </div>
+            <div>
+              <h5 class="font-bold text-white mb-2 flex items-center gap-2">
+                <i data-lucide="external-link" class="w-4 h-4 text-purple-400"></i> Outbound Citation Nodes
+              </h5>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Every document cites official Google entity knowledge bases (Wikidata, Wikipedia, Google Maps) to reinforce topical authority.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================== LOCAL PRIVACY & OAUTH ENGINE ==================== -->
+      <section class="py-16 border-t border-zinc-800">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-4">
+              <i data-lucide="lock" class="w-3.5 h-3.5"></i> Enterprise Security Standard
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+              100% Client-Side Privacy: Your Google Tokens Never Touch Our Cloud.
+            </h2>
+            <p class="mt-4 text-sm sm:text-base text-zinc-400 leading-relaxed">
+              Unlike SaaS web tools that store your sensitive Google OAuth tokens on vulnerable third-party web servers, G-Stack Studio operates as an authenticated local desktop engine.
+            </p>
+            
+            <div class="mt-6 space-y-3 text-sm text-zinc-300">
+              <div class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+                <div>
+                  <strong class="text-white">Local Token Storage:</strong> The generated <code class="text-sky-300 font-mono">token.json</code> is saved only in your operating system's local AppData.
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+                <div>
+                  <strong class="text-white">Official Scopes Only:</strong> Requests strictly the minimal scopes needed to create Drive folders, Docs, and Sheets.
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+                <div>
+                  <strong class="text-white">Zero Telemetry Logging:</strong> Client business details and target URLs remain confidential between your workstation and Google.
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <a href="privacy.html" class="inline-flex items-center gap-2 text-sm text-sky-400 hover:text-sky-300 font-semibold underline">
+                Read our Google API Services User Data Policy Disclosures <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Security Diagram Card -->
+          <div class="glass-panel rounded-2xl p-6 sm:p-8 border border-zinc-800">
+            <div class="text-xs font-mono text-zinc-400 uppercase tracking-wider mb-4 flex items-center justify-between">
+              <span>Security Data Flow Architecture</span>
+              <span class="text-emerald-400 font-bold">100% Local Encrypted</span>
+            </div>
+
+            <div class="space-y-4 font-mono text-xs">
+              <div class="p-3.5 rounded-xl bg-zinc-900/90 border border-zinc-800 flex items-center justify-between">
+                <span class="flex items-center gap-2 text-white">
+                  <i data-lucide="monitor" class="w-4 h-4 text-sky-400"></i> Your Desktop Workstation
+                </span>
+                <span class="text-sky-400">G-Stack Studio App</span>
+              </div>
+
+              <div class="flex justify-center">
+                <span class="text-zinc-600 flex items-center gap-1 text-[11px]">
+                  <i data-lucide="arrow-down-up" class="w-3.5 h-3.5 text-emerald-400"></i> Direct HTTPS TLS 1.3
+                </span>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-zinc-900/90 border border-zinc-800 flex items-center justify-between">
+                <span class="flex items-center gap-2 text-white">
+                  <i data-lucide="cloud" class="w-4 h-4 text-emerald-400"></i> Official Google Cloud APIs
+                </span>
+                <span class="text-emerald-400">googleapis.com</span>
+              </div>
+
+              <div class="p-4 rounded-xl bg-rose-950/20 border border-rose-900/40 text-rose-300 text-[11px] font-sans flex items-center gap-2">
+                <i data-lucide="shield-alert" class="w-5 h-5 text-rose-400 shrink-0"></i>
+                <span><strong>No Intermediary Servers:</strong> G-Stack Studio developers have zero access to your Google accounts, client data, or files.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA BANNER -->
+      <section class="mt-16 text-center">
+        <div class="p-8 sm:p-12 rounded-3xl bg-zinc-950 border border-sky-500/30">
+          <h3 class="text-2xl sm:text-4xl font-extrabold text-white">
+            Put the 20-Asset Google Machine to Work for Your Agency.
+          </h3>
+          <p class="text-zinc-400 text-sm sm:text-base mt-3 max-w-xl mx-auto">
+            Get instant access to G-Stack Studio and start shipping enterprise-grade authority stacks today.
+          </p>
+          <div class="mt-8 flex justify-center gap-4">
+            <a href="pricing.html" class="btn-glow-primary px-8 py-3.5 rounded-xl text-sm font-bold text-white flex items-center gap-2">
+              <i data-lucide="rocket" class="w-4 h-4"></i> View Agency Plans & Pricing
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-zinc-800 bg-[#070709] text-zinc-400 text-sm mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-2">
+          <i data-lucide="layers" class="w-5 h-5 text-sky-400"></i>
+          <span class="font-bold text-white">G-Stack Studio</span>
+          <span class="text-xs text-zinc-500">© 2026 All Rights Reserved</span>
+        </div>
+        <div class="flex items-center gap-6 text-xs">
+          <a href="index.html" class="hover:text-white">Home</a>
+          <a href="features.html" class="hover:text-white">Features</a>
+          <a href="pricing.html" class="hover:text-white">Pricing</a>
+          <a href="privacy.html" class="hover:text-white">Privacy Policy</a>
+          <a href="terms.html" class="hover:text-white">Terms</a>
+          <a href="contact.html" class="hover:text-white">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
