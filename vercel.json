@@ -2,6 +2,11 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/features", "destination": "/#assets", "permanent": false },
+    { "source": "/pricing", "destination": "/#pricing", "permanent": false },
+    { "source": "/contact", "destination": "/#contact", "permanent": false }
+  ],
   "headers": [
     {
       "source": "/(.*)",
