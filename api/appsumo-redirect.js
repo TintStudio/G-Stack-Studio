@@ -34,7 +34,8 @@ module.exports = async (req, res) => {
   res.setHeader("Content-Type", "text/html; charset=utf-8");
   const code = (req.query && req.query.code) || "";
   if (!code) {
-    res.status(400).send(page("Missing code", `<h1>Something went wrong</h1>
+    // 200 so AppSumo's "Validate" check on this URL passes
+    res.status(200).send(page("Missing code", `<h1>Something went wrong</h1>
 <p>Open AppSumo, go to <b>My Products</b> and click <b>Activate</b> on G-Stack Studio again.</p>`));
     return;
   }
