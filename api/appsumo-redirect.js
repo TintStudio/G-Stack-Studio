@@ -7,7 +7,7 @@
 //   APPSUMO_REDIRECT_URI                        exactly the URL saved in AppSumo, e.g.
 //                                               https://gstackstudio.vercel.app/api/appsumo-redirect
 
-const SITE = "https://gstackstudio.vercel.app/";
+const SITE = "https://gstackstudio.com/";
 const YOUTUBE = "https://www.youtube.com/@gstackstudio";
 const WHATSAPP = "https://wa.me/923028981089";
 

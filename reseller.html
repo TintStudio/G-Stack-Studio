@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Reseller Portal | G-Stack Studio</title>
+<link rel="icon" href="img/favicon.png">
+<style>
+:root{--bg:#09090b;--card:#141418;--line:#27272a;--ink:#fafafa;--mut:#a1a1aa;--acc:#38bdf8;--btn:#0284c7;--ok:#4ade80;--bad:#f87171}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,"Segoe UI",sans-serif}
+main{max-width:860px;margin:0 auto;padding:32px 16px 64px;display:grid;gap:20px}
+h1{margin:0;font-size:26px}h2{margin:0 0 12px;font-size:18px}
+p{margin:0;color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+label{display:block;font-size:13px;font-weight:600;margin:12px 0 6px}
+input,select{width:100%;padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:#0c0c10;color:var(--ink);font-size:15px}
+input:focus,select:focus{outline:2px solid var(--btn);outline-offset:1px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:600px){.row{grid-template-columns:1fr}}
+button{margin-top:16px;background:var(--btn);color:#fff;border:0;border-radius:10px;padding:12px 18px;font-weight:700;font-size:15px;cursor:pointer}
+button:disabled{opacity:.5;cursor:default}
+.ghost{background:transparent;border:1px solid var(--line);color:var(--ink);margin-left:8px}
+.msg{margin-top:12px;font-weight:600}.ok{color:var(--ok)}.bad{color:var(--bad)}
+.result{margin-top:14px;padding:14px;border:1px solid #14532d;background:#052e1a;border-radius:10px;display:none}
+.key{font:700 18px ui-monospace,Consolas,monospace;word-break:break-all}
+.stats{display:flex;gap:16px;flex-wrap:wrap;color:var(--mut);font-size:14px}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px}
+th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line)}
+th{color:var(--mut);font-weight:600;font-size:12px;text-transform:uppercase}
+td code{font:600 12.5px ui-monospace,Consolas,monospace}
+.hide{display:none}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>G-Stack Studio · Reseller Portal</h1>
+    <p>Create customer licenses with your reseller key. Every license you create is saved to your account.</p>
+  </header>
+
+  <section class="card" id="login">
+    <h2>Sign in</h2>
+    <label for="rkey">Reseller key</label>
+    <input id="rkey" type="password" autocomplete="off" placeholder="Paste the reseller key you were given">
+    <button id="loginBtn">Open portal</button>
+    <div class="msg" id="loginMsg"></div>
+  </section>
+
+  <section class="card hide" id="create">
+    <h2 id="hello">Create a license</h2>
+    <div class="stats" id="stats"></div>
+    <div class="row">
+      <div><label for="email">Customer email</label><input id="email" type="email" placeholder="customer@example.com"></div>
+      <div><label for="cname">Customer name (optional)</label><input id="cname" placeholder="Business or person name"></div>
+    </div>
+    <label for="plan">Plan</label>
+    <select id="plan"></select>
+    <button id="createBtn">Create license</button>
+    <button class="ghost" id="logoutBtn" type="button">Sign out</button>
+    <div class="msg" id="createMsg"></div>
+    <div class="result" id="result">
+      <p style="color:#bbf7d0">License created. Send these to the customer:</p>
+      <div style="margin-top:8px">Email: <b id="rEmail"></b></div>
+      <div>License key: <span class="key" id="rKey"></span></div>
+      <div>Plan: <b id="rPlan"></b> · Valid until: <b id="rExp"></b></div>
+      <button class="ghost" id="copyBtn" type="button" style="margin-left:0">Copy for customer</button>
+    </div>
+  </section>
+
+  <section class="card hide" id="list">
+    <h2>Your licenses</h2>
+    <div class="tbl"><table>
+      <thead><tr><th>Created</th><th>Email</th><th>Customer</th><th>Plan</th><th>Key</th><th>Status</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+  </section>
+</main>
+<script>
+const API = "https://script.google.com/macros/s/AKfycbxYJoJlKUg9UzRPIPIHS71iskuv6gMYV6B4-quXprCodC_qon5B4gs00IF2vUsflLtluA/exec";
+const $ = (id) => document.getElementById(id);
+let KEY = "";
+try { KEY = sessionStorage.getItem("gs_reseller_key") || ""; } catch (e) {}
+
+async function call(action, extra) {
+  const q = new URLSearchParams(Object.assign({ action, reseller_key: KEY }, extra || {}));
+  const r = await fetch(API + "?" + q.toString());
+  return r.json();
+}
+function msg(el, text, ok) { el.textContent = text; el.className = "msg " + (ok ? "ok" : "bad"); }
+function esc(s) { return String(s || "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+
+async function load() {
+  const d = await call("reseller_list");
+  if (!d.success) { msg($("loginMsg"), d.message || "Could not sign in.", false); return false; }
+  $("login").classList.add("hide");
+  $("create").classList.remove("hide");
+  $("list").classList.remove("hide");
+  $("hello").textContent = "Create a license · " + d.reseller;
+  $("stats").innerHTML = "<span>Licenses created: <b>" + d.created + "</b></span><span>Limit: <b>" + esc(d.max) + "</b></span>";
+  $("plan").innerHTML = d.plans.map((p) => "<option>" + esc(p) + "</option>").join("");
+  $("rows").innerHTML = d.items.map((t) =>
+    "<tr><td>" + esc(t.created) + "</td><td>" + esc(t.email) + "</td><td>" + esc(t.client) + "</td><td>" + esc(t.plan) +
+    "</td><td><code>" + esc(t.key) + "</code></td><td>" + esc(t.status) + "</td></tr>").join("") ||
+    "<tr><td colspan='6' style='color:#a1a1aa'>No licenses yet.</td></tr>";
+  return true;
+}
+
+$("loginBtn").onclick = async () => {
+  KEY = $("rkey").value.trim();
+  if (!KEY) return;
+  $("loginBtn").disabled = true; msg($("loginMsg"), "Checking…", true);
+  try {
+    if (await load()) { try { sessionStorage.setItem("gs_reseller_key", KEY); } catch (e) {} }
+  } catch (e) { msg($("loginMsg"), "Network error. Try again.", false); }
+  $("loginBtn").disabled = false;
+};
+$("logoutBtn").onclick = () => { try { sessionStorage.removeItem("gs_reseller_key"); } catch (e) {} location.reload(); };
+$("createBtn").onclick = async () => {
+  const email = $("email").value.trim();
+  if (!email) { msg($("createMsg"), "Enter the customer email.", false); return; }
+  if (!confirm("Create a " + $("plan").value + " license for " + email + "?")) return;
+  $("createBtn").disabled = true; msg($("createMsg"), "Creating…", true);
+  try {
+    const d = await call("reseller_create", { email, client_name: $("cname").value.trim(), plan: $("plan").value });
+    if (!d.success) { msg($("createMsg"), d.message || "Failed.", false); }
+    else {
+      msg($("createMsg"), "Done.", true);
+      $("rEmail").textContent = d.email; $("rKey").textContent = d.license_key;
+      $("rPlan").textContent = d.plan; $("rExp").textContent = d.expiry;
+      $("result").style.display = "block";
+      $("email").value = ""; $("cname").value = "";
+      load();
+    }
+  } catch (e) { msg($("createMsg"), "Network error. Check the Sheet before trying again, the license may already exist.", false); }
+  $("createBtn").disabled = false;
+};
+$("copyBtn").onclick = () => {
+  const t = "Your G-Stack Studio license\nEmail: " + $("rEmail").textContent + "\nLicense key: " + $("rKey").textContent +
+            "\nPlan: " + $("rPlan").textContent + "\n\nDownload: https://gstackstudio.com/\nOpen the app, enter this email and key, and click Activate.";
+  navigator.clipboard.writeText(t).then(() => { $("copyBtn").textContent = "Copied ✓"; });
+};
+if (KEY) { $("rkey").value = KEY; load().catch(() => {}); }
+</script>
+</body>
+</html>
