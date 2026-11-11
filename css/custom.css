@@ -204,3 +204,224 @@ body {
 /* decorative glows must not widen the page on phones */
 html { overflow-x: clip; }
 body { position: relative; overflow-x: clip; }
+
+/* ================================================================
+   Light product theme
+   The public site uses the same clean white/light-blue visual language
+   as the dashboard reference image.  Tailwind utility classes remain in
+   the markup, but these scoped overrides recolor the marketing pages
+   without changing their layout or JavaScript behavior.
+   ================================================================ */
+body.light-theme {
+  --bg-primary: #ffffff;
+  --bg-card: #ffffff;
+  --border-subtle: #e2e8f0;
+  --border-glow: rgba(37, 99, 235, 0.15);
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+/* 1. All dark background containers become soft slate or white */
+body.light-theme [class*="bg-[#0c0c11]"],
+body.light-theme [class*="bg-[#09090b]"],
+body.light-theme [class*="bg-[#0a0a0f]"],
+body.light-theme [class*="bg-[#0b0b10]"],
+body.light-theme [class*="bg-[#070709]"],
+body.light-theme [class*="bg-[#121217]"],
+body.light-theme [class*="bg-zinc-950"],
+body.light-theme section[class*="bg-[#"] {
+  background-color: #f8fafc !important;
+  background-image: none !important;
+}
+
+/* 2. Gradients in light mode (CTA banners & highlights) */
+body.light-theme [class*="bg-gradient-to-b"],
+body.light-theme [class*="from-[#09090b]"],
+body.light-theme [class*="to-[#121217]"],
+body.light-theme [class*="from-[#161622]"][class*="to-[#0e0e15]"],
+body.light-theme [class*="from-[#161622]"],
+body.light-theme [class*="to-[#0e0e15]"] {
+  background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%) !important;
+}
+
+/* 3. Cards & Glass Panels */
+body.light-theme .glass-panel {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05) !important;
+}
+
+body.light-theme .glass-panel-hover:hover {
+  background: #ffffff !important;
+  border-color: #93c5fd !important;
+  box-shadow: 0 12px 28px -4px rgba(37, 99, 235, 0.12) !important;
+}
+
+body.light-theme [class*="bg-zinc-900"],
+body.light-theme [class*="bg-zinc-800"] {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+body.light-theme [class*="bg-zinc-900/60"],
+body.light-theme [class*="bg-zinc-800/80"],
+body.light-theme [class*="bg-zinc-900/40"] {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+}
+
+body.light-theme [class*="bg-sky-950"],
+body.light-theme [class*="bg-sky-950/40"] {
+  background-color: #eff6ff !important;
+  border-color: #bfdbfe !important;
+}
+
+/* 4. Borders */
+body.light-theme [class*="border-zinc-800"],
+body.light-theme [class*="border-zinc-700"],
+body.light-theme [class*="border-white/5"],
+body.light-theme [class*="border-white/10"],
+body.light-theme [class*="border-white/20"] {
+  border-color: #e2e8f0 !important;
+}
+
+/* 5. Typography */
+body.light-theme [class*="text-white"] { color: #0f172a !important; }
+body.light-theme [class*="text-zinc-100"] { color: #1e293b !important; }
+body.light-theme [class*="text-zinc-200"] { color: #334155 !important; }
+body.light-theme [class*="text-zinc-300"] { color: #334155 !important; }
+body.light-theme [class*="text-zinc-400"] { color: #64748b !important; }
+body.light-theme [class*="text-zinc-500"] { color: #64748b !important; }
+body.light-theme [class*="text-zinc-600"] { color: #94a3b8 !important; }
+
+body.light-theme [class*="text-sky-300"],
+body.light-theme [class*="text-sky-400"] { color: #0284c7 !important; }
+body.light-theme [class*="text-emerald-300"],
+body.light-theme [class*="text-emerald-400"] { color: #059669 !important; }
+
+/* 6. Alert & Notice Boxes */
+body.light-theme [class*="bg-amber-500/10"],
+body.light-theme [class*="bg-amber-500/20"] {
+  background-color: #fffbeb !important;
+  border-color: #fde68a !important;
+}
+body.light-theme [class*="text-amber-300"],
+body.light-theme [class*="text-amber-400"],
+body.light-theme [class*="text-amber-500"] {
+  color: #92400e !important;
+}
+body.light-theme [class*="border-amber-500/20"],
+body.light-theme [class*="border-amber-500/30"] {
+  border-color: #fde68a !important;
+}
+
+/* 7. Code & Badges */
+body.light-theme code[class*="text-sky-300"] {
+  color: #0284c7 !important;
+  background-color: #eff6ff !important;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid #dbeafe;
+}
+
+/* 8. Buttons */
+body.light-theme .btn-glow-primary,
+body.light-theme a[class~="bg-sky-600"],
+body.light-theme button[class~="bg-sky-600"],
+body.light-theme a[class~="bg-sky-500"],
+body.light-theme button[class~="bg-sky-500"],
+body.light-theme a[class~="bg-[#1FA855]"],
+body.light-theme button[class~="bg-[#1FA855]"] {
+  background-color: #0284c7 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25) !important;
+}
+
+body.light-theme [class*="bg-zinc-800"][class*="hover:bg-zinc-700"] {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+body.light-theme [class*="bg-zinc-800"][class*="hover:bg-zinc-700"]:hover {
+  background-color: #e2e8f0 !important;
+  color: #0284c7 !important;
+  border-color: #94a3b8 !important;
+}
+
+/* 9. Background Grid Pattern & Ambient Glow */
+body.light-theme .bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.12) 1px, transparent 1px) !important;
+  opacity: 0.35;
+}
+
+body.light-theme .ambient-glow { opacity: 0.08 !important; }
+body.light-theme .ambient-blue { background: radial-gradient(circle, rgba(96, 165, 250, 0.28) 0%, rgba(96, 165, 250, 0) 70%); }
+body.light-theme .ambient-cyan { background: radial-gradient(circle, rgba(125, 211, 252, 0.20) 0%, rgba(125, 211, 252, 0) 70%); }
+body.light-theme .ambient-purple { background: radial-gradient(circle, rgba(196, 181, 253, 0.16) 0%, rgba(196, 181, 253, 0) 70%); }
+
+body.light-theme ::-webkit-scrollbar-track { background: #f8fafc; }
+body.light-theme ::-webkit-scrollbar-thumb { background: #cbd5e1; }
+body.light-theme ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* 10. Header Navbar in light mode */
+body.light-theme header {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+body.light-theme header nav a:not([class*="text-sky-400"]):not([class*="text-amber"]) {
+  color: #475569 !important;
+}
+body.light-theme header nav a:not([class*="text-sky-400"]):not([class*="text-amber"]):hover {
+  color: #0284c7 !important;
+}
+
+body.light-theme header a[data-link="youtube"] {
+  color: #64748b !important;
+}
+body.light-theme header a[data-link="youtube"]:hover {
+  color: #ef4444 !important;
+  background-color: rgba(239, 68, 68, 0.08) !important;
+}
+
+/* 11. Footer in light mode */
+body.light-theme footer {
+  background-color: #f8fafc !important;
+  border-top: 1px solid #e2e8f0 !important;
+}
+body.light-theme footer h4 {
+  color: #0f172a !important;
+}
+body.light-theme footer a,
+body.light-theme footer p,
+body.light-theme footer li {
+  color: #64748b !important;
+}
+body.light-theme footer a:hover {
+  color: #0284c7 !important;
+}
+
+/* 12. Mobile Drawer */
+body.light-theme #mobile-menu-drawer {
+  background-color: #ffffff !important;
+  border-left: 1px solid #e2e8f0 !important;
+}
+body.light-theme #mobile-menu-drawer [class*="border-zinc-800"] {
+  border-color: #e2e8f0 !important;
+}
+body.light-theme #mobile-menu-drawer a {
+  color: #334155 !important;
+}
+body.light-theme #mobile-menu-drawer a:hover {
+  color: #0284c7 !important;
+}
+body.light-theme #mobile-menu-drawer a[class*="text-sky-400"] {
+  color: #0284c7 !important;
+}
+body.light-theme #mobile-menu-drawer a[class*="text-amber"] {
+  color: #b45309 !important;
+}

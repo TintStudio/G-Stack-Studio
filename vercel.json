@@ -3,9 +3,11 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/features", "destination": "/#assets", "permanent": false },
-    { "source": "/pricing", "destination": "/#pricing", "permanent": false },
-    { "source": "/contact", "destination": "/#contact", "permanent": false }
+    { "source": "/reseller", "destination": "/trusted-reseller", "permanent": true },
+    { "source": "/lifetime", "destination": "/lifetime-deals", "permanent": true },
+    { "source": "/deals", "destination": "/lifetime-deals", "permanent": true },
+    { "source": "/partner", "destination": "/reseller-program", "permanent": true },
+    { "source": "/partners", "destination": "/reseller-program", "permanent": true }
   ],
   "headers": [
     {
@@ -27,6 +29,12 @@
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
         }
+      ]
+    },
+    {
+      "source": "/(trusted-reseller|trusted-reseller.html|reseller|reseller.html|api/.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" }
       ]
     }
   ]

@@ -33,41 +33,56 @@
   </script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="css/custom.css">
+  <link rel="canonical" href="https://gstackstudio.com/terms">
 </head>
-<body class="bg-[#09090b] text-zinc-100 min-h-screen relative selection:bg-sky-500/30 selection:text-white">
+<body class="light-theme bg-[#09090b] text-zinc-100 min-h-screen relative selection:bg-sky-500/30 selection:text-white">
 
   <div class="ambient-glow ambient-blue w-[400px] h-[400px] -top-20 left-1/3"></div>
   <div class="absolute inset-0 bg-grid-pattern pointer-events-none opacity-40"></div>
 
-  <!-- NAVBAR -->
-  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#09090b]/80 border-b border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        <a href="index.html" class="flex items-center gap-3">
-          <img src="img/logo.png" alt="G-Stack Studio logo" class="w-10 h-10 rounded-xl object-contain" width="64" height="64">
-          <div class="flex flex-col">
-            <span class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-              G-Stack <span class="text-sky-400 font-extrabold">Studio</span>
-            </span>
-            <span class="text-[10px] tracking-wider text-zinc-400 uppercase font-medium">Terms of Service</span>
+    <!-- ==================== HEADER NAVBAR ==================== -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#09090b]/85 border-b border-white/5">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-3">
+        
+        <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+          <img src="img/logo.png" alt="G-Stack Studio Logo" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl object-contain shrink-0" width="40" height="40">
+          <div class="flex flex-col whitespace-nowrap">
+            <div class="flex items-center gap-1.5 leading-none">
+              <span class="text-lg sm:text-xl font-bold tracking-tight text-white whitespace-nowrap">
+                G-Stack <span class="text-sky-400 font-extrabold">Studio</span>
+              </span>
+              <span class="text-[9px] font-mono uppercase bg-sky-500/10 text-sky-400 px-1.5 py-0.5 rounded-full border border-sky-500/20 font-semibold hidden sm:inline-block">v3.0</span>
+            </div>
+            <span class="text-[9px] tracking-wider text-zinc-400 uppercase font-medium mt-1 hidden 2xl:inline-block">Compliance &amp; Terms</span>
           </div>
         </a>
 
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-300">
-          <a href="index.html" class="hover:text-sky-400 transition-colors">Home</a>
-          <a href="features.html" class="hover:text-sky-400 transition-colors">Features</a>
-          <a href="pricing.html" class="hover:text-sky-400 transition-colors">Pricing</a>
-          <a href="privacy.html" class="hover:text-sky-400 transition-colors">Privacy</a>
-          <a href="contact.html" class="hover:text-sky-400 transition-colors">Contact</a>
+        <!-- Desktop Navigation -->
+        <nav class="hidden xl:flex items-center gap-2.5 2xl:gap-5 text-[13px] 2xl:text-sm font-medium text-zinc-300">
+          <a href="features.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Features</a>
+          <a href="google-stack.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Google Stack</a>
+          <a href="cloud-stacking.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Cloud Stacking</a>
+          <a href="agency-tools.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Agency Tools</a>
+          <a href="tutorials.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Tutorials</a>
+          <a href="pricing.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Pricing</a>
+          <a href="lifetime-deals.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Lifetime Deals</a>
+          <a href="reseller-program.html" class="whitespace-nowrap text-amber-500 hover:text-amber-400 font-semibold transition-colors flex items-center gap-1">
+            <i data-lucide="award" class="w-3.5 h-3.5 shrink-0"></i> Reseller Program
+          </a>
         </nav>
 
-        <div class="hidden md:flex items-center gap-4">
-          <a href="pricing.html" class="btn-glow-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white">
-            <i data-lucide="zap" class="w-4 h-4 text-sky-300"></i> Get Access
+        <div class="hidden md:flex items-center gap-2.5 xl:gap-3 shrink-0">
+          <a data-link="youtube" href="https://www.youtube.com/@gstackstudio" target="_blank" rel="noopener" class="p-2 text-zinc-400 hover:text-red-500 hover:bg-red-500/10 rounded-lg transition-colors shrink-0 flex items-center gap-1.5 text-xs xl:text-sm font-medium" title="Watch Tutorials on YouTube" aria-label="YouTube Channel">
+            <i data-lucide="play-circle" class="w-4 h-4 text-red-500 shrink-0"></i>
+            <span class="hidden 2xl:inline">YouTube</span>
+          </a>
+          <a href="pricing.html" class="btn-glow-primary shrink-0 whitespace-nowrap inline-flex items-center gap-1.5 px-3.5 py-2 xl:px-4 xl:py-2.5 rounded-xl text-xs xl:text-sm font-bold text-white shadow-sm">
+            <i data-lucide="zap" class="w-3.5 h-3.5 text-sky-300 shrink-0"></i> Get Your License
           </a>
         </div>
 
-        <button id="mobile-menu-btn" class="md:hidden p-2 text-zinc-400 hover:text-white" aria-label="Toggle menu">
+        <button id="mobile-menu-btn" class="xl:hidden p-2 text-zinc-400 hover:text-white shrink-0" aria-label="Toggle menu">
           <i data-lucide="menu" class="w-6 h-6"></i>
         </button>
       </div>
@@ -80,21 +95,33 @@
     <div>
       <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
         <div class="flex items-center gap-2">
-          <img src="img/logo.png" alt="G-Stack Studio logo" class="w-6 h-6 object-contain" width="64" height="64">
+          <img src="img/logo.png" alt="G-Stack Studio Logo" class="w-6 h-6 object-contain" width="64" height="64">
           <span class="font-bold text-white text-lg">G-Stack Studio</span>
         </div>
         <button id="mobile-menu-close" class="text-zinc-400 hover:text-white" aria-label="Close menu">
           <i data-lucide="x" class="w-6 h-6"></i>
         </button>
       </div>
-      <div class="flex flex-col gap-4 mt-6 text-base font-medium">
-        <a href="index.html" class="text-zinc-300 hover:text-sky-400 py-1">Home</a>
-        <a href="features.html" class="text-zinc-300 hover:text-sky-400 py-1">Features</a>
-        <a href="pricing.html" class="text-zinc-300 hover:text-sky-400 py-1">Pricing</a>
-        <a href="privacy.html" class="text-zinc-300 hover:text-sky-400 py-1">Privacy</a>
-        <a href="terms.html" class="text-sky-400 py-1 font-semibold">Terms of Service</a>
-        <a href="contact.html" class="text-zinc-300 hover:text-sky-400 py-1">Contact</a>
+      <div class="flex flex-col gap-3 mt-6 text-sm font-medium">
+        <a href="index.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Home</a>
+        <a href="features.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Features Overview</a>
+        <a href="google-stack.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Google Stack</a>
+        <a href="cloud-stacking.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Cloud Stacking</a>
+        <a href="agency-tools.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Agency Tools</a>
+        <a href="how-it-works.html" class="text-zinc-300 hover:text-sky-400 py-1.5">How It Works</a>
+        <a href="tutorials.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Video Tutorials</a>
+        <a href="pricing.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Monthly Pricing</a>
+        <a href="lifetime-deals.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Lifetime Deals</a>
+        <a href="reseller-program.html" class="text-amber-400 hover:text-amber-300 py-1.5">Reseller Program</a>
+        <a href="security.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Security Architecture</a>
+        <a href="about.html" class="text-zinc-300 hover:text-sky-400 py-1.5">About Us</a>
+        <a href="contact.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Contact Desk</a>
       </div>
+    </div>
+    <div class="pt-6 border-t border-zinc-800">
+      <a href="pricing.html" class="btn-glow-primary w-full py-3 rounded-xl text-center text-sm font-semibold text-white block">
+        Get Your License
+      </a>
     </div>
   </div>
 
@@ -218,27 +245,62 @@
     </div>
   </main>
 
-  <footer class="border-t border-zinc-800 bg-[#070709] text-zinc-400 text-sm mt-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
-        <div class="flex items-center gap-2">
-          <img src="img/logo.png" alt="G-Stack Studio logo" class="w-5 h-5 object-contain" width="64" height="64">
-          <span class="font-bold text-white">G-Stack Studio</span>
-          <span class="text-xs text-zinc-500">© 2026 All Rights Reserved</span>
+  <!-- ==================== GLOBAL FOOTER ==================== -->
+  <footer class="bg-[#070709] border-t border-zinc-800/80 py-16 text-zinc-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider font-mono">Product</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="features.html" class="hover:text-white transition-colors">Features Overview</a></li>
+            <li><a href="google-stack.html" class="hover:text-white transition-colors">Google Stack Engine</a></li>
+            <li><a href="cloud-stacking.html" class="hover:text-white transition-colors">Cloud Stacking</a></li>
+            <li><a href="agency-tools.html" class="hover:text-white transition-colors">Agency Tools</a></li>
+            <li><a href="how-it-works.html" class="hover:text-white transition-colors">How It Works</a></li>
+          </ul>
         </div>
-        <div class="flex items-center gap-6 text-xs">
-          <a href="index.html" class="hover:text-white">Home</a>
-          <a href="features.html" class="hover:text-white">Features</a>
-          <a href="pricing.html" class="hover:text-white">Pricing</a>
-          <a href="privacy.html" class="hover:text-white">Privacy Policy</a>
-          <a href="terms.html" class="text-sky-400 font-semibold">Terms</a>
-          <a href="contact.html" class="hover:text-white">Contact</a>
+        <div>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider font-mono">Resources</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="tutorials.html" class="hover:text-white transition-colors">Video Tutorials</a></li>
+            <li><a href="security.html" class="hover:text-white transition-colors">Security &amp; OAuth</a></li>
+            <li><a data-link="youtube" href="https://www.youtube.com/@gstackstudio" target="_blank" rel="noopener" class="hover:text-white transition-colors">Official YouTube</a></li>
+            <li><a data-link="whatsapp" href="https://wa.me/923028981089" target="_blank" rel="noopener" class="hover:text-white transition-colors">WhatsApp Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider font-mono">Commercial</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="pricing.html" class="hover:text-white transition-colors">Monthly Subscriptions</a></li>
+            <li><a href="lifetime-deals.html" class="hover:text-white transition-colors">Lifetime Master Deals</a></li>
+            <li><a href="reseller-program.html" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Reseller Program</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact Sales</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider font-mono">Legal &amp; Trust</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="privacy.html" class="hover:text-white transition-colors text-sky-400 font-semibold">Privacy Policy</a></li>
+            <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="privacy.html#oauth" class="hover:text-white transition-colors">OAuth User Data Policy</a></li>
+            <li><a href="terms.html#refunds" class="hover:text-white transition-colors">30-Day Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-zinc-800/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+        <p>&copy; 2026 G-Stack Studio. All rights reserved. Windows desktop software for SEO agencies.</p>
+        <div class="flex items-center gap-2 text-zinc-500">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>Legal &amp; Privacy Disclosures: Active</span>
         </div>
       </div>
     </div>
   </footer>
 
   <script src="js/links.js"></script>
+  <script src="js/pricing-data.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

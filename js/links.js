@@ -31,8 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
       a.rel = 'noopener';
       a.textContent = life ? 'Get ' + a.dataset.buy + ' Lifetime' : 'Choose ' + a.dataset.buy;
     });
-    document.querySelectorAll('[data-life-only]').forEach((el) => el.classList.toggle('hidden', !life));
-    document.querySelectorAll('[data-month-only]').forEach((el) => el.classList.toggle('hidden', life));
+    // inline display wins over Tailwind's "flex"/"grid", so lifetime-only lines never show on monthly
+    document.querySelectorAll('[data-life-only]').forEach((el) => {
+      el.classList.toggle('hidden', !life);
+      el.style.display = life ? '' : 'none';
+    });
+    document.querySelectorAll('[data-month-only]').forEach((el) => {
+      el.classList.toggle('hidden', life);
+      el.style.display = life ? 'none' : '';
+    });
   };
   if (toggle) toggle.addEventListener('change', sync);
   sync();

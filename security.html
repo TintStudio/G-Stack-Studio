@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security &amp; OAuth Architecture | Client-Side Data Privacy | G-Stack Studio</title>
+  <meta name="description" content="Technical security disclosure for G-Stack Studio. Understand our local Windows desktop architecture, client-side Google OAuth 2.0 flow, credential storage, and API scopes.">
+  <meta name="keywords" content="G-Stack Studio security, Google OAuth client privacy, local token storage, desktop SEO software security, Google API disclosures">
+  <link rel="canonical" href="https://gstackstudio.com/security">
+  
+  <meta property="og:title" content="Security &amp; OAuth Architecture | G-Stack Studio">
+  <meta property="og:description" content="Transparent disclosure of local token storage, Google OAuth 2.0 InstalledAppFlow, and desktop execution architecture.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gstackstudio.com/security">
+  <meta property="og:image" content="https://gstackstudio.com/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://gstackstudio.com/img/og.jpg">
+
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="light-theme bg-[#09090b] text-zinc-100 min-h-screen relative selection:bg-sky-500/30 selection:text-white">
+
+  <!-- Ambient Glow -->
+  <div class="ambient-glow ambient-blue w-[500px] h-[500px] -top-32 left-1/4"></div>
+  <div class="ambient-glow ambient-cyan w-[400px] h-[400px] top-[1000px] right-10"></div>
+  <div class="absolute inset-0 bg-grid-pattern pointer-events-none opacity-40"></div>
+
+    <!-- ==================== HEADER NAVBAR ==================== -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#09090b]/85 border-b border-white/5">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-3">
+        
+        <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+          <img src="img/logo.png" alt="G-Stack Studio Logo" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl object-contain shrink-0" width="40" height="40">
+          <div class="flex flex-col whitespace-nowrap">
+            <div class="flex items-center gap-1.5 leading-none">
+              <span class="text-lg sm:text-xl font-bold tracking-tight text-white whitespace-nowrap">
+                G-Stack <span class="text-sky-400 font-extrabold">Studio</span>
+              </span>
+              <span class="text-[9px] font-mono uppercase bg-sky-500/10 text-sky-400 px-1.5 py-0.5 rounded-full border border-sky-500/20 font-semibold hidden sm:inline-block">v3.0</span>
+            </div>
+            <span class="text-[9px] tracking-wider text-zinc-400 uppercase font-medium mt-1 hidden 2xl:inline-block">Security &amp; OAuth Architecture</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden xl:flex items-center gap-2.5 2xl:gap-5 text-[13px] 2xl:text-sm font-medium text-zinc-300">
+          <a href="features.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Features</a>
+          <a href="google-stack.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Google Stack</a>
+          <a href="cloud-stacking.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Cloud Stacking</a>
+          <a href="agency-tools.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Agency Tools</a>
+          <a href="tutorials.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Tutorials</a>
+          <a href="pricing.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Pricing</a>
+          <a href="lifetime-deals.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Lifetime Deals</a>
+          <a href="reseller-program.html" class="whitespace-nowrap text-amber-500 hover:text-amber-400 font-semibold transition-colors flex items-center gap-1">
+            <i data-lucide="award" class="w-3.5 h-3.5 shrink-0"></i> Reseller Program
+          </a>
+        </nav>
+
+        <div class="hidden md:flex items-center gap-2.5 xl:gap-3 shrink-0">
+          <a data-link="youtube" href="https://www.youtube.com/@gstackstudio" target="_blank" rel="noopener" class="p-2 text-zinc-400 hover:text-red-500 hover:bg-red-500/10 rounded-lg transition-colors shrink-0 flex items-center gap-1.5 text-xs xl:text-sm font-medium" title="Watch Tutorials on YouTube" aria-label="YouTube Channel">
+            <i data-lucide="play-circle" class="w-4 h-4 text-red-500 shrink-0"></i>
+            <span class="hidden 2xl:inline">YouTube</span>
+          </a>
+          <a href="pricing.html" class="btn-glow-primary shrink-0 whitespace-nowrap inline-flex items-center gap-1.5 px-3.5 py-2 xl:px-4 xl:py-2.5 rounded-xl text-xs xl:text-sm font-bold text-white shadow-sm">
+            <i data-lucide="zap" class="w-3.5 h-3.5 text-sky-300 shrink-0"></i> Get Your License
+          </a>
+        </div>
+
+        <button id="mobile-menu-btn" class="xl:hidden p-2 text-zinc-400 hover:text-white shrink-0" aria-label="Toggle menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 right-0 bottom-0 w-80 bg-[#121217] border-l border-zinc-800 z-50 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+        <div class="flex items-center gap-2">
+          <img src="img/logo.png" alt="G-Stack Studio Logo" class="w-6 h-6 object-contain" width="64" height="64">
+          <span class="font-bold text-white text-lg">G-Stack Studio</span>
+        </div>
+        <button id="mobile-menu-close" class="text-zinc-400 hover:text-white" aria-label="Close menu">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+      <div class="flex flex-col gap-3 mt-6 text-sm font-medium">
+        <a href="index.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Home</a>
+        <a href="features.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Features Overview</a>
+        <a href="google-stack.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Google Stack</a>
+        <a href="cloud-stacking.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Cloud Stacking</a>
+        <a href="agency-tools.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Agency Tools</a>
+        <a href="how-it-works.html" class="text-zinc-300 hover:text-sky-400 py-1.5">How It Works</a>
+        <a href="tutorials.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Video Tutorials</a>
+        <a href="pricing.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Monthly Pricing</a>
+        <a href="lifetime-deals.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Lifetime Deals</a>
+        <a href="reseller-program.html" class="text-amber-400 hover:text-amber-300 py-1.5">Reseller Program</a>
+        <a href="security.html" class="text-sky-400 py-1.5 font-semibold">Security Architecture</a>
+        <a href="contact.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Contact Desk</a>
+      </div>
+    </div>
+    <div class="pt-6 border-t border-zinc-800">
+      <a href="pricing.html" class="btn-glow-primary w-full py-3 rounded-xl text-center text-sm font-semibold text-white block">
+        Get Your License
+      </a>
+    </div>
+  </div>
+
+  <main class="py-16 md:py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-4">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Architecture Transparency
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
+          Security &amp; OAuth Architecture
+        </h1>
+        <p class="mt-4 text-base sm:text-lg text-zinc-300 leading-relaxed">
+          G-Stack Studio is engineered as an offline-first Windows desktop client application. We believe agencies should retain 100% control over their Google API keys, client content, and third-party cloud hosting credentials.
+        </p>
+      </div>
+
+      <!-- SECTION 1: EXECUTION ARCHITECTURE -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-6">1. Local Execution Architecture</h2>
+        <div class="glass-panel rounded-2xl p-6 sm:p-8 border border-zinc-800 space-y-4 text-sm text-zinc-300 leading-relaxed">
+          <p>
+            Unlike traditional multi-tenant cloud SaaS platforms, G-Stack Studio executes directly on your Windows PC. The software runs locally and communicates with third-party platforms via official, encrypted HTTPS REST APIs:
+          </p>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-xl bg-zinc-950 border border-zinc-800">
+              <div class="font-bold text-white mb-1 flex items-center gap-2">
+                <i data-lucide="cpu" class="w-4 h-4 text-sky-400"></i> Your Computer (Local Client)
+              </div>
+              <p class="text-xs text-zinc-400">
+                Houses project files (<code class="text-sky-300">projects.json</code>), client NAP profiles, image assets, AI prompt templates, and OAuth credentials.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-zinc-950 border border-zinc-800">
+              <div class="font-bold text-white mb-1 flex items-center gap-2">
+                <i data-lucide="cloud" class="w-4 h-4 text-sky-400"></i> Direct API Communication
+              </div>
+              <p class="text-xs text-zinc-400">
+                Direct TLS 1.3 encrypted HTTPS requests between your desktop and Google APIs, AWS S3, Cloudflare, Netlify, and Vercel.
+              </p>
+            </div>
+          </div>
+
+          <p class="pt-2">
+            The only external server communication made by the desktop software to G-Stack Studio infrastructure is a periodic licensing heartbeat ping to our Google Apps Script license verification endpoint, which checks license activation status, machine hardware ID (HWID), and plan quota limits.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 2: GOOGLE OAUTH & CREDENTIAL ISOLATION -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-6">2. Google OAuth 2.0 &amp; Token Handling</h2>
+        <div class="glass-panel rounded-2xl p-6 sm:p-8 border border-zinc-800 space-y-4 text-sm text-zinc-300 leading-relaxed">
+          <p>
+            G-Stack Studio utilizes Google's standard <strong>Desktop InstalledAppFlow</strong>:
+          </p>
+          <ul class="space-y-2 list-disc list-inside text-xs sm:text-sm text-zinc-300">
+            <li><strong>Bring-Your-Own-Client:</strong> You create an OAuth 2.0 Desktop Client in your own Google Cloud Console. This provides private API quotas and avoids Google's 100-test-user restriction.</li>
+            <li><strong>Local Loopback Authorization:</strong> During authentication, Google redirects to a temporary local loopback web server running on <code class="text-sky-300">http://localhost:[port]</code> on your PC to complete the handshake.</li>
+            <li><strong>Local Token File:</strong> The generated OAuth access and refresh tokens are serialized into <code class="text-sky-300">token.json</code> located strictly in your local app directory.</li>
+            <li><strong>No Cloud Interception:</strong> Our servers never receive, log, or store your Google password, client secrets, access tokens, or Drive file contents.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SECTION 3: REQUESTED GOOGLE SCOPES -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-6">3. Why Google Workspace Permissions are Requested</h2>
+        <div class="overflow-x-auto rounded-2xl border border-zinc-800">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-zinc-950 border-b border-zinc-800 text-zinc-400 font-mono uppercase text-[11px]">
+                <th class="py-4 px-6">OAuth Scope</th>
+                <th class="py-4 px-6">Purpose in G-Stack Studio</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-zinc-800/60 text-zinc-300">
+              <tr>
+                <td class="py-4 px-6 font-mono text-sky-400 font-semibold">https://www.googleapis.com/auth/drive</td>
+                <td class="py-4 px-6 text-zinc-300">Required to create project root hubs, organize 13 subfolders, upload file copies (PDF/ODT/PPTX), set public sharing permissions, and publish files to the web.</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 font-mono text-sky-400 font-semibold">https://www.googleapis.com/auth/documents</td>
+                <td class="py-4 px-6 text-zinc-300">Required to create keyword-optimized Google Docs articles, inject headings, apply paragraph formatting, and embed interlinking anchor tags.</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 font-mono text-sky-400 font-semibold">https://www.googleapis.com/auth/spreadsheets</td>
+                <td class="py-4 px-6 text-zinc-300">Required to generate Master Keyword Directories, tabulate NAP citations, record public URLs, and format client delivery spreadsheets.</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 font-mono text-sky-400 font-semibold">https://www.googleapis.com/auth/calendar &amp; calendar.events</td>
+                <td class="py-4 px-6 text-zinc-300">Required to generate public entity calendars and schedule geotagged business appointment events with driving citations.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- SECTION 4: HARDWARE LOCKING & LICENSE TOKENS -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-6">4. Machine Fingerprinting &amp; License Caching</h2>
+        <div class="glass-panel rounded-2xl p-6 sm:p-8 border border-zinc-800 space-y-4 text-sm text-zinc-300 leading-relaxed">
+          <p>
+            To prevent software piracy while enabling instant offline launching, G-Stack Studio uses ScrapeBox-style machine licensing:
+          </p>
+          <ul class="space-y-2 list-disc list-inside text-xs sm:text-sm text-zinc-300">
+            <li><strong>Hardware ID (HWID):</strong> A non-reversible cryptographic hash combining CPU UUID and Motherboard Serial Number. No personal identifying computer files are read.</li>
+            <li><strong>Cryptographic Cache:</strong> Successful validations are cached locally using HMAC-SHA256 signature verification (<code class="text-sky-300">.license_session.dat</code>) allowing 0.01-second instant offline launch.</li>
+            <li><strong>Machine Transfer Cooldown:</strong> Licenses allow 1 free machine transfer every 30 days to protect against shared key abuse.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SECTION 5: PRIVACY POLICY & COMPLIANCE LINKS -->
+      <section class="p-8 rounded-2xl glass-panel border border-zinc-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <div>
+          <h3 class="text-lg font-bold text-white">Need Further Disclosures?</h3>
+          <p class="text-xs text-zinc-400 mt-1">Review our complete Terms of Service, Privacy Policy, and Google Limited Use disclosures.</p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="privacy.html" class="px-4 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-xs font-semibold text-white">
+            Privacy Policy
+          </a>
+          <a href="privacy.html#oauth" class="px-4 py-2.5 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 border border-sky-500/30 text-xs font-semibold text-sky-400">
+            Google API Disclosures
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==================== GLOBAL FOOTER ==================== -->
+  <footer class="bg-[#070709] border-t border-zinc-800/80 py-16 text-zinc-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider font-mono">Product</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="features.html" class="hover:text-white transition-colors">Features Overview</a></li>
+            <li><a href="google-stack.html" class="hover:text-white transition-colors">Google Stack Engine</a></li>
+            <li><a href="cloud-stacking.html" class="hover:text-white transition-colors">Cloud Stacking</a></li>
+            <li><a href="agency-tools.html" class="hover:text-white transition-colors">Agency Tools</a></li>
+            <li><a href="how-it-works.html" class="hover:text-white transition-colors">How It Works</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider font-mono">Resources</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="tutorials.html" class="hover:text-white transition-colors">Video Tutorials</a></li>
+            <li><a href="security.html" class="hover:text-white transition-colors text-sky-400 font-semibold">Security &amp; OAuth</a></li>
+            <li><a data-link="youtube" href="https://www.youtube.com/@gstackstudio" target="_blank" rel="noopener" class="hover:text-white transition-colors">Official YouTube</a></li>
+            <li><a data-link="whatsapp" href="https://wa.me/923028981089" target="_blank" rel="noopener" class="hover:text-white transition-colors">WhatsApp Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider font-mono">Commercial</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="pricing.html" class="hover:text-white transition-colors">Monthly Subscriptions</a></li>
+            <li><a href="lifetime-deals.html" class="hover:text-white transition-colors">Lifetime Master Deals</a></li>
+            <li><a href="reseller-program.html" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Reseller Program</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact Sales</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider font-mono">Legal &amp; Trust</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="privacy.html#oauth" class="hover:text-white transition-colors">OAuth User Data Policy</a></li>
+            <li><a href="terms.html#refunds" class="hover:text-white transition-colors">30-Day Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-zinc-800/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+        <p>&copy; 2026 G-Stack Studio. All rights reserved. Windows desktop software for SEO agencies.</p>
+        <div class="flex items-center gap-2 text-zinc-500">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>Security Architecture Verified</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/links.js"></script>
+  <script src="js/pricing-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works | Installation-to-Output Walkthrough | G-Stack Studio</title>
+  <meta name="description" content="Step-by-step walkthrough of G-Stack Studio: Windows installation, ScrapeBox-style HWID license activation, Google OAuth connection, stack configuration, batch runs, and client report delivery.">
+  <meta name="keywords" content="G-Stack Studio tutorial, how G-Stack Studio works, Google stack software guide, local SEO automation walkthrough">
+  <link rel="canonical" href="https://gstackstudio.com/how-it-works">
+  
+  <meta property="og:title" content="How G-Stack Studio Works | Complete Walkthrough">
+  <meta property="og:description" content="From desktop download to 20-asset Google entity stacks and multi-cloud websites in under 3 minutes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gstackstudio.com/how-it-works">
+  <meta property="og:image" content="https://gstackstudio.com/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://gstackstudio.com/img/og.jpg">
+
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="light-theme bg-[#09090b] text-zinc-100 min-h-screen relative selection:bg-sky-500/30 selection:text-white">
+
+  <!-- Ambient Glow -->
+  <div class="ambient-glow ambient-blue w-[500px] h-[500px] -top-32 left-1/3"></div>
+  <div class="ambient-glow ambient-cyan w-[400px] h-[400px] top-[1100px] right-10"></div>
+  <div class="absolute inset-0 bg-grid-pattern pointer-events-none opacity-40"></div>
+
+    <!-- ==================== HEADER NAVBAR ==================== -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#09090b]/85 border-b border-white/5">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-3">
+        
+        <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+          <img src="img/logo.png" alt="G-Stack Studio Logo" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl object-contain shrink-0" width="40" height="40">
+          <div class="flex flex-col whitespace-nowrap">
+            <div class="flex items-center gap-1.5 leading-none">
+              <span class="text-lg sm:text-xl font-bold tracking-tight text-white whitespace-nowrap">
+                G-Stack <span class="text-sky-400 font-extrabold">Studio</span>
+              </span>
+              <span class="text-[9px] font-mono uppercase bg-sky-500/10 text-sky-400 px-1.5 py-0.5 rounded-full border border-sky-500/20 font-semibold hidden sm:inline-block">v3.0</span>
+            </div>
+            <span class="text-[9px] tracking-wider text-zinc-400 uppercase font-medium mt-1 hidden 2xl:inline-block">Step-by-Step Guide</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden xl:flex items-center gap-2.5 2xl:gap-5 text-[13px] 2xl:text-sm font-medium text-zinc-300">
+          <a href="features.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Features</a>
+          <a href="google-stack.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Google Stack</a>
+          <a href="cloud-stacking.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Cloud Stacking</a>
+          <a href="agency-tools.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Agency Tools</a>
+          <a href="tutorials.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Tutorials</a>
+          <a href="pricing.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Pricing</a>
+          <a href="lifetime-deals.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Lifetime Deals</a>
+          <a href="reseller-program.html" class="whitespace-nowrap text-amber-500 hover:text-amber-400 font-semibold transition-colors flex items-center gap-1">
+            <i data-lucide="award" class="w-3.5 h-3.5 shrink-0"></i> Reseller Program
+          </a>
+        </nav>
+
+        <div class="hidden md:flex items-center gap-2.5 xl:gap-3 shrink-0">
+          <a data-link="youtube" href="https://www.youtube.com/@gstackstudio" target="_blank" rel="noopener" class="p-2 text-zinc-400 hover:text-red-500 hover:bg-red-500/10 rounded-lg transition-colors shrink-0 flex items-center gap-1.5 text-xs xl:text-sm font-medium" title="Watch Tutorials on YouTube" aria-label="YouTube Channel">
+            <i data-lucide="play-circle" class="w-4 h-4 text-red-500 shrink-0"></i>
+            <span class="hidden 2xl:inline">YouTube</span>
+          </a>
+          <a href="pricing.html" class="btn-glow-primary shrink-0 whitespace-nowrap inline-flex items-center gap-1.5 px-3.5 py-2 xl:px-4 xl:py-2.5 rounded-xl text-xs xl:text-sm font-bold text-white shadow-sm">
+            <i data-lucide="zap" class="w-3.5 h-3.5 text-sky-300 shrink-0"></i> Get Your License
+          </a>
+        </div>
+
+        <button id="mobile-menu-btn" class="xl:hidden p-2 text-zinc-400 hover:text-white shrink-0" aria-label="Toggle menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 right-0 bottom-0 w-80 bg-[#121217] border-l border-zinc-800 z-50 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+        <div class="flex items-center gap-2">
+          <img src="img/logo.png" alt="G-Stack Studio Logo" class="w-6 h-6 object-contain" width="64" height="64">
+          <span class="font-bold text-white text-lg">G-Stack Studio</span>
+        </div>
+        <button id="mobile-menu-close" class="text-zinc-400 hover:text-white" aria-label="Close menu">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+      <div class="flex flex-col gap-3 mt-6 text-sm font-medium">
+        <a href="index.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Home</a>
+        <a href="features.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Features Overview</a>
+        <a href="google-stack.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Google Stack</a>
+        <a href="cloud-stacking.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Cloud Stacking</a>
+        <a href="agency-tools.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Agency Tools</a>
+        <a href="how-it-works.html" class="text-sky-400 py-1.5 font-semibold">How It Works</a>
+        <a href="tutorials.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Video Tutorials</a>
+        <a href="pricing.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Monthly Pricing</a>
+        <a href="lifetime-deals.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Lifetime Deals</a>
+        <a href="reseller-program.html" class="text-amber-400 hover:text-amber-300 py-1.5">Reseller Program</a>
+        <a href="security.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Security Architecture</a>
+        <a href="contact.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Contact Desk</a>
+      </div>
+    </div>
+    <div class="pt-6 border-t border-zinc-800">
+      <a href="pricing.html" class="btn-glow-primary w-full py-3 rounded-xl text-center text-sm font-semibold text-white block">
+        Get Your License
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="py-16 md:py-24 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-6">
+            <i data-lucide="play-circle" class="w-3.5 h-3.5"></i> Execution Architecture
+          </div>
+          <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
+            Installation to Client Delivery Walkthrough
+          </h1>
+          <p class="mt-6 text-lg sm:text-xl text-zinc-300 leading-relaxed">
+            Follow our verified 8-step pipeline: download the desktop application, activate your license key, connect your local Google OAuth credentials, and output complete multi-page stacks in under 3 minutes.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4 items-center">
+            <a href="pricing.html" class="btn-glow-primary px-7 py-3.5 rounded-xl font-bold text-white text-sm inline-flex items-center gap-2">
+              <i data-lucide="zap" class="w-4 h-4"></i> Get License &amp; Download App
+            </a>
+            <a href="tutorials.html" class="px-6 py-3.5 rounded-xl font-semibold text-zinc-300 hover:text-white bg-zinc-900/80 hover:bg-zinc-800 border border-zinc-700 text-sm inline-flex items-center gap-2">
+              <i data-lucide="video" class="w-4 h-4 text-red-500"></i> Watch Video Academy
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8-STEP TIMELINE -->
+    <section class="py-16 bg-[#0c0c11] border-y border-zinc-800/80">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="space-y-12 relative before:absolute before:inset-0 before:left-8 before:w-0.5 before:bg-zinc-800 hidden sm:block"></div>
+
+        <div class="space-y-8">
+          
+          <!-- Step 1 -->
+          <div class="glass-panel rounded-2xl p-6 sm:p-8 border border-zinc-800 flex flex-col sm:flex-row gap-6 items-start">
+            <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 border border-sky-500/30 flex items-center justify-center font-bold text-lg shrink-0">
+              01
+            </div>
+            <div>
+              <span class="text-xs font-mono uppercase tracking-wider text-sky-400 font-bold">Step 1 · Desktop Setup</span>
+              <h2 class="text-xl sm:text-2xl font-bold text-white mt-1 mb-3">Install the Windows Desktop Application</h2>
+              <p class="text-sm text-zinc-300 leading-relaxed">
+                Download the lightweight zip file provided upon purchase. Extract to any directory on your Windows 10/11 workstation (e.g. <code class="text-sky-300 font-mono">C:\GStackStudio\</code>). No complicated runtime dependencies, database configurations, or background server setups required.
+              </p>
+              <div class="mt-4 p-3 rounded-xl bg-zinc-950/80 border border-zinc-800 font-mono text-xs text-zinc-400">
+                Compatibility: Windows 10 / Windows 11 (64-bit) &middot; Portable Execution
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="glass-panel rounded-2xl p-6 sm:p-8 border border-zinc-800 flex flex-col sm:flex-row gap-6 items-start">
+            <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 border border-sky-500/30 flex items-center justify-center font-bold text-lg shrink-0">
+              02
+            </div>
+            <div>
+              <span class="text-xs font-mono uppercase tracking-wider text-sky-400 font-bold">Step 2 · Machine Lock</span>
+              <h2 class="text-xl sm:text-2xl font-bold text-white mt-1 mb-3">License Activation &amp; Device Pairing</h2>
+              <p class="text-sm text-zinc-300 leading-relaxed">
+                Enter your Registered Email Address and Gumroad Transaction ID/License Key in the ScrapeBox-style activation GUI. The software computes a secure Hardware Identifier (HWID) based on your CPU and Motherboard UUID, binding your license for 0.01-second instant offline launching.
+              </p>
+              <div class="mt-4 p-3 rounded-xl bg-zinc-950/80 border border-zinc-800 text-xs text-zinc-400">
+                <strong>Machine Policy:</strong> Standard licenses include 1 PC lock. You receive <strong>1 free machine transfer every 30 days</strong> if you switch computers. Agency Lifetime includes 2 activations; Ultimate Agency includes 5 separate licenses.
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="glass-panel rounded-2xl p-6 sm:p-8 border border-zinc-800 flex flex-col sm:flex-row gap-6 items-start">
+            <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 border border-sky-500/30 flex items-center justify-center font-bold text-lg shrink-0">
+              03
+            </div>
+            <div>
+              <span class="text-xs font-mono uppercase tracking-wider text-sky-400 font-bold">Step 3 · Google Authorization</span>
+              <h2 class="text-xl sm:text-2xl font-bold text-white mt-1 mb-3">Connect Your Google Cloud OAuth Project</h2>
+              <p class="text-sm text-zinc-300 leading-relaxed">
+                In Google Cloud Console, enable the 6 Workspace APIs (Drive, Docs, Sheets, Slides, Forms, Calendar). Download your desktop client <code class="text-sky-300 font-mono">credentials.json</code>. Launch G-Stack Studio, click Authorize, and complete the standard Google consent prompt in your default browser.
+              </p>
+              <div class="mt-4 p-3 rounded-xl bg-zinc-950/80 border border-zinc-800 text-xs text-zinc-400">
+                <strong>Privacy Guarantee:</strong> Authorization tokens are stored locally in <code class="text-sky-300 font-mono">token.json</code> on your PC. No third-party cloud server ever intercepts your Google credentials or client data.
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="glass-panel rounded-2xl p-6 sm:p-8 border border-zinc-800 flex flex-col sm:flex-row gap-6 items-start">
+            <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 border border-sky-500/30 flex items-center justify-center font-bold text-lg shrink-0">
+              04
+            </div>
+            <div>
+              <span class="text-xs font-mono uppercase tracking-wider text-sky-400 font-bold">Step 4 · Intake Configuration</span>
+              <h2 class="text-xl sm:text-2xl font-bold text-white mt-1 mb-3">Configure Agency &amp; Client Intake Profiles</h2>
+              <p class="text-sm text-zinc-300 leading-relaxed">
+                Add your client's business information: Name, Address, Phone (NAP), website URL, Google Business Profile Maps URL, primary keyword targets, LSI terms, and existing social citation links. Saved profiles can be edited, cloned, and re-run whenever new campaigns launch.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="glass-panel rounded-2xl p-6 sm:p-8 border border-zinc-800 flex flex-col sm:flex-row gap-6 items-start">
+            <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 border border-sky-500/30 flex items-center justify-center font-bold text-lg shrink-0">
+              05
+            </div>
+            <div>
+              <span class="text-xs font-mono uppercase tracking-wider text-sky-400 font-bold">Step 5 · Architecture Selection</span>
+              <h2 class="text-xl sm:text-2xl font-bold text-white mt-1 mb-3">Select Desired Assets &amp; Silo Architecture</h2>
+              <p class="text-sm text-zinc-300 leading-relaxed">
+                Tick the exact Google assets you wish to assemble (Select All for the full 20-asset ecosystem). Choose your architecture mode: Single Authority Hub, Keyword Stacks Inside Main Folder, or Keyword Stacks in Separate Folders. Connect your Gemini or OpenAI API key if generating unique articles.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="glass-panel rounded-2xl p-6 sm:p-8 border border-zinc-800 flex flex-col sm:flex-row gap-6 items-start">
+            <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 border border-sky-500/30 flex items-center justify-center font-bold text-lg shrink-0">
+              06
+            </div>
+            <div>
+              <span class="text-xs font-mono uppercase tracking-wider text-sky-400 font-bold">Step 6 · Automated Execution</span>
+              <h2 class="text-xl sm:text-2xl font-bold text-white mt-1 mb-3">Run Automation Engine with Live Progress</h2>
+              <p class="text-sm text-zinc-300 leading-relaxed">
+                Click Build Stack. The desktop engine communicates with Google APIs: creating folders, writing Docs, formatting Sheets, building Slides, generating vector Drawings, publishing to the web, setting public reader permissions, and executing circular reciprocal interlinking.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 7 -->
+          <div class="glass-panel rounded-2xl p-6 sm:p-8 border border-zinc-800 flex flex-col sm:flex-row gap-6 items-start">
+            <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 border border-sky-500/30 flex items-center justify-center font-bold text-lg shrink-0">
+              07
+            </div>
+            <div>
+              <span class="text-xs font-mono uppercase tracking-wider text-sky-400 font-bold">Step 7 · Deliverable Export</span>
+              <h2 class="text-xl sm:text-2xl font-bold text-white mt-1 mb-3">Export 9-Tab Excel &amp; White-Label PDF Reports</h2>
+              <p class="text-sm text-zinc-300 leading-relaxed">
+                Within 120 seconds, the software compiles a master 9-tab branded Excel directory and an executive client PDF report. Every published URL, QR code, and iframe embed snippet is organized for instantaneous client handover.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 8 -->
+          <div class="glass-panel rounded-2xl p-6 sm:p-8 border-2 border-sky-500/40 bg-sky-950/10 flex flex-col sm:flex-row gap-6 items-start">
+            <div class="w-12 h-12 rounded-2xl bg-sky-500/20 text-sky-300 border border-sky-500/50 flex items-center justify-center font-bold text-lg shrink-0">
+              08
+            </div>
+            <div>
+              <span class="text-xs font-mono uppercase tracking-wider text-sky-400 font-bold">Step 8 · Cloud Publishing (Eligible Plans)</span>
+              <h2 class="text-xl sm:text-2xl font-bold text-white mt-1 mb-3">Deploy Multi-Page Static Cloud Authority Sites</h2>
+              <p class="text-sm text-zinc-300 leading-relaxed">
+                On Pro, Agency, or Ultimate plans: tick your target cloud hosting providers (AWS S3, Cloudflare Pages, Netlify, Vercel, GitHub Pages, Backblaze B2, Firebase, or Neocities). Click Deploy to publish lightning-fast static HTML sites interlinked directly with your newly created Google Stack.
+              </p>
+              <div class="mt-4 text-xs text-amber-300 font-medium">
+                * Note: Cloud Publishing is not included in the entry-level Starter plan.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CALL TO ACTION -->
+    <section class="py-16 bg-gradient-to-b from-[#09090b] to-[#121217] border-t border-zinc-800">
+      <div class="max-w-5xl mx-auto px-4 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+          Experience the 120-Second Stacking Workflow
+        </h2>
+        <p class="mt-4 text-zinc-400 text-sm sm:text-base max-w-2xl mx-auto">
+          Choose a monthly plan or a lifetime deal. Instant license delivery to your inbox.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="pricing.html" class="btn-glow-primary px-8 py-4 rounded-xl font-bold text-white text-sm inline-flex items-center gap-2">
+            View Monthly Pricing ($49/mo)
+          </a>
+          <a href="lifetime-deals.html" class="px-8 py-4 rounded-xl font-bold text-white bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-sm inline-flex items-center gap-2">
+            View Lifetime Master Passes ($299)
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== GLOBAL FOOTER ==================== -->
+  <footer class="bg-[#070709] border-t border-zinc-800/80 py-16 text-zinc-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider font-mono">Product</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="features.html" class="hover:text-white transition-colors">Features Overview</a></li>
+            <li><a href="google-stack.html" class="hover:text-white transition-colors">Google Stack Engine</a></li>
+            <li><a href="cloud-stacking.html" class="hover:text-white transition-colors">Cloud Stacking</a></li>
+            <li><a href="agency-tools.html" class="hover:text-white transition-colors">Agency Tools</a></li>
+            <li><a href="how-it-works.html" class="hover:text-white transition-colors text-sky-400 font-semibold">How It Works</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider font-mono">Resources</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="tutorials.html" class="hover:text-white transition-colors">Video Tutorials</a></li>
+            <li><a href="security.html" class="hover:text-white transition-colors">Security &amp; OAuth</a></li>
+            <li><a data-link="youtube" href="https://www.youtube.com/@gstackstudio" target="_blank" rel="noopener" class="hover:text-white transition-colors">Official YouTube</a></li>
+            <li><a data-link="whatsapp" href="https://wa.me/923028981089" target="_blank" rel="noopener" class="hover:text-white transition-colors">WhatsApp Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider font-mono">Commercial</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="pricing.html" class="hover:text-white transition-colors">Monthly Subscriptions</a></li>
+            <li><a href="lifetime-deals.html" class="hover:text-white transition-colors">Lifetime Master Deals</a></li>
+            <li><a href="reseller-program.html" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Reseller Program</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact Sales</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider font-mono">Legal &amp; Trust</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="privacy.html#oauth" class="hover:text-white transition-colors">OAuth User Data Policy</a></li>
+            <li><a href="terms.html#refunds" class="hover:text-white transition-colors">30-Day Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-zinc-800/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+        <p>&copy; 2026 G-Stack Studio. All rights reserved. Windows desktop software for SEO agencies.</p>
+        <div class="flex items-center gap-2 text-zinc-500">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>Desktop Pipeline: Operational</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/links.js"></script>
+  <script src="js/pricing-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

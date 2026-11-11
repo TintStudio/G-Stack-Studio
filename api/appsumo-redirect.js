@@ -17,7 +17,7 @@ function esc(s) {
 
 function page(title, inner) {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)} | G-Stack Studio</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>${esc(title)} | G-Stack Studio</title>
 <style>
 :root{--bg:#09090b;--card:#18181b;--line:#27272a;--ink:#fafafa;--mut:#a1a1aa;--acc:#38bdf8;--btn:#0284c7}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,Segoe UI,sans-serif;display:grid;place-items:center;min-height:100vh;padding:24px 16px}

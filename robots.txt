@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /trusted-reseller
+Disallow: /trusted-reseller.html
+Disallow: /reseller
+Disallow: /reseller.html
+Disallow: /api/
+
+Sitemap: https://gstackstudio.com/sitemap.xml

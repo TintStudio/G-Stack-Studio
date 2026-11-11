@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>G-Stack Studio | Google Authority Stacking & Multi-Cloud Stacking Suite</title>
+  <title>G-Stack Studio | Automate Your SEO Stacking Workflow</title>
+  <meta name="description" content="Build authoritative 20+ asset Google Drive Entity Stacks and deploy static multi-page websites to 8 cloud providers in under 3 minutes. Windows desktop automation for SEO agencies.">
+  <meta name="keywords" content="Google authority stacking software, Google entity stack builder, cloud stacking software, local SEO agency tools, automated citation software">
+  <link rel="canonical" href="https://gstackstudio.com/">
+  
+  <meta property="og:title" content="G-Stack Studio | Automate Your SEO Stacking Workflow">
+  <meta property="og:description" content="The world's fastest desktop automation engine for Google Drive entity stacking and multi-cloud static website deployment.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gstackstudio.com/">
   <meta property="og:image" content="https://gstackstudio.com/img/og.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://gstackstudio.com/img/og.jpg">
 
-  <meta name="description" content="Build complete 20+ Asset Google Entity Stacks in under 3 minutes. The world's fastest desktop automation engine for SEO agencies, local businesses, and link builders.">
-  <meta name="keywords" content="Google Authority Stacking, Local SEO Software, Cloud Stacking, Entity Stacking, SEO Agency Tools, Google Drive Stacking">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="img/favicon.png"><polygon points='12 2 2 7 12 12 22 7 12 2'></polygon><polyline points='2 17 12 22 22 17'></polyline><polyline points='2 12 12 17 22 12'></polyline></svg>">
-
-  <!-- Tailwind CSS CDN -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -25,83 +25,70 @@
         extend: {
           colors: {
             brand: {
-              50: '#f0f9ff',
-              100: '#e0f2fe',
               400: '#38bdf8',
               500: '#0ea5e9',
               600: '#0284c7',
               700: '#0369a1',
-              900: '#0c4a6e',
-            },
-            dark: {
-              bg: '#09090b',
-              card: '#121217',
-              border: '#27272a',
-              hover: '#181820'
             }
           }
         }
       }
     }
   </script>
-
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- Custom Styles -->
   <link rel="stylesheet" href="css/custom.css">
 </head>
-<body class="bg-[#09090b] text-zinc-100 min-h-screen relative selection:bg-sky-500/30 selection:text-white">
+<body class="light-theme bg-[#09090b] text-zinc-100 min-h-screen relative selection:bg-sky-500/30 selection:text-white">
 
-  <!-- Ambient Glow Effects -->
+  <!-- Ambient Glow -->
   <div class="ambient-glow ambient-blue w-[600px] h-[600px] -top-40 left-1/2 -translate-x-1/2"></div>
   <div class="ambient-glow ambient-cyan w-[450px] h-[450px] top-[900px] -left-20"></div>
   <div class="ambient-glow ambient-purple w-[500px] h-[500px] top-[2400px] -right-20"></div>
-
-  <!-- Background Grid Pattern -->
   <div class="absolute inset-0 bg-grid-pattern pointer-events-none opacity-40"></div>
 
-  <!-- ==================== 1. NAVBAR ==================== -->
-  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#09090b]/80 border-b border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
+    <!-- ==================== HEADER NAVBAR ==================== -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#09090b]/85 border-b border-white/5">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-3">
         
-        <!-- Brand Logo -->
-        <a href="index.html" class="flex items-center gap-3 group">
-          <img src="img/logo.png" alt="G-Stack Studio logo" class="w-10 h-10 rounded-xl object-contain" width="64" height="64">
-          <div class="flex flex-col">
-            <span class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-              G-Stack <span class="text-sky-400 font-extrabold">Studio</span>
-              <span class="text-[10px] font-mono uppercase bg-sky-500/10 text-sky-400 px-2 py-0.5 rounded-full border border-sky-500/20 hidden sm:inline-block">v2.1</span>
-            </span>
-            <span class="text-[10px] tracking-wider text-zinc-400 uppercase font-medium">Google Stacking & Cloud Stacking Suite</span>
+        <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+          <img src="img/logo.png" alt="G-Stack Studio Logo" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl object-contain shrink-0" width="40" height="40">
+          <div class="flex flex-col whitespace-nowrap">
+            <div class="flex items-center gap-1.5 leading-none">
+              <span class="text-lg sm:text-xl font-bold tracking-tight text-white whitespace-nowrap">
+                G-Stack <span class="text-sky-400 font-extrabold">Studio</span>
+              </span>
+              <span class="text-[9px] font-mono uppercase bg-sky-500/10 text-sky-400 px-1.5 py-0.5 rounded-full border border-sky-500/20 font-semibold hidden sm:inline-block">v3.0</span>
+            </div>
+            <span class="text-[9px] tracking-wider text-zinc-400 uppercase font-medium mt-1 hidden 2xl:inline-block">Google Stacking &amp; Multi-Cloud Suite</span>
           </div>
         </a>
 
-        <!-- Desktop Navigation Links -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-300">
-          <a href="#features" class="hover:text-sky-400 transition-colors">Features</a>
-            <a href="#agency-tools" class="hover:text-sky-400 transition-colors">Agencies</a>
-            <a href="#assets" class="hover:text-sky-400 transition-colors">20 Assets</a>
-          <a href="#how-it-works" class="hover:text-sky-400 transition-colors">How It Works</a>
-          <a href="#videos" class="hover:text-sky-400 transition-colors">Videos</a>
-          <a href="#pricing" class="hover:text-sky-400 transition-colors">Pricing</a>
-          <a href="#contact" class="hover:text-sky-400 transition-colors">Contact</a>
+        <!-- Desktop Navigation -->
+        <nav class="hidden xl:flex items-center gap-2.5 2xl:gap-5 text-[13px] 2xl:text-sm font-medium text-zinc-300">
+          <a href="features.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Features</a>
+          <a href="google-stack.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Google Stack</a>
+          <a href="cloud-stacking.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Cloud Stacking</a>
+          <a href="agency-tools.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Agency Tools</a>
+          <a href="tutorials.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Tutorials</a>
+          <a href="pricing.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Pricing</a>
+          <a href="lifetime-deals.html" class="whitespace-nowrap hover:text-sky-400 transition-colors">Lifetime Deals</a>
+          <a href="reseller-program.html" class="whitespace-nowrap text-amber-500 hover:text-amber-400 font-semibold transition-colors flex items-center gap-1">
+            <i data-lucide="award" class="w-3.5 h-3.5 shrink-0"></i> Reseller Program
+          </a>
         </nav>
 
-        <!-- Action Buttons -->
-        <div class="hidden md:flex items-center gap-4">
-          <a data-link="youtube" href="#videos" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors flex items-center gap-1.5">
-            <i data-lucide="play-circle" class="w-4 h-4 text-red-500"></i> YouTube
+        <div class="hidden md:flex items-center gap-2.5 xl:gap-3 shrink-0">
+          <a data-link="youtube" href="https://www.youtube.com/@gstackstudio" target="_blank" rel="noopener" class="p-2 text-zinc-400 hover:text-red-500 hover:bg-red-500/10 rounded-lg transition-colors shrink-0 flex items-center gap-1.5 text-xs xl:text-sm font-medium" title="Watch Tutorials on YouTube" aria-label="YouTube Channel">
+            <i data-lucide="play-circle" class="w-4 h-4 text-red-500 shrink-0"></i>
+            <span class="hidden 2xl:inline">YouTube</span>
           </a>
-          <a href="#pricing" class="btn-glow-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white">
-            <i data-lucide="zap" class="w-4 h-4 text-sky-300"></i>
-            Get Instant Access
+          <a href="#pricing-paths" class="btn-glow-primary shrink-0 whitespace-nowrap inline-flex items-center gap-1.5 px-3.5 py-2 xl:px-4 xl:py-2.5 rounded-xl text-xs xl:text-sm font-bold text-white shadow-sm">
+            <i data-lucide="zap" class="w-3.5 h-3.5 text-sky-300 shrink-0"></i> Get Your License
           </a>
         </div>
 
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="md:hidden p-2 text-zinc-400 hover:text-white focus:outline-none" aria-label="Toggle menu">
+        <button id="mobile-menu-btn" class="xl:hidden p-2 text-zinc-400 hover:text-white shrink-0" aria-label="Toggle menu">
           <i data-lucide="menu" class="w-6 h-6"></i>
         </button>
       </div>
@@ -114,2170 +101,540 @@
     <div>
       <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
         <div class="flex items-center gap-2">
-          <img src="img/logo.png" alt="G-Stack Studio logo" class="w-6 h-6 object-contain" width="64" height="64">
+          <img src="img/logo.png" alt="G-Stack Studio Logo" class="w-6 h-6 object-contain" width="64" height="64">
           <span class="font-bold text-white text-lg">G-Stack Studio</span>
         </div>
         <button id="mobile-menu-close" class="text-zinc-400 hover:text-white" aria-label="Close menu">
           <i data-lucide="x" class="w-6 h-6"></i>
         </button>
       </div>
-      <div class="flex flex-col gap-4 mt-6 text-base font-medium">
-        <a href="#features" class="text-zinc-300 hover:text-sky-400 py-2 flex items-center gap-2">
-          <i data-lucide="cpu" class="w-4 h-4 text-sky-400"></i> Features
-        </a>
-        <a href="#how-it-works" class="text-zinc-300 hover:text-sky-400 py-2 flex items-center gap-2">
-          <i data-lucide="git-merge" class="w-4 h-4 text-sky-400"></i> How It Works
-        </a>
-        <a href="#videos" class="text-zinc-300 hover:text-sky-400 py-2 flex items-center gap-2">
-          <i data-lucide="play-circle" class="w-4 h-4 text-sky-400"></i> Videos
-        </a>
-        <a href="#comparison" class="text-zinc-300 hover:text-sky-400 py-2 flex items-center gap-2">
-          <i data-lucide="bar-chart-2" class="w-4 h-4 text-sky-400"></i> Manual vs Automated
-        </a>
-        <a href="#pricing" class="text-zinc-300 hover:text-sky-400 py-2 flex items-center gap-2">
-          <i data-lucide="tag" class="w-4 h-4 text-sky-400"></i> Pricing
-        </a>
-        <a href="#contact" class="text-zinc-300 hover:text-sky-400 py-2 flex items-center gap-2">
-          <i data-lucide="mail" class="w-4 h-4 text-sky-400"></i> Contact
-        </a>
+      <div class="flex flex-col gap-3 mt-6 text-sm font-medium">
+        <a href="index.html" class="text-sky-400 py-1.5 font-semibold">Home</a>
+        <a href="features.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Features Overview</a>
+        <a href="google-stack.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Google Stack Engine</a>
+        <a href="cloud-stacking.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Cloud Stacking</a>
+        <a href="agency-tools.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Agency Tools</a>
+        <a href="how-it-works.html" class="text-zinc-300 hover:text-sky-400 py-1.5">How It Works</a>
+        <a href="tutorials.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Video Tutorials</a>
+        <a href="pricing.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Monthly Pricing</a>
+        <a href="lifetime-deals.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Lifetime Deals</a>
+        <a href="reseller-program.html" class="text-amber-400 hover:text-amber-300 py-1.5">Reseller Program</a>
+        <a href="security.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Security Architecture</a>
+        <a href="about.html" class="text-zinc-300 hover:text-sky-400 py-1.5">About Us</a>
+        <a href="contact.html" class="text-zinc-300 hover:text-sky-400 py-1.5">Contact Desk</a>
       </div>
     </div>
-    <div class="flex flex-col gap-3 pt-6 border-t border-zinc-800">
-      <a href="#pricing" class="btn-glow-primary w-full py-3 rounded-xl text-center text-sm font-semibold text-white flex items-center justify-center gap-2">
-        <i data-lucide="zap" class="w-4 h-4"></i> Get Instant Access
-      </a>
-      <a data-link="youtube" href="#videos" class="w-full py-3 rounded-xl text-center text-sm font-medium text-zinc-300 bg-zinc-800/80 border border-zinc-700/60">
-        Watch on YouTube
+    <div class="pt-6 border-t border-zinc-800">
+      <a href="#pricing-paths" class="btn-glow-primary w-full py-3 rounded-xl text-center text-sm font-semibold text-white block">
+        Get Your License
       </a>
     </div>
   </div>
 
   <main>
-    <!-- ==================== 2. HERO SECTION ==================== -->
-    <!-- ==================== PAKISTAN LOCAL PAYMENT BANNER ==================== -->
-    <div class="bg-gradient-to-r from-emerald-700 via-emerald-600 to-emerald-700 text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center text-sm">
-        <span class="font-semibold text-amber-200">⏳ Lifetime deal: limited time only.</span>
-        <a data-link="gumroadLifetime" href="#pricing" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-amber-400 text-black font-bold text-xs hover:bg-amber-300"><i data-lucide="infinity" class="w-3.5 h-3.5"></i> Get Lifetime Deal</a>
-        <span class="font-semibold">🇵🇰 In Pakistan? Pay by local bank transfer (PKR).</span>
-        <a href="https://wa.me/923028981089?text=Hi%2C%20I%20want%20to%20buy%20G-Stack%20Studio%20and%20pay%20from%20a%20Pakistani%20bank%20%28local%20transfer%29." target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white text-emerald-700 font-bold text-xs hover:bg-emerald-50"><i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Message us on WhatsApp</a>
-      </div>
-    </div>
-
-    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- HERO SECTION -->
+    <section class="py-16 md:py-24 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
-        <!-- Top Authority Pill -->
-        <div class="flex justify-center mb-8">
-          <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-panel border border-sky-500/30 shadow-lg shadow-sky-500/10">
-            <span class="flex h-2 w-2 relative">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
-            </span>
-            <span class="text-xs sm:text-sm font-medium text-zinc-300">
-              <strong class="text-sky-400 font-semibold">2 Core SEO Engines:</strong> Google Authority Stacks + 8-Cloud Stacking
-            </span>
-            <span class="hidden sm:inline-block text-zinc-600">|</span>
-            <span class="hidden sm:inline-block text-xs font-mono text-emerald-400">3-Minute Fast Build</span>
-          </div>
+        <!-- Authority Pill -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-8">
+          <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+          <span>Desktop Automation Engine &middot; Windows 10/11</span>
         </div>
 
-        <!-- Headline & Subheadline -->
-        <div class="text-center max-w-4xl mx-auto">
-          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.15]">
-            Your Clients Want 
-            <span class="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
-              Google Stacks.
-            </span>
-            <br class="hidden sm:inline">
-            Build Them in 
-            <span class="bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">
-              Minutes, Not Hours.
-            </span>
-          </h1>
-          <p class="mt-6 text-lg sm:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
-            The complete all-in-one desktop automation suite for SEO agencies. Build 20-asset Google entity hubs directly in your own Google Drive, publish multi-page cloud websites across 8 networks, and generate 100% white-label client reports in under 3 minutes.
-          </p>
+        <!-- Headline -->
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight max-w-5xl mx-auto">
+          Automate Your SEO Stacking Workflow.
+        </h1>
 
-          <!-- 3 Core Tools Highlight Bar -->
-          <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto text-left">
-            <div class="p-4 rounded-2xl glass-panel border border-sky-500/30 flex items-start gap-3 bg-sky-500/5 hover:border-sky-500/50 transition-all">
-              <div class="w-9 h-9 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0 mt-0.5">
-                <i data-lucide="layers" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <span class="text-[10px] font-mono uppercase font-bold text-sky-400 tracking-wider">Feature 1</span>
-                <h3 class="text-sm font-bold text-white">Google Authority Stacking</h3>
-                <p class="text-xs text-zinc-400 mt-0.5">20 interlinked Google assets in your own Google Drive.</p>
-              </div>
+        <!-- Supporting Copy -->
+        <p class="mt-6 text-lg sm:text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed">
+          Build authoritative 20+ asset Google Drive Entity Stacks and deploy static multi-page websites across 8 cloud providers in under 3 minutes. High-speed desktop software built for SEO agencies and local consultants.
+        </p>
+
+        <!-- Plan Note -->
+        <p class="mt-3 text-xs text-zinc-400">
+          * Starter plan includes complete Google Stack automation. Cloud Stacking is included on Pro, Agency, and Ultimate plans.
+        </p>
+
+        <!-- CTAs -->
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="#pricing-paths" class="btn-glow-primary px-8 py-4 rounded-xl font-bold text-white text-sm inline-flex items-center gap-2">
+            <i data-lucide="zap" class="w-4 h-4"></i> Get Your License
+          </a>
+          <a href="tutorials.html" class="px-8 py-4 rounded-xl font-semibold text-zinc-300 hover:text-white bg-zinc-900/80 hover:bg-zinc-800 border border-zinc-700 text-sm inline-flex items-center gap-2">
+            <i data-lucide="play-circle" class="w-4 h-4 text-red-500"></i> Watch Product Demo
+          </a>
+        </div>
+
+        <!-- LIVE INTERACTIVE ENGINE SIMULATION CARD -->
+        <div class="mt-16 max-w-4xl mx-auto glass-panel rounded-3xl p-6 sm:p-8 border border-zinc-800 text-left relative shadow-2xl shadow-sky-950/40">
+          <div class="flex items-center justify-between pb-4 border-b border-zinc-800 mb-6">
+            <div class="flex items-center gap-3">
+              <span class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></span>
+              <span class="text-xs font-mono uppercase tracking-wider text-white font-bold">Live Execution Engine: 120s Run</span>
             </div>
+            <div class="text-xs font-mono text-sky-400 font-bold" id="sim-percent">100%</div>
+          </div>
 
-            <div class="p-4 rounded-2xl glass-panel border border-cyan-500/30 flex items-start gap-3 bg-cyan-500/5 hover:border-cyan-500/50 transition-all">
-              <div class="w-9 h-9 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0 mt-0.5">
-                <i data-lucide="cloud" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <span class="text-[10px] font-mono uppercase font-bold text-cyan-400 tracking-wider">Feature 2</span>
-                <h3 class="text-sm font-bold text-white">Multi-Cloud Stacking</h3>
-                <p class="text-xs text-zinc-400 mt-0.5">Publish static websites to GitHub, Netlify, Vercel, Cloudflare &amp; S3.</p>
-              </div>
+          <div class="w-full bg-zinc-900 h-2.5 rounded-full overflow-hidden mb-6">
+            <div id="sim-progress-bar" class="h-full bg-gradient-to-r from-sky-500 via-indigo-500 to-emerald-400 transition-all duration-300" style="width: 100%;"></div>
+          </div>
+
+          <div id="sim-asset-list" class="space-y-2 mb-6 min-h-[140px]">
+            <div class="flex items-center justify-between text-xs py-1.5 px-3 rounded-lg bg-zinc-950 border border-zinc-800/80 text-zinc-300">
+              <span class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span class="font-mono text-white">Google Drive Root Authority Hub</span>
+              </span>
+              <span class="text-emerald-400 font-mono text-[11px]">LIVE 200 OK</span>
             </div>
-
-            <div class="p-4 rounded-2xl glass-panel border border-emerald-500/30 flex items-start gap-3 bg-emerald-500/5 hover:border-emerald-500/50 transition-all">
-              <div class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
-                <i data-lucide="file-check" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <span class="text-[10px] font-mono uppercase font-bold text-emerald-400 tracking-wider">Feature 3</span>
-                <h3 class="text-sm font-bold text-white">White-Label Reports</h3>
-                <p class="text-xs text-zinc-400 mt-0.5">Client-ready PDF &amp; Excel reports with your agency logo &amp; live links.</p>
-              </div>
+            <div class="flex items-center justify-between text-xs py-1.5 px-3 rounded-lg bg-zinc-950 border border-zinc-800/80 text-zinc-300">
+              <span class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span class="font-mono text-white">13 Subfolder Silo Taxonomy Created</span>
+              </span>
+              <span class="text-emerald-400 font-mono text-[11px]">LIVE 200 OK</span>
+            </div>
+            <div class="flex items-center justify-between text-xs py-1.5 px-3 rounded-lg bg-zinc-950 border border-zinc-800/80 text-zinc-300">
+              <span class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span class="font-mono text-white">Circular Silo Interlinks Connected</span>
+              </span>
+              <span class="text-emerald-400 font-mono text-[11px]">LIVE 200 OK</span>
+            </div>
+            <div class="flex items-center justify-between text-xs py-1.5 px-3 rounded-lg bg-zinc-950 border border-zinc-800/80 text-zinc-300">
+              <span class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span class="font-mono text-white">White-Label 9-Tab Excel &amp; PDF Report Compiled</span>
+              </span>
+              <span class="text-emerald-400 font-mono text-[11px]">DELIVERABLE READY</span>
             </div>
           </div>
 
-          <!-- Dual CTAs -->
-          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5">
-            <a href="#pricing" class="btn-glow-primary w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white flex items-center justify-center gap-3 shadow-xl">
-              <i data-lucide="rocket" class="w-5 h-5 text-sky-200"></i>
-              Start Building Authority Now
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          <div class="pt-4 border-t border-zinc-800/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-zinc-400">
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+              <span>Local Desktop Execution &middot; Direct Official Google &amp; Cloud APIs</span>
+            </div>
+            <a href="how-it-works.html" class="text-sky-400 hover:text-sky-300 font-semibold inline-flex items-center gap-1">
+              Explore 8-Step Walkthrough &rarr;
             </a>
-            <a href="#videos" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-semibold text-zinc-300 bg-zinc-900/80 hover:bg-zinc-800 border border-zinc-700/80 flex items-center justify-center gap-2 transition-all">
-              <i data-lucide="play-circle" class="w-5 h-5 text-sky-400"></i>
-              Watch the Videos
-            </a>
-          </div>
-
-          <!-- Social Proof Badges -->
-          <div class="mt-10 flex flex-wrap items-center justify-center gap-y-3 gap-x-6 text-xs sm:text-sm text-zinc-400 font-medium">
-            <div class="flex items-center gap-2">
-              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
-              <span>Built for SEO Agencies</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
-              <span>100% White-Label Brand Reports (PDF + Excel)</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
-              <span>Google Stacks + Cloud Stacks</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <i data-lucide="shield-check" class="w-4 h-4 text-sky-400"></i>
-              <span>100% Local Privacy (Zero Cloud Token Storing)</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- ==================== APP UI MOCKUP / DASHBOARD PREVIEW ==================== -->
-        <div class="mt-16 sm:mt-20 max-w-5xl mx-auto relative">
-          <!-- Outer glowing frame -->
-          <div class="absolute -inset-1.5 bg-gradient-to-r from-sky-500/30 via-cyan-400/20 to-blue-600/30 rounded-2xl blur-lg opacity-70 group-hover:opacity-100 transition duration-1000"></div>
-
-          <div class="relative rounded-2xl glass-panel border border-zinc-700/70 overflow-hidden shadow-2xl shadow-black/80">
-            
-            <!-- Window Titlebar -->
-            <div class="bg-zinc-950/90 px-4 py-3 border-b border-zinc-800 flex items-center justify-between">
-              <div class="flex items-center gap-2">
-                <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-                <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
-                <span class="ml-3 text-xs font-mono text-zinc-400 flex items-center gap-1.5">
-                  <i data-lucide="terminal" class="w-3.5 h-3.5 text-sky-400"></i>
-                  G-Stack Studio v2.4 (Enterprise Desktop Engine)
-                </span>
-              </div>
-              <div class="flex items-center gap-3">
-                <span class="text-[11px] font-mono bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/20 flex items-center gap-1">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  Google Cloud OAuth 2.0 Connected
-                </span>
-                <span class="hidden sm:inline text-[11px] text-zinc-500 font-mono">Workspace: Client_ApexRoofing_Dallas</span>
-              </div>
-            </div>
-
-            <!-- Mock Dashboard Body -->
-            <div class="p-6 sm:p-8 bg-[#0c0c10]/95 space-y-6">
-              
-              <!-- Quick Stats Bar -->
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                <div class="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800/80">
-                  <div class="text-[11px] text-zinc-400 font-medium">Stack Architecture</div>
-                  <div class="text-base font-bold text-white mt-1 flex items-center gap-1.5">
-                    <span class="text-sky-400 font-mono">Single Hub</span> (13 Silos)
-                  </div>
-                </div>
-                <div class="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800/80">
-                  <div class="text-[11px] text-zinc-400 font-medium">Total Cloud Assets</div>
-                  <div class="text-base font-bold text-emerald-400 mt-1 font-mono">20 / 20 Online</div>
-                </div>
-                <div class="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800/80">
-                  <div class="text-[11px] text-zinc-400 font-medium">Circular Interlinks</div>
-                  <div class="text-base font-bold text-sky-400 mt-1 font-mono">144 Cross-Links</div>
-                </div>
-                <div class="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800/80">
-                  <div class="text-[11px] text-zinc-400 font-medium">Build Time Elapsed</div>
-                  <div class="text-base font-bold text-zinc-200 mt-1 font-mono flex items-center gap-1">
-                    <i data-lucide="timer" class="w-4 h-4 text-amber-400"></i>
-                    1m 48s
-                  </div>
-                </div>
-              </div>
-
-              <!-- Main Simulation Panel -->
-              <div class="rounded-xl border border-zinc-800 bg-zinc-950/60 p-5 space-y-4">
-                <div class="flex items-center justify-between text-xs">
-                  <span class="font-mono text-zinc-300 font-semibold flex items-center gap-2">
-                    <img src="img/logo.png" alt="G-Stack Studio logo" class="w-4 h-4 object-contain" width="64" height="64">
-                    AUTOMATED 20-ASSET GENERATION ENGINE
-                  </span>
-                  <span id="sim-percent" class="font-mono text-sky-400 font-bold">100%</span>
-                </div>
-
-                <!-- Progress Bar -->
-                <div class="w-full bg-zinc-900 h-2.5 rounded-full overflow-hidden border border-zinc-800">
-                  <div id="sim-progress-bar" class="h-full bg-gradient-to-r from-sky-500 to-cyan-400 transition-all duration-300 w-full shadow-lg shadow-sky-500/50"></div>
-                </div>
-
-                <!-- Dynamic Real-Time Terminal Feed -->
-                <div class="space-y-2 pt-2">
-                  <div class="text-[11px] text-zinc-400 uppercase font-mono tracking-wider flex items-center justify-between">
-                    <span>Active Entity Stack Threads</span>
-                    <span class="text-emerald-400 flex items-center gap-1">
-                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Live Execution
-                    </span>
-                  </div>
-                  <div id="sim-asset-list" class="space-y-1.5 min-h-[110px]">
-                    <div class="flex items-center justify-between text-xs py-1 px-2.5 rounded bg-zinc-900/80 border border-zinc-800/80 text-zinc-300">
-                      <span class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                        <span class="font-mono text-zinc-200">Google Docs Authority Article (Dallas Roofing Experts)</span>
-                      </span>
-                      <span class="text-emerald-400 font-mono text-[10px]">HTTP 200 OK • PUBLISHED</span>
-                    </div>
-                    <div class="flex items-center justify-between text-xs py-1 px-2.5 rounded bg-zinc-900/80 border border-zinc-800/80 text-zinc-300">
-                      <span class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                        <span class="font-mono text-zinc-200">Google MyMaps (100 KML Radius Geo-Coded Pins + Driving Directions)</span>
-                      </span>
-                      <span class="text-emerald-400 font-mono text-[10px]">GEO-PINNED</span>
-                    </div>
-                    <div class="flex items-center justify-between text-xs py-1 px-2.5 rounded bg-zinc-900/80 border border-zinc-800/80 text-zinc-300">
-                      <span class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                        <span class="font-mono text-zinc-200">Circular Silo Interlinking (KW1 ➔ KW2 ➔ KW3 ➔ Master Sheet)</span>
-                      </span>
-                      <span class="text-sky-400 font-mono text-[10px]">CONNECTED</span>
-                    </div>
-                    <div class="flex items-center justify-between text-xs py-1 px-2.5 rounded bg-zinc-900/80 border border-zinc-800/80 text-zinc-300">
-                      <span class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                        <span class="font-mono text-zinc-200">White-Label Client Excel Dossier (.xlsx) & Interactive HTML Portal</span>
-                      </span>
-                      <span class="text-emerald-400 font-mono text-[10px]">READY TO DELIVER</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Action Strip in preview -->
-                <div class="pt-2 flex flex-wrap items-center justify-between gap-3 border-t border-zinc-800/80 text-xs">
-                  <div class="flex items-center gap-2 text-zinc-400 font-mono">
-                    <i data-lucide="shield" class="w-4 h-4 text-sky-400"></i>
-                    OAuth Token: <span class="text-zinc-300">Stored in Local AppData (C:\...)</span>
-                  </div>
-                  <div class="flex items-center gap-2">
-                    <button onclick="showToast('Sample Deliverable Report Generated!')" class="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-zinc-700 text-xs font-medium transition-colors">
-                      Preview Client Report (.xlsx)
-                    </button>
-                    <a href="#features" class="px-3 py-1.5 rounded-lg bg-sky-600/20 hover:bg-sky-600/30 text-sky-300 border border-sky-500/30 text-xs font-medium transition-colors flex items-center gap-1">
-                      Explore All 20 Assets <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-                    </a>
-                  </div>
-                </div>
-
-              </div>
-            </div>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- ==================== WHAT YOU CAN BUILD (brand images) ==================== -->
-    <section id="features" class="scroll-mt-20 py-20 md:py-28 relative border-t border-white/5">
+    <!-- SECTION 1: CORE CAPABILITIES BENTO GRID -->
+    <section class="py-16 bg-[#0c0c11] border-y border-zinc-800/80">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-14">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-4"><i data-lucide="layers" class="w-3.5 h-3.5"></i> Complete Agency SEO &amp; Automation Suite</div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Everything a stacking campaign needs</h2>
-          <p class="mt-4 text-base sm:text-lg text-zinc-400">Google stacks in your Drive, keyword websites on 8 clouds, your own content as full sites, and a branded report for the client.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <article class="glass-panel rounded-2xl border border-zinc-800 overflow-hidden hover:border-sky-500/50 transition-colors">
-            <img src="img/feature_google.webp" alt="Google Drive hub linked to Docs, Sheets, Slides, Forms, PDF and Maps assets" width="765" height="509" loading="lazy" class="w-full h-auto block">
-            <div class="p-6">
-              <span class="inline-block text-[10px] font-mono font-bold uppercase tracking-wider text-sky-400 bg-sky-500/10 border border-sky-500/20 px-2 py-0.5 rounded mb-2">Core Tool 1</span>
-              <h3 class="text-xl font-bold text-white">Google Authority Stack</h3>
-              <p class="text-sm text-zinc-400 mt-2">Docs articles, Sheets, Slides, Drawings, a lead Form, a public Calendar, KML and Maps assets and PDFs, all interlinked around your client's keyword inside your own Drive.</p>
-            </div>
-          </article>
-          <article class="glass-panel rounded-2xl border border-zinc-800 overflow-hidden hover:border-sky-500/50 transition-colors">
-            <img src="img/feature_cloud.webp" alt="One website published to GitHub Pages, Vercel, Netlify, Cloudflare, AWS S3, Backblaze B2, Firebase and Neocities" width="765" height="509" loading="lazy" class="w-full h-auto block">
-            <div class="p-6">
-              <span class="inline-block text-[10px] font-mono font-bold uppercase tracking-wider text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 px-2 py-0.5 rounded mb-2">Core Tool 2</span>
-              <h3 class="text-xl font-bold text-white">Multi-Cloud Stacking</h3>
-              <p class="text-sm text-zinc-400 mt-2">Multi-page keyword websites published to GitHub Pages, Netlify, Vercel, Cloudflare Pages, AWS S3, Backblaze B2, Firebase and Neocities.</p>
-            </div>
-          </article>
-          <article class="glass-panel rounded-2xl border border-zinc-800 overflow-hidden hover:border-sky-500/50 transition-colors">
-            <img src="img/feature_own_content.webp" alt="An Excel sheet turning into several finished web pages" width="765" height="509" loading="lazy" class="w-full h-auto block">
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-white">Own Content Builder</h3>
-              <p class="text-sm text-zinc-400 mt-2">Fill one Excel sheet with your own content and publish it as a full website on every cloud you pick.</p>
-            </div>
-          </article>
-          <article class="glass-panel rounded-2xl border border-zinc-800 overflow-hidden hover:border-sky-500/50 transition-colors">
-            <img src="img/feature_reports.webp" alt="White-label PDF and Excel brand report with your logo and every live link" width="765" height="509" loading="lazy" class="w-full h-auto block">
-            <div class="p-6">
-              <span class="inline-block text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded mb-2">Core Feature 4 &middot; Client Deliverable</span>
-              <h3 class="text-xl font-bold text-white">White-Label Brand Reports</h3>
-              <p class="text-sm text-zinc-400 mt-2">Every build automatically generates professionally branded PDF and Excel reports carrying your agency's logo, colors, contact details, and every live indexed URL ready for instant client handoff.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ==================== AGENCY TOOLS ==================== -->
-    <section id="agency-tools" class="scroll-mt-20 py-20 md:py-28 relative border-t border-white/5 bg-[#0b0b10]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-14">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-4"><i data-lucide="briefcase" class="w-3.5 h-3.5"></i> Built for agencies</div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Run every agency and every client from one app</h2>
-          <p class="mt-4 text-base sm:text-lg text-zinc-400">Separate brands, separate Google accounts, separate reports. One dashboard.</p>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <article class="glass-panel rounded-2xl border border-zinc-800 p-6 hover:border-emerald-500/50 transition-colors">
-            <i data-lucide="building-2" class="w-8 h-8 text-emerald-400"></i>
-            <h3 class="text-lg font-bold text-white mt-4">Multiple Agencies</h3>
-            <p class="text-sm text-zinc-400 mt-2">Create an agency profile for every brand you run. Each one keeps its own logo, Google account, API keys, Drive folder and AI prompts.</p>
-          </article>
-          <article class="glass-panel rounded-2xl border border-zinc-800 p-6 hover:border-emerald-500/50 transition-colors">
-            <i data-lucide="users" class="w-8 h-8 text-sky-400"></i>
-            <h3 class="text-lg font-bold text-white mt-4">Multiple Clients</h3>
-            <p class="text-sm text-zinc-400 mt-2">Save every client once: NAP, website, Maps link, keywords, citations and images. Clone, edit and see each client's build history any time.</p>
-          </article>
-          <article class="glass-panel rounded-2xl border border-zinc-800 p-6 hover:border-emerald-500/50 transition-colors">
-            <i data-lucide="file-badge" class="w-8 h-8 text-amber-400"></i>
-            <h3 class="text-lg font-bold text-white mt-4">White-Label Reports</h3>
-            <p class="text-sm text-zinc-400 mt-2">Branded PDF and Excel reports with the client's agency logo and every live link. Send them as your own work, no G-Stack branding.</p>
-          </article>
-          <article class="glass-panel rounded-2xl border border-zinc-800 p-6 hover:border-emerald-500/50 transition-colors">
-            <i data-lucide="layers-3" class="w-8 h-8 text-violet-400"></i>
-            <h3 class="text-lg font-bold text-white mt-4">Batch Builder + AI Writing</h3>
-            <p class="text-sm text-zinc-400 mt-2">Queue many clients and build them in one run. AI writes the articles with your own OpenRouter, Gemini or OpenAI key and your own prompts.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== 20 GOOGLE ASSETS + ARCHITECTURE (was features page) ==================== -->
-    <div id="assets" class="scroll-mt-20 py-20 md:py-28 border-t border-white/5">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-      <!-- ==================== 20 ASSETS GRID ==================== -->
-      <section class="mb-24">
-        <div class="flex items-center justify-between mb-8 border-b border-zinc-800 pb-4">
-          <div>
-            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-              <img src="img/logo.png" alt="G-Stack Studio logo" class="w-6 h-6 object-contain" width="64" height="64">
-              The Complete 20-Asset Ecosystem
-            </h2>
-            <p class="text-xs text-zinc-400 mt-1">Built automatically via official Google Cloud REST API endpoints in &lt; 120s.</p>
-          </div>
-          <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full hidden sm:inline-block">
-            All 20 Generated in Parallel
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-mono uppercase tracking-wider text-sky-400 font-bold bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">
+            Core Automation Pillars
           </span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4">
+            Everything Required for High-Volume Entity SEO
+          </h2>
+          <p class="text-zinc-400 text-sm sm:text-base mt-3">
+            Each capability is built directly into the desktop client. Click any pillar to explore its dedicated technical breakdown.
+          </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <!-- Asset 1 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+          <!-- Pillar 1 -->
+          <a href="google-stack.html" class="glass-panel rounded-2xl p-6 border border-zinc-800 hover:border-sky-500/60 transition-all group flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #01</span>
-                <i data-lucide="folder" class="w-5 h-5 text-amber-400"></i>
+              <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <i data-lucide="layers" class="w-6 h-6"></i>
               </div>
-              <h3 class="text-base font-bold text-white mb-1.5">Google Drive Root Hub</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Centralized authority parent folder configured with public viewing permissions, geotagged metadata, and client entity descriptions.
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-sky-300 transition-colors">Google Authority Stack</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+                Automate complete 20-asset Google Drive ecosystems with 3 silo architecture modes and circular interlinking.
               </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>Scope: Drive API v3</span>
-              <span class="text-emerald-400">Public Live</span>
+            <div class="pt-4 border-t border-zinc-800/80 text-xs font-semibold text-sky-400 inline-flex items-center gap-1">
+              Explore Google Stack Engine &rarr;
             </div>
-          </div>
+          </a>
 
-          <!-- Asset 2 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+          <!-- Pillar 2 -->
+          <a href="cloud-stacking.html" class="glass-panel rounded-2xl p-6 border border-zinc-800 hover:border-sky-500/60 transition-all group flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #02</span>
-                <i data-lucide="globe" class="w-5 h-5 text-sky-400"></i>
+              <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <i data-lucide="cloud" class="w-6 h-6"></i>
               </div>
-              <h3 class="text-base font-bold text-white mb-1.5">Google Site Authority Portal</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Clean, modern multi-page responsive Google Site hosting rich client NAP data, embedded maps, drive folder embeds, and keyword silos.
+              <div class="flex items-center justify-between mb-1">
+                <h3 class="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">Multi-Cloud Stacking</h3>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-800 text-amber-300">Pro+</span>
+              </div>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+                Compile and deploy static multi-page HTML authority sites across 8 verified cloud hosts including AWS S3, Cloudflare, and Netlify.
               </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>sites.google.com</span>
-              <span class="text-emerald-400">Ranked Node</span>
+            <div class="pt-4 border-t border-zinc-800/80 text-xs font-semibold text-purple-400 inline-flex items-center gap-1">
+              Explore Cloud Stacking &rarr;
             </div>
-          </div>
+          </a>
 
-          <!-- Asset 3 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+          <!-- Pillar 3 -->
+          <a href="agency-tools.html" class="glass-panel rounded-2xl p-6 border border-zinc-800 hover:border-sky-500/60 transition-all group flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #03</span>
-                <i data-lucide="table" class="w-5 h-5 text-emerald-400"></i>
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <i data-lucide="briefcase" class="w-6 h-6"></i>
               </div>
-              <h3 class="text-base font-bold text-white mb-1.5">Master Sheets Directory</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Central dynamic spreadsheet cataloging every asset link, anchor text variations, citation targets, and 2-way cross-reference formulas.
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">Agency Tools &amp; Batch</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+                Manage saved client NAP profiles, queue multiple concurrent runs in Batch Builder, and customize the AI prompt library.
               </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>Sheets API v4</span>
-              <span class="text-emerald-400">Auto-Indexed</span>
+            <div class="pt-4 border-t border-zinc-800/80 text-xs font-semibold text-emerald-400 inline-flex items-center gap-1">
+              Explore Agency Tools &rarr;
             </div>
-          </div>
+          </a>
 
-          <!-- Asset 4 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
+          <!-- Pillar 4 -->
+          <a href="agency-tools.html#reports" class="glass-panel rounded-2xl p-6 border border-zinc-800 hover:border-sky-500/60 transition-all group flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #04</span>
-                <i data-lucide="file-text" class="w-5 h-5 text-blue-400"></i>
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <i data-lucide="file-check" class="w-6 h-6"></i>
               </div>
-              <h3 class="text-base font-bold text-white mb-1.5">Google Docs Keyword Silos</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                1,500+ word AI-written authority articles with H1/H2 semantic hierarchy, local schema markup, LSI clusters, and outbound citations.
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">White-Label Reports</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+                Export 9-tab branded Excel spreadsheets with QR codes and executive client-ready PDF summaries under your agency branding.
               </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>Docs API v1</span>
-              <span class="text-emerald-400">Circular Links</span>
+            <div class="pt-4 border-t border-zinc-800/80 text-xs font-semibold text-amber-400 inline-flex items-center gap-1">
+              View Sample Reports &rarr;
             </div>
-          </div>
-
-          <!-- Asset 5 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #05</span>
-                <i data-lucide="map-pin" class="w-5 h-5 text-rose-400"></i>
-              </div>
-              <h3 class="text-base font-bold text-white mb-1.5">Custom Google MyMaps</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Geographic entity anchor with up to 100 neighborhood pins, driving direction vectors, business description, and coordinate boundaries.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>KML Layer Sync</span>
-              <span class="text-emerald-400">Local 3-Pack</span>
-            </div>
-          </div>
-
-          <!-- Asset 6 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #06</span>
-                <i data-lucide="calendar" class="w-5 h-5 text-cyan-400"></i>
-              </div>
-              <h3 class="text-base font-bold text-white mb-1.5">Google Calendar Entity</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Publicly shared Google Calendar broadcasting recurring business operating hours, seasonal promotions, and localized event coordinates.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>Calendar API v3</span>
-              <span class="text-emerald-400">Active Signals</span>
-            </div>
-          </div>
-
-          <!-- Asset 7 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #07</span>
-                <i data-lucide="presentation" class="w-5 h-5 text-amber-500"></i>
-              </div>
-              <h3 class="text-base font-bold text-white mb-1.5">Google Slides Presentation</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Multi-slide visual deck highlighting brand services, customer testimonials, and embedded anchor links for rich media crawling.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>Slides API v1</span>
-              <span class="text-emerald-400">High Trust</span>
-            </div>
-          </div>
-
-          <!-- Asset 8 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #08</span>
-                <i data-lucide="clipboard-list" class="w-5 h-5 text-purple-400"></i>
-              </div>
-              <h3 class="text-base font-bold text-white mb-1.5">Google Forms Ingestion</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Custom branded customer contact/quote form embedded into the Google Site and linked in Docs to establish two-way client interaction.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>Forms API</span>
-              <span class="text-emerald-400">Lead Capture</span>
-            </div>
-          </div>
-
-          <!-- Asset 9 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #09</span>
-                <i data-lucide="file-check" class="w-5 h-5 text-red-400"></i>
-              </div>
-              <h3 class="text-base font-bold text-white mb-1.5">Google PDF Whitepaper</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Exported authority whitepaper rendered as a standalone indexed PDF document directly hosted on Google Drive's high-speed CDN.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>Drive PDF Render</span>
-              <span class="text-emerald-400">Direct Search</span>
-            </div>
-          </div>
-
-          <!-- Asset 10 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #10</span>
-                <i data-lucide="git-branch" class="w-5 h-5 text-teal-400"></i>
-              </div>
-              <h3 class="text-base font-bold text-white mb-1.5">Google Drawing Schema</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Vector entity schema architecture drawing linking brand entities, parent organizations, and target geo-regions with clickable hotlinks.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>Drawings SVG</span>
-              <span class="text-emerald-400">Visual Schema</span>
-            </div>
-          </div>
-
-          <!-- Asset 11 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #11</span>
-                <i data-lucide="folder-tree" class="w-5 h-5 text-sky-500"></i>
-              </div>
-              <h3 class="text-base font-bold text-white mb-1.5">13 Subfolder Silo Hierarchy</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Specialized subfolders for Images, Videos, Audio, PDFs, Citations, Reviews, Maps, and Structured Data to create profound topical depth.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>13 Categorized Nodes</span>
-              <span class="text-emerald-400">Topical Silo</span>
-            </div>
-          </div>
-
-          <!-- Asset 12 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #12</span>
-                <i data-lucide="rss" class="w-5 h-5 text-orange-400"></i>
-              </div>
-              <h3 class="text-base font-bold text-white mb-1.5">Google Drive RSS Feed</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Syndication-ready XML feed URL broadcasting public folder changes to ping indexing crawlers and content aggregators on autopilot.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>XML Feed</span>
-              <span class="text-emerald-400">Pings Crawlers</span>
-            </div>
-          </div>
-
-          <!-- Asset 13 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #13</span>
-                <i data-lucide="image" class="w-5 h-5 text-pink-400"></i>
-              </div>
-              <h3 class="text-base font-bold text-white mb-1.5">Geotagged EXIF Gallery</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Images injected with GPS coordinates, client NAP, copyright metadata, and target keywords placed in the public image silo.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>EXIF GPS Injector</span>
-              <span class="text-emerald-400">Geo-Tagged</span>
-            </div>
-          </div>
-
-          <!-- Asset 14 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #14</span>
-                <i data-lucide="compass" class="w-5 h-5 text-indigo-400"></i>
-              </div>
-              <h3 class="text-base font-bold text-white mb-1.5">KML / KMZ Map Layers</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Raw Keyhole Markup Language boundary files generated for Google Earth integration and third-party local GIS authority verification.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>GIS Coordinate Spec</span>
-              <span class="text-emerald-400">Google Earth</span>
-            </div>
-          </div>
-
-          <!-- Asset 15 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #15</span>
-                <i data-lucide="navigation" class="w-5 h-5 text-sky-300"></i>
-              </div>
-              <h3 class="text-base font-bold text-white mb-1.5">GPX Route Waypoints</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                GPS exchange format tracks providing simulated travel routes from surrounding city centers directly to the business premises.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>Turn-by-Turn GPS</span>
-              <span class="text-emerald-400">Map Proximity</span>
-            </div>
-          </div>
-
-          <!-- Asset 16 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #16</span>
-                <i data-lucide="layout" class="w-5 h-5 text-cyan-300"></i>
-              </div>
-              <h3 class="text-base font-bold text-white mb-1.5">Google Sites Live Embeds</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Interactive iframes embedding the MyMap, Calendar, Sheets Directory, and Forms seamlessly into the Google Site body.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>Dynamic iFrames</span>
-              <span class="text-emerald-400">Interactive</span>
-            </div>
-          </div>
-
-          <!-- Asset 17 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #17</span>
-                <i data-lucide="link" class="w-5 h-5 text-emerald-400"></i>
-              </div>
-              <h3 class="text-base font-bold text-white mb-1.5">Citation Anchor Matrix</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Synchronized indexing sheet linking all tier 1 citations (Yelp, BBB, YellowPages, Chamber of Commerce) into the stack.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>Tier 1 Citations</span>
-              <span class="text-emerald-400">Entity Reinforce</span>
-            </div>
-          </div>
-
-          <!-- Asset 18 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #18</span>
-                <i data-lucide="file-spreadsheet" class="w-5 h-5 text-emerald-500"></i>
-              </div>
-              <h3 class="text-base font-bold text-white mb-1.5">White-Label Client .xlsx</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Formatted Excel workbook stamped with your agency branding, public asset URLs, and audit verification links ready for client handoff.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>Agency Brand Kit</span>
-              <span class="text-emerald-400">Deliverable</span>
-            </div>
-          </div>
-
-          <!-- Asset 19 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #19</span>
-                <i data-lucide="external-link" class="w-5 h-5 text-violet-400"></i>
-              </div>
-              <h3 class="text-base font-bold text-white mb-1.5">Interactive Client Portal</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Lightweight static HTML dashboard you can host on any sub-domain to give VIP clients a live clickable preview of their stack.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>Web Portal</span>
-              <span class="text-emerald-400">Agency Pro</span>
-            </div>
-          </div>
-
-          <!-- Asset 20 -->
-          <div class="glass-panel rounded-2xl p-5 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/40 transition-colors">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono text-sky-400 font-bold">ASSET #20</span>
-                <i data-lucide="hard-drive" class="w-5 h-5 text-cyan-400"></i>
-              </div>
-              <h3 class="text-base font-bold text-white mb-1.5">Cloud Storage Mirror Sync</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Optional mirror copy exported to Google Cloud Storage (storage.googleapis.com) for secondary static HTML and image redundancy.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500 flex justify-between">
-              <span>GCS Bucket Sync</span>
-              <span class="text-emerald-400">Redundant Node</span>
-            </div>
-          </div>
+          </a>
 
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ==================== MULTI-ARCHITECTURE MODES ==================== -->
-      <section id="architectures" class="py-16 border-t border-zinc-800">
+    <!-- SECTION 2: HOW IT WORKS PREVIEW -->
+    <section class="py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">
-            <i data-lucide="git-merge" class="w-3.5 h-3.5"></i> Custom Topology Engine
-          </div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            3 Multi-Architecture Silo Modes
+          <span class="text-xs font-mono uppercase tracking-wider text-sky-400 font-bold bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">
+            Intake to Delivery
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4">
+            How G-Stack Studio Works
           </h2>
-          <p class="mt-4 text-base sm:text-lg text-zinc-400">
-            Tailor the Google Drive structure to fit local single-location businesses, multi-service companies, or national franchise chains.
+          <p class="text-zinc-400 text-sm sm:text-base mt-3">
+            An intuitive 3-phase automated desktop pipeline built for speed and privacy.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="glass-panel rounded-2xl p-8 border border-zinc-800">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center font-bold text-sm mb-6">01</div>
+            <h3 class="text-xl font-bold text-white mb-3">Enter Project &amp; NAP Details</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+              Input the business name, address, phone, GBP Maps URL, and primary keyword targets. Save to your local client database for 1-click re-runs.
+            </p>
+          </div>
+
+          <div class="glass-panel rounded-2xl p-8 border border-zinc-800">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center font-bold text-sm mb-6">02</div>
+            <h3 class="text-xl font-bold text-white mb-3">Connect Required Accounts</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+              Authenticate via standard Google OAuth 2.0 loopback. For eligible plans, enter your cloud host keys (AWS S3, Netlify, Cloudflare).
+            </p>
+          </div>
+
+          <div class="glass-panel rounded-2xl p-8 border border-zinc-800">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center font-bold text-sm mb-6">03</div>
+            <h3 class="text-xl font-bold text-white mb-3">Run &amp; Export Deliverables</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+              Click Build. In 120 seconds, the software compiles all assets, executes circular links, publishes live URLs, and generates white-label client reports.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <a href="how-it-works.html" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-400 hover:text-sky-300">
+            Read the detailed 8-step technical walkthrough <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: THE 3 SEPARATE PRICING PATHWAYS (CRITICAL SPECIFICATION REQUIREMENT) -->
+    <section id="pricing-paths" class="py-16 md:py-24 bg-[#0c0c11] border-y border-zinc-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-mono uppercase tracking-wider text-sky-400 font-bold bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">
+            Commercial Pathways
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4">
+            Choose Your License Structure
+          </h2>
+          <p class="text-zinc-400 text-sm sm:text-base mt-3">
+            We provide three distinct commercial avenues: flexible monthly subscriptions, one-time lifetime passes, and wholesale reseller partnerships.
           </p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
-          <!-- Mode 1 Card -->
-          <div class="glass-panel rounded-2xl p-7 border border-zinc-800 flex flex-col justify-between">
+          <!-- Pathway 1: Monthly Plans -->
+          <div class="glass-panel rounded-3xl p-8 border border-zinc-800 flex flex-col justify-between hover:border-sky-500/50 transition-all">
             <div>
-              <span class="text-xs font-mono text-sky-400 font-bold bg-sky-500/10 px-2.5 py-1 rounded border border-sky-500/20">
-                ARCHITECTURE MODE 1
-              </span>
-              <h3 class="text-xl font-bold text-white mt-4 mb-2">Single Authority Hub</h3>
+              <div class="inline-block px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 text-xs font-mono font-bold uppercase mb-4">
+                Recurring Subscription
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">Monthly Plans</h3>
               <p class="text-xs text-zinc-400 leading-relaxed mb-6">
-                13 Categorized subfolders inside a unified parent Google Drive folder. Consolidates all entity signals into one master brand node.
+                Predictable recurring billing for active digital agencies and consultants. Upgrade, downgrade, or cancel anytime in 1 click.
               </p>
-              
-              <div class="bg-zinc-950/80 p-4 rounded-xl border border-zinc-800 font-mono text-xs space-y-2 text-zinc-300">
-                <div class="text-sky-400 font-bold">📁 [Client_Brand]_Authority_Hub/</div>
-                <div class="pl-4 text-zinc-400">├── 📁 01_Articles/ (Docs)</div>
-                <div class="pl-4 text-zinc-400">├── 📁 02_Maps_GeoData/ (KML)</div>
-                <div class="pl-4 text-zinc-400">├── 📁 03_Sheets_Directory/</div>
-                <div class="pl-4 text-zinc-400">├── 📁 04_Presentations/</div>
-                <div class="pl-4 text-zinc-400">└── 📁 05_Whitepapers/ (PDFs)</div>
+
+              <div class="p-4 rounded-xl bg-zinc-950 border border-zinc-800 space-y-2.5 text-xs text-zinc-300 mb-6">
+                <div class="flex justify-between"><span>Starter (6 Stacks/mo):</span><span class="font-bold text-white font-mono">$49/mo</span></div>
+                <div class="flex justify-between"><span>Pro (12 Stacks + 30 Cloud):</span><span class="font-bold text-white font-mono">$99/mo</span></div>
+                <div class="flex justify-between text-sky-300"><span>Agency (70 Stacks + 100 Cloud):</span><span class="font-bold text-sky-400 font-mono">$199/mo</span></div>
+                <div class="flex justify-between"><span>Ultimate (100 Stacks + 200 Cloud):</span><span class="font-bold text-white font-mono">$399/mo</span></div>
               </div>
 
-              <div class="mt-6 space-y-2 text-xs text-zinc-300">
-                <div class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Best for single-location local businesses
-                </div>
-                <div class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Maximum domain juice consolidation
-                </div>
-              </div>
-            </div>
-            
-            <div class="mt-8 pt-4 border-t border-zinc-800 text-xs font-mono text-zinc-500">
-              Ideal for: Plumbers, Roofers, Law Firms
-            </div>
-          </div>
-
-          <!-- Mode 2 Card -->
-          <div class="glass-panel rounded-2xl p-7 border border-sky-500/40 flex flex-col justify-between shadow-xl shadow-sky-950/30">
-            <div>
-              <span class="text-xs font-mono text-cyan-400 font-bold bg-cyan-500/10 px-2.5 py-1 rounded border border-cyan-500/20">
-                ARCHITECTURE MODE 2
-              </span>
-              <h3 class="text-xl font-bold text-white mt-4 mb-2">Keyword Stacks: Inside Main Folder</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed mb-6">
-                Creates dedicated subfolder silos for each target keyword group within the main client folder. Combines separation with central authority.
-              </p>
-              
-              <div class="bg-zinc-950/80 p-4 rounded-xl border border-zinc-800 font-mono text-xs space-y-2 text-zinc-300">
-                <div class="text-cyan-400 font-bold">📁 [Client_Brand]_Authority_Hub/</div>
-                <div class="pl-4 text-zinc-400">├── 📁 Silo_Emergency_Roofing/</div>
-                <div class="pl-8 text-zinc-500">└── (Docs, Map, Sheet, Form)</div>
-                <div class="pl-4 text-zinc-400">├── 📁 Silo_Commercial_Roofing/</div>
-                <div class="pl-8 text-zinc-500">└── (Docs, Map, Sheet, Form)</div>
-                <div class="pl-4 text-zinc-400">└── 📁 Silo_Gutter_Installation/</div>
-              </div>
-
-              <div class="mt-6 space-y-2 text-xs text-zinc-300">
-                <div class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Perfect for multi-service contractors
-                </div>
-                <div class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Interlinks sub-services circularly
-                </div>
-              </div>
-            </div>
-            
-            <div class="mt-8 pt-4 border-t border-zinc-800 text-xs font-mono text-zinc-400">
-              Ideal for: Multi-Specialty Clinics, Agencies
-            </div>
-          </div>
-
-          <!-- Mode 3 Card -->
-          <div class="glass-panel rounded-2xl p-7 border border-zinc-800 flex flex-col justify-between">
-            <div>
-              <span class="text-xs font-mono text-emerald-400 font-bold bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/20">
-                ARCHITECTURE MODE 3
-              </span>
-              <h3 class="text-xl font-bold text-white mt-4 mb-2">Keyword Stacks: Separate Folders</h3>
-              <p class="text-xs text-zinc-400 leading-relaxed mb-6">
-                Produces completely isolated standalone Drive hubs for different cities or brand entities with individual permission controls.
-              </p>
-              
-              <div class="bg-zinc-950/80 p-4 rounded-xl border border-zinc-800 font-mono text-xs space-y-2 text-zinc-300">
-                <div class="text-emerald-400 font-bold">📁 [Brand]_Dallas_Location/</div>
-                <div class="pl-4 text-zinc-500">└── Standalone 20 Assets Stack</div>
-                <div class="text-emerald-400 font-bold mt-2">📁 [Brand]_FortWorth_Location/</div>
-                <div class="pl-4 text-zinc-500">└── Standalone 20 Assets Stack</div>
-                <div class="text-emerald-400 font-bold mt-2">📁 [Brand]_Austin_Location/</div>
-                <div class="pl-4 text-zinc-500">└── Standalone 20 Assets Stack</div>
-              </div>
-
-              <div class="mt-6 space-y-2 text-xs text-zinc-300">
-                <div class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Built for national franchise networks
-                </div>
-                <div class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Clean, separate client deliverable URLs
-                </div>
-              </div>
-            </div>
-            
-            <div class="mt-8 pt-4 border-t border-zinc-800 text-xs font-mono text-zinc-500">
-              Ideal for: Franchises, Multi-City Chains
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- ==================== CIRCULAR SILO INTERLINKING ==================== -->
-      <section id="circular" class="py-16 border-t border-zinc-800">
-        <div class="rounded-3xl glass-panel p-8 sm:p-12 border border-zinc-800 relative overflow-hidden">
-          
-          <div class="max-w-3xl">
-            <span class="text-xs font-mono text-sky-400 font-bold bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20 uppercase tracking-wider">
-              Mathematical Silo Logic
-            </span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4 mb-4">
-              Circular Authority Silo Interlinking: Eliminating Googlebot Dead Ends.
-            </h2>
-            <p class="text-sm sm:text-base text-zinc-400 leading-relaxed">
-              When Googlebot discovers an asset, it follows links to index subsequent pages. Typical manual stacking creates isolated orphan files. G-Stack Studio executes a closed-loop algorithmic linking pattern:
-            </p>
-          </div>
-
-          <!-- Circular Interlinking Diagram Card -->
-          <div class="mt-10 grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
-            
-            <div class="p-5 rounded-xl bg-zinc-950/80 border border-sky-500/30 flex flex-col items-center justify-center">
-              <span class="w-8 h-8 rounded-full bg-sky-500/20 text-sky-400 font-mono font-bold flex items-center justify-center text-xs mb-3">1</span>
-              <h4 class="text-sm font-bold text-white mb-1">KW Doc 01</h4>
-              <p class="text-[11px] text-zinc-400">Primary Core Keyword</p>
-              <div class="mt-3 text-sky-400 font-mono text-xs flex items-center gap-1">
-                Links to KW 02 <i data-lucide="arrow-right" class="w-3 h-3"></i>
-              </div>
+              <ul class="space-y-2 text-xs text-zinc-400">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Quotas reset every 30 days</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> 1 PC license (1 free transfer/30 days)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> 30-day money-back guarantee</li>
+              </ul>
             </div>
 
-            <div class="p-5 rounded-xl bg-zinc-950/80 border border-sky-500/30 flex flex-col items-center justify-center">
-              <span class="w-8 h-8 rounded-full bg-sky-500/20 text-sky-400 font-mono font-bold flex items-center justify-center text-xs mb-3">2</span>
-              <h4 class="text-sm font-bold text-white mb-1">KW Doc 02</h4>
-              <p class="text-[11px] text-zinc-400">Secondary High-Intent Term</p>
-              <div class="mt-3 text-sky-400 font-mono text-xs flex items-center gap-1">
-                Links to KW 03 <i data-lucide="arrow-right" class="w-3 h-3"></i>
-              </div>
-            </div>
-
-            <div class="p-5 rounded-xl bg-zinc-950/80 border border-sky-500/30 flex flex-col items-center justify-center">
-              <span class="w-8 h-8 rounded-full bg-sky-500/20 text-sky-400 font-mono font-bold flex items-center justify-center text-xs mb-3">3</span>
-              <h4 class="text-sm font-bold text-white mb-1">KW Doc 03</h4>
-              <p class="text-[11px] text-zinc-400">Long-Tail Geo Phrase</p>
-              <div class="mt-3 text-sky-400 font-mono text-xs flex items-center gap-1">
-                Loops to KW 01 <i data-lucide="rotate-ccw" class="w-3 h-3"></i>
-              </div>
-            </div>
-
-            <div class="p-5 rounded-xl bg-gradient-to-b from-sky-950/40 to-zinc-950 border border-cyan-500/40 flex flex-col items-center justify-center">
-              <span class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-300 font-mono font-bold flex items-center justify-center text-xs mb-3">HUB</span>
-              <h4 class="text-sm font-bold text-white mb-1">Central Google Site</h4>
-              <p class="text-[11px] text-zinc-400">Receives & Reciprocates Juice</p>
-              <div class="mt-3 text-cyan-300 font-mono text-xs flex items-center gap-1">
-                2-Way Sheets Sync <i data-lucide="repeat" class="w-3 h-3"></i>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Feature Breakdown -->
-          <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-zinc-800 text-sm">
-            <div>
-              <h5 class="font-bold text-white mb-2 flex items-center gap-2">
-                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> No Over-Optimization Penalties
-              </h5>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Anchors are dynamically rotated between Brand, Partial Match, URL string, and Generic calls-to-action to simulate organic entity citations.
-              </p>
-            </div>
-            <div>
-              <h5 class="font-bold text-white mb-2 flex items-center gap-2">
-                <i data-lucide="refresh-cw" class="w-4 h-4 text-sky-400"></i> Continuous Crawl Loops
-              </h5>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                By looping KW3 back to KW1 and feeding the Master Sheets Directory, search engine crawlers cycle through your entity stack repeatedly.
-              </p>
-            </div>
-            <div>
-              <h5 class="font-bold text-white mb-2 flex items-center gap-2">
-                <i data-lucide="external-link" class="w-4 h-4 text-purple-400"></i> Outbound Citation Nodes
-              </h5>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-                Every document cites official Google entity knowledge bases (Wikidata, Wikipedia, Google Maps) to reinforce topical authority.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- ==================== LOCAL PRIVACY & OAUTH ENGINE ==================== -->
-      <section class="py-16 border-t border-zinc-800">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          <div>
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-4">
-              <i data-lucide="lock" class="w-3.5 h-3.5"></i> Enterprise Security Standard
-            </div>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-              100% Client-Side Privacy: Your Google Tokens Never Touch Our Cloud.
-            </h2>
-            <p class="mt-4 text-sm sm:text-base text-zinc-400 leading-relaxed">
-              Unlike SaaS web tools that store your sensitive Google OAuth tokens on vulnerable third-party web servers, G-Stack Studio operates as an authenticated local desktop engine.
-            </p>
-            
-            <div class="mt-6 space-y-3 text-sm text-zinc-300">
-              <div class="flex items-start gap-3">
-                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
-                <div>
-                  <strong class="text-white">Local Token Storage:</strong> The generated <code class="text-sky-300 font-mono">token.json</code> is saved only in your operating system's local AppData.
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
-                <div>
-                  <strong class="text-white">Official Scopes Only:</strong> Requests strictly the minimal scopes needed to create Drive folders, Docs, and Sheets.
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
-                <div>
-                  <strong class="text-white">Zero Telemetry Logging:</strong> Client business details and target URLs remain confidential between your workstation and Google.
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-8">
-              <a href="privacy.html" class="inline-flex items-center gap-2 text-sm text-sky-400 hover:text-sky-300 font-semibold underline">
-                Read our Google API Services User Data Policy Disclosures <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            <div class="mt-8 pt-6 border-t border-zinc-800">
+              <a href="pricing.html" class="w-full py-3.5 rounded-xl text-center text-sm font-bold text-white bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 block transition-all">
+                View Monthly Pricing &rarr;
               </a>
             </div>
           </div>
 
-          <!-- Security Diagram Card -->
-          <div class="glass-panel rounded-2xl p-6 sm:p-8 border border-zinc-800">
-            <div class="text-xs font-mono text-zinc-400 uppercase tracking-wider mb-4 flex items-center justify-between">
-              <span>Security Data Flow Architecture</span>
-              <span class="text-emerald-400 font-bold">100% Local Encrypted</span>
+          <!-- Pathway 2: Lifetime Deals (Most Popular) -->
+          <div class="glass-panel rounded-3xl p-8 border-2 border-sky-500 shadow-2xl shadow-sky-950/50 bg-gradient-to-b from-[#161622] to-[#0e0e15] flex flex-col justify-between relative scale-[1.02] z-10">
+            <div class="absolute -top-3.5 left-6 px-3 py-1 rounded-full bg-gradient-to-r from-sky-400 to-cyan-300 text-black text-[11px] font-extrabold uppercase tracking-wider shadow-lg">
+              One-Time Payment
+            </div>
+            <div>
+              <div class="inline-block px-3 py-1 rounded-full bg-sky-500/20 text-sky-300 text-xs font-mono font-bold uppercase mb-4 mt-2">
+                Lifetime Master Passes
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">Lifetime Deals</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-6">
+                Pay once and keep your software license forever. Quotas reset automatically every month with zero recurring monthly fees.
+              </p>
+
+              <div class="p-4 rounded-xl bg-zinc-950 border border-zinc-800 space-y-2.5 text-xs text-zinc-300 mb-6">
+                <div class="flex justify-between"><span>Starter Lifetime:</span><span class="font-bold text-white font-mono">$299 once</span></div>
+                <div class="flex justify-between"><span>Pro Lifetime:</span><span class="font-bold text-white font-mono">$449 once</span></div>
+                <div class="flex justify-between text-sky-300"><span>Agency Lifetime (2 PCs):</span><span class="font-bold text-sky-400 font-mono">$999 once</span></div>
+                <div class="flex justify-between"><span>Ultimate Lifetime:</span><span class="font-bold text-white font-mono">$1,499 once</span></div>
+                <div class="flex justify-between text-amber-300"><span>Ultimate Agency Fleet (5 PCs):</span><span class="font-bold text-amber-400 font-mono">$3,999 once</span></div>
+              </div>
+
+              <ul class="space-y-2 text-xs text-zinc-300">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Lifetime software access &amp; updates</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Quotas reset every 30 days forever</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> 1 free machine transfer / 30 days</li>
+              </ul>
             </div>
 
-            <div class="space-y-4 font-mono text-xs">
-              <div class="p-3.5 rounded-xl bg-zinc-900/90 border border-zinc-800 flex items-center justify-between">
-                <span class="flex items-center gap-2 text-white">
-                  <i data-lucide="monitor" class="w-4 h-4 text-sky-400"></i> Your Desktop Workstation
-                </span>
-                <span class="text-sky-400">G-Stack Studio App</span>
-              </div>
-
-              <div class="flex justify-center">
-                <span class="text-zinc-600 flex items-center gap-1 text-[11px]">
-                  <i data-lucide="arrow-down-up" class="w-3.5 h-3.5 text-emerald-400"></i> Direct HTTPS TLS 1.3
-                </span>
-              </div>
-
-              <div class="p-3.5 rounded-xl bg-zinc-900/90 border border-zinc-800 flex items-center justify-between">
-                <span class="flex items-center gap-2 text-white">
-                  <i data-lucide="cloud" class="w-4 h-4 text-emerald-400"></i> Official Google Cloud APIs
-                </span>
-                <span class="text-emerald-400">googleapis.com</span>
-              </div>
-
-              <div class="p-4 rounded-xl bg-rose-950/20 border border-rose-900/40 text-rose-300 text-[11px] font-sans flex items-center gap-2">
-                <i data-lucide="shield-alert" class="w-5 h-5 text-rose-400 shrink-0"></i>
-                <span><strong>No Intermediary Servers:</strong> G-Stack Studio developers have zero access to your Google accounts, client data, or files.</span>
-              </div>
+            <div class="mt-8 pt-6 border-t border-zinc-800">
+              <a href="lifetime-deals.html" class="btn-glow-primary w-full py-4 rounded-xl text-center text-sm font-bold text-white block shadow-xl shadow-sky-500/20">
+                Explore Lifetime Deals &rarr;
+              </a>
             </div>
           </div>
-        </div>
-      </section>
 
-      </div>
-    </div>
+          <!-- Pathway 3: Reseller Program -->
+          <div class="glass-panel rounded-3xl p-8 border border-amber-500/50 flex flex-col justify-between hover:border-amber-400 transition-all bg-gradient-to-b from-[#181611]/40 to-transparent">
+            <div>
+              <div class="inline-block px-3 py-1 rounded-full bg-amber-500/10 text-amber-300 text-xs font-mono font-bold uppercase mb-4">
+                Partner Distribution
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">Reseller Program</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+                For SEO educators, course mentors, and tool aggregators. Generate and distribute client license keys on-demand from our dedicated portal.
+              </p>
 
-    <!-- ==================== VIDEOS ==================== -->
-    <section id="videos" class="scroll-mt-20 py-20 md:py-28 relative border-t border-white/5">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-          <div class="max-w-2xl">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-semibold uppercase tracking-wider mb-4"><i data-lucide="play-circle" class="w-3.5 h-3.5"></i> See it work</div>
-            <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Watch each part in 30 seconds</h2>
-            <p class="mt-4 text-base text-zinc-400">Short clips recorded in the app with a sample roofing company. Full tutorials are on our YouTube channel.</p>
+              <div class="p-4 rounded-xl bg-zinc-950 border border-zinc-800 space-y-2 text-xs text-zinc-300 mb-6">
+                <div class="font-bold text-amber-300">Reseller Highlights:</div>
+                <div>&bull; Dedicated Reseller Portal access</div>
+                <div>&bull; Single &amp; bulk license generation</div>
+                <div>&bull; Client status &amp; key tracking</div>
+                <div>&bull; Priority WhatsApp engineering line</div>
+              </div>
+
+              <div class="text-[11px] text-zinc-400 leading-relaxed mb-4">
+                * Wholesale pricing arranged by volume commitment (minimum 10 seats). Distinct from internal multi-PC licenses.
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-zinc-800">
+              <a href="reseller-program.html" class="w-full py-3.5 rounded-xl text-center text-sm font-bold text-black bg-amber-500 hover:bg-amber-400 block transition-all shadow-lg shadow-amber-500/20">
+                View Reseller Program &rarr;
+              </a>
+            </div>
           </div>
-          <a data-link="youtube" href="#videos" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white text-sm font-bold shrink-0"><i data-lucide="play-circle" class="w-5 h-5"></i> Watch on YouTube</a>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <figure class="glass-panel rounded-2xl border border-zinc-800 p-3">
-            <video src="videos/01_google_stack.mp4" controls muted loop playsinline preload="metadata" class="w-full rounded-xl bg-black aspect-[1366/820]"></video>
-            <figcaption class="px-2 pt-3 pb-1"><span class="font-bold text-white">Google Stack</span> <span class="text-sm text-zinc-400">· one client, the full Drive stack, one click</span></figcaption>
-          </figure>
-          <figure class="glass-panel rounded-2xl border border-zinc-800 p-3">
-            <video src="videos/02_batch_builder.mp4" controls muted loop playsinline preload="metadata" class="w-full rounded-xl bg-black aspect-[1366/820]"></video>
-            <figcaption class="px-2 pt-3 pb-1"><span class="font-bold text-white">Batch Builder</span> <span class="text-sm text-zinc-400">· many clients in one run</span></figcaption>
-          </figure>
-          <figure class="glass-panel rounded-2xl border border-zinc-800 p-3">
-            <video src="videos/03_cloud_bulk_builder.mp4" controls muted loop playsinline preload="metadata" class="w-full rounded-xl bg-black aspect-[1366/820]"></video>
-            <figcaption class="px-2 pt-3 pb-1"><span class="font-bold text-white">Bulk Page Builder</span> <span class="text-sm text-zinc-400">· keyword pages on every cloud you pick</span></figcaption>
-          </figure>
-          <figure class="glass-panel rounded-2xl border border-zinc-800 p-3">
-            <video src="videos/04_own_content_builder.mp4" controls muted loop playsinline preload="metadata" class="w-full rounded-xl bg-black aspect-[1366/820]"></video>
-            <figcaption class="px-2 pt-3 pb-1"><span class="font-bold text-white">Own Content Builder</span> <span class="text-sm text-zinc-400">· your own content from one Excel sheet</span></figcaption>
-          </figure>
+
         </div>
       </div>
     </section>
 
-    <!-- ==================== 3. COMPARISON SECTION (MANUAL VS AUTOMATED) ==================== -->
-    <section id="comparison" class="py-20 md:py-28 relative border-t border-white/5 bg-[#0b0b0f]">
+    <!-- SECTION 4: TRUST, SECURITY & VIDEO ACADEMY PREVIEW -->
+    <section class="py-16 md:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 text-xs font-semibold uppercase tracking-wider mb-4">
-            <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i> The Agency Scaling Bottleneck
-          </div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Manual Authority Stacking Is Killing Your Profit Margins.
-          </h2>
-          <p class="mt-4 text-base sm:text-lg text-zinc-400">
-            Virtual Assistants charge $15-$25/hr and take full business days to piece together broken links. G-Stack Studio finishes the entire 20-asset ecosystem before your coffee brews.
-          </p>
-        </div>
-
-        <!-- Comparison Side-by-Side Cards -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
-          <!-- Old Manual Way -->
-          <div class="rounded-2xl p-6 sm:p-8 bg-zinc-950/70 border border-rose-900/30 relative">
-            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
-              <div>
-                <span class="text-xs uppercase font-mono tracking-wider text-rose-400 font-bold">The Slow, Manual Nightmare</span>
-                <h3 class="text-2xl font-bold text-white mt-1">Manual Virtual Assistant / In-House</h3>
-              </div>
-              <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400">
-                <i data-lucide="clock" class="w-6 h-6"></i>
-              </div>
-            </div>
-
-            <div class="space-y-4 mt-6 text-sm text-zinc-300">
-              <div class="flex items-start gap-3">
-                <i data-lucide="x-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
-                <div>
-                  <strong class="text-white">8 to 10 Tedious Hours per Client:</strong> Manually logging into Google, creating folders, pasting NAP, uploading assets one by one.
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <i data-lucide="x-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
-                <div>
-                  <strong class="text-white">High Error & Broken Silo Rates:</strong> Missed circular links, improper public permission settings, and disjointed entity mapping.
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <i data-lucide="x-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
-                <div>
-                  <strong class="text-white">Astronomical Labor Cost:</strong> At $20/hr, every single client stack costs your agency $160–$200 in direct labor.
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <i data-lucide="x-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
-                <div>
-                  <strong class="text-white">Impossible to Scale Batch Orders:</strong> A surge of 15 local clients creates an unmanageable 150-hour backlog for your team.
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <i data-lucide="x-circle" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
-                <div>
-                  <strong class="text-white">Messy, Unbranded Deliverables:</strong> Scrambled spreadsheets without custom agency branding look amateur to corporate clients.
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-8 pt-4 border-t border-zinc-800 text-xs font-mono text-zinc-500 flex items-center justify-between">
-              <span>Avg Output: 1 Stack per Day</span>
-              <span class="text-rose-400 font-bold">$180+ Cost Per Build</span>
-            </div>
-          </div>
-
-          <!-- The G-Stack Studio Way -->
-          <div class="rounded-2xl p-6 sm:p-8 bg-zinc-900/90 border border-sky-500/40 relative shadow-2xl shadow-sky-950/40">
-            <!-- Glow highlight tag -->
-            <div class="absolute -top-3.5 right-6 px-3 py-1 rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 text-black text-xs font-black uppercase tracking-wider shadow-md">
-              100X Faster Engine
-            </div>
-
-            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
-              <div>
-                <span class="text-xs uppercase font-mono tracking-wider text-sky-400 font-bold">Automated Perfection</span>
-                <h3 class="text-2xl font-bold text-white mt-1">G-Stack Studio v2.4</h3>
-              </div>
-              <div class="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-500/40 flex items-center justify-center text-sky-300">
-                <i data-lucide="zap" class="w-6 h-6"></i>
-              </div>
-            </div>
-
-            <div class="space-y-4 mt-6 text-sm text-zinc-300">
-              <div class="flex items-start gap-3">
-                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
-                <div>
-                  <strong class="text-white">Under 3 Minutes Flat:</strong> Generates the entire 20-asset Google entity stack with zero human delay.
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
-                <div>
-                  <strong class="text-white">Mathematical Circular Linking:</strong> KW1 ➔ KW2 ➔ KW3 ➔ Google Site ➔ Google Sheets Hub with 2-way cross references.
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
-                <div>
-                  <strong class="text-white">Zero Labor Cost:</strong> Build every client's stack from one license, monthly or lifetime. Pure profit for your retainers.
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
-                <div>
-                  <strong class="text-white">High-Velocity Batch Queue:</strong> Queue 20 clients simultaneously. Walk away and come back to completed dossiers.
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
-                <div>
-                  <strong class="text-white">100% White-Label Agency Portals:</strong> Deliver branded Excel spreadsheets (.xlsx) and interactive client review links.
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-8 pt-4 border-t border-zinc-800 text-xs font-mono text-zinc-400 flex items-center justify-between">
-              <span class="text-emerald-400 font-bold">Avg Output: 30+ Stacks per Hour</span>
-              <span class="text-sky-400 font-bold">&lt; $0.05 Compute Cost</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 4. CORE PILLARS / BENTO-GRID CARDS ==================== -->
-    <section class="py-20 md:py-28 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-4">
-            <i data-lucide="boxes" class="w-3.5 h-3.5"></i> High-Performance Feature Suite
-          </div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Engineered for Massive Local Map Pack & Organic Domination.
-          </h2>
-          <p class="mt-4 text-base sm:text-lg text-zinc-400">
-            Every feature in G-Stack Studio is precision-calibrated to satisfy Google's entity validation patents while protecting your agency's private credentials.
-          </p>
-        </div>
-
-        <!-- Bento Grid (6 Cards) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-          <!-- Pillar 1 -->
-          <div class="glass-panel glass-panel-hover rounded-2xl p-6 sm:p-8 flex flex-col justify-between border border-zinc-800/80">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 mb-6">
-                <i data-lucide="cloud" class="w-6 h-6"></i>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Full 20-Asset Google Cloud Stacks</h3>
-              <p class="text-sm text-zinc-400 leading-relaxed">
-                Automates Google Drive root hubs, Google Sheets master directories, Google Docs, MyMaps, Slides, Forms, Drawings, and Calendar silos.
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-zinc-800/80 flex items-center justify-between text-xs font-mono text-zinc-500">
-              <span>Drive API v3 Certified</span>
-              <a href="#features" class="text-sky-400 hover:underline flex items-center gap-1">Details <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
-            </div>
-          </div>
-
-          <!-- Pillar 2 -->
-          <div class="glass-panel glass-panel-hover rounded-2xl p-6 sm:p-8 flex flex-col justify-between border border-zinc-800/80">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-6">
-                <i data-lucide="refresh-cw" class="w-6 h-6"></i>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Circular Silo & 2-Way Interlinking</h3>
-              <p class="text-sm text-zinc-400 leading-relaxed">
-                No dead ends. Keywords cross-link sequentially (KW1 ➔ KW2 ➔ KW3 ➔ KW1) with reciprocal linking between the Google Site and central Google Sheets master node.
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-zinc-800/80 flex items-center justify-between text-xs font-mono text-zinc-500">
-              <span>Zero Orphan Pages</span>
-              <span class="text-cyan-400">Loop Architecture</span>
-            </div>
-          </div>
-
-          <!-- Pillar 3 -->
-          <div class="glass-panel glass-panel-hover rounded-2xl p-6 sm:p-8 flex flex-col justify-between border border-zinc-800/80">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-6">
-                <i data-lucide="briefcase" class="w-6 h-6"></i>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Multi-Agency White-Labeling</h3>
-              <p class="text-sm text-zinc-400 leading-relaxed">
-                Create unlimited agency profiles. Automatically stamps your agency logo, primary brand colors, client manager notes, and generates client-facing Excel deliverable sheets.
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-zinc-800/80 flex items-center justify-between text-xs font-mono text-zinc-500">
-              <span>Unlimited Agency Sub-Brands</span>
-              <span class="text-indigo-400">1-Click PDF/XLSX</span>
-            </div>
-          </div>
-
-          <!-- Pillar 4 -->
-          <div class="glass-panel glass-panel-hover rounded-2xl p-6 sm:p-8 flex flex-col justify-between border border-zinc-800/80">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-6">
-                <i data-lucide="map-pin" class="w-6 h-6"></i>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Geo-Targeted Driving Directions</h3>
-              <p class="text-sm text-zinc-400 leading-relaxed">
-                Auto-generates Google MyMaps with KML/GPX boundary radii, driving route coordinates from nearby neighborhoods, and geotagged NAP embeds for local Map 3-Pack authority.
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-zinc-800/80 flex items-center justify-between text-xs font-mono text-zinc-500">
-              <span>KML / GPX Map Nodes</span>
-              <span class="text-emerald-400">Map 3-Pack Boost</span>
-            </div>
-          </div>
-
-          <!-- Pillar 5 -->
-          <div class="glass-panel glass-panel-hover rounded-2xl p-6 sm:p-8 flex flex-col justify-between border border-zinc-800/80">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-6">
-                <i data-lucide="layers" class="w-6 h-6"></i>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Batch Multi-Project Automation</h3>
-              <p class="text-sm text-zinc-400 leading-relaxed">
-                Import CSV queues of 5, 20, or 50 local client campaigns. Run parallel builds with live thread monitoring, automatic retry failover, and instant completion alerts.
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-zinc-800/80 flex items-center justify-between text-xs font-mono text-zinc-500">
-              <span>High-Concurrency Queue</span>
-              <span class="text-amber-400">CSV Import Ready</span>
-            </div>
-          </div>
-
-          <!-- Pillar 6 -->
-          <div class="glass-panel glass-panel-hover rounded-2xl p-6 sm:p-8 flex flex-col justify-between border border-zinc-800/80">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-6">
-                <i data-lucide="sparkles" class="w-6 h-6"></i>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Built-in AI Authority Article Engine</h3>
-              <p class="text-sm text-zinc-400 leading-relaxed">
-                Connect your OpenAI or Google Gemini API key to write 1,500+ word geo-targeted, schema-enriched SEO articles complete with FAQ sections, LSI terms, and NAP headers.
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-zinc-800/80 flex items-center justify-between text-xs font-mono text-zinc-500">
-              <span>GPT-4o & Gemini Pro</span>
-              <span class="text-purple-400">Geo-LSI Injection</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 5. HOW IT WORKS (SIMPLE 3-STEP FLOW) ==================== -->
-    <section id="how-it-works" class="scroll-mt-20 py-20 md:py-28 relative border-t border-white/5 bg-[#0b0b10]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-4">
-            <i data-lucide="workflow" class="w-3.5 h-3.5"></i> Streamlined 3-Step Process
-          </div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            From Client Intake to Live Authority Stack in Under 3 Minutes.
-          </h2>
-          <p class="mt-4 text-base sm:text-lg text-zinc-400">
-            No complex setup, no proxy management, no captcha fees. A native desktop experience designed for speed and reliability.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          
-          <!-- Connecting Line (Desktop) -->
-          <div class="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-sky-500/20 via-sky-500/40 to-cyan-500/20 -translate-y-12 z-0"></div>
-
-          <!-- Step 1 -->
-          <div class="relative z-10 glass-panel rounded-2xl p-6 sm:p-8 border border-zinc-800 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-6">
-                <span class="w-12 h-12 rounded-2xl bg-sky-500/10 border border-sky-500/30 text-sky-400 font-mono font-extrabold text-xl flex items-center justify-center">
-                  01
-                </span>
-                <span class="text-xs font-mono text-zinc-500 bg-zinc-900 px-2 py-1 rounded border border-zinc-800">
-                  Step 1 • Input
-                </span>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Input Client NAP & Target Keywords</h3>
-              <p class="text-sm text-zinc-400 leading-relaxed">
-                Enter your client's Business Name, Address, Phone, Website, and target geo-keywords. Or let the built-in AI generate semantic keyword clusters automatically.
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-zinc-800 text-xs font-mono text-zinc-400 flex items-center gap-1.5">
-              <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Auto-validates NAP format
-            </div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="relative z-10 glass-panel rounded-2xl p-6 sm:p-8 border border-zinc-800 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-6">
-                <span class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono font-extrabold text-xl flex items-center justify-center">
-                  02
-                </span>
-                <span class="text-xs font-mono text-zinc-500 bg-zinc-900 px-2 py-1 rounded border border-zinc-800">
-                  Step 2 • Auth
-                </span>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">1-Click Google OAuth Authentication</h3>
-              <p class="text-sm text-zinc-400 leading-relaxed">
-                Click authenticate to link with your Google account. All OAuth tokens (<code class="text-sky-300">token.json</code>) remain 100% on your local disk. Zero credentials are ever sent to our servers.
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-zinc-800 text-xs font-mono text-zinc-400 flex items-center gap-1.5">
-              <i data-lucide="shield-check" class="w-4 h-4 text-sky-400"></i> 100% Local Privacy Guaranteed
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="relative z-10 glass-panel rounded-2xl p-6 sm:p-8 border border-zinc-800 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-6">
-                <span class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono font-extrabold text-xl flex items-center justify-center">
-                  03
-                </span>
-                <span class="text-xs font-mono text-zinc-500 bg-zinc-900 px-2 py-1 rounded border border-zinc-800">
-                  Step 3 • Deploy
-                </span>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Live Google Stack + White-Label Report</h3>
-              <p class="text-sm text-zinc-400 leading-relaxed">
-                Click "Run Build" and watch 20 assets launch simultaneously. Download the formatted Excel report (.xlsx) branded with your agency logo and hand it straight to the client.
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-zinc-800 text-xs font-mono text-zinc-400 flex items-center gap-1.5">
-              <i data-lucide="file-spreadsheet" class="w-4 h-4 text-emerald-400"></i> Client-Ready Deliverables
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Interactive Architecture Mode Selector Showcase -->
-        <div class="mt-16 p-6 sm:p-8 rounded-2xl bg-zinc-950/80 border border-zinc-800">
-          <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-6 border-b border-zinc-800">
-            <div>
-              <span class="text-xs font-mono text-sky-400 uppercase tracking-wider font-bold">Interactive Architecture Selector</span>
-              <h4 class="text-xl font-bold text-white mt-1">Select Your Entity Stacking Silo Strategy</h4>
-              <p class="text-sm text-zinc-400 mt-0.5">G-Stack Studio adapts to your agency's preferred linking topology.</p>
-            </div>
-            
-            <div class="flex flex-wrap gap-2">
-              <button class="arch-mode-btn px-4 py-2 rounded-xl text-xs font-semibold border transition-all bg-sky-500/20 text-sky-400 border-sky-500/40" data-mode="single">
-                Mode 1: Single Authority Hub
-              </button>
-              <button class="arch-mode-btn px-4 py-2 rounded-xl text-xs font-semibold border transition-all bg-zinc-900/60 text-zinc-400 border-zinc-800 hover:text-white" data-mode="inside">
-                Mode 2: Keyword Stacks (Subfolders)
-              </button>
-              <button class="arch-mode-btn px-4 py-2 rounded-xl text-xs font-semibold border transition-all bg-zinc-900/60 text-zinc-400 border-zinc-800 hover:text-white" data-mode="separate">
-                Mode 3: Separate Standalone Folders
-              </button>
-            </div>
-          </div>
-
-          <!-- Mode 1 View -->
-          <div class="arch-view pt-6" data-view="single">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono">
-              <div class="p-4 rounded-xl bg-zinc-900/90 border border-zinc-800">
-                <span class="text-sky-400 font-bold block mb-2">📁 Root Drive Directory</span>
-                <p class="text-zinc-400 font-sans text-xs">Contains 13 specialized subfolders (Articles, Presentations, PDFs, Datasets, GeoAssets, Maps, Forms).</p>
-              </div>
-              <div class="p-4 rounded-xl bg-zinc-900/90 border border-zinc-800">
-                <span class="text-cyan-400 font-bold block mb-2">🌐 Unified Brand Domination</span>
-                <p class="text-zinc-400 font-sans text-xs">Ideal for high-ticket local businesses establishing one authoritative entity hub across all services.</p>
-              </div>
-              <div class="p-4 rounded-xl bg-zinc-900/90 border border-zinc-800">
-                <span class="text-emerald-400 font-bold block mb-2">⚡ Circular Central Nodes</span>
-                <p class="text-zinc-400 font-sans text-xs">All 13 subfolders report directly into the published Google Site and Master Directory spreadsheet.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mode 2 View (Hidden by default) -->
-          <div class="arch-view pt-6 hidden" data-view="inside">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono">
-              <div class="p-4 rounded-xl bg-zinc-900/90 border border-zinc-800">
-                <span class="text-sky-400 font-bold block mb-2">📁 Nested Keyword Silos</span>
-                <p class="text-zinc-400 font-sans text-xs">Primary Root contains designated child folders for each primary service keyword (e.g. /roof-repair, /roof-replacement).</p>
-              </div>
-              <div class="p-4 rounded-xl bg-zinc-900/90 border border-zinc-800">
-                <span class="text-cyan-400 font-bold block mb-2">🎯 Isolated Keyword Authority</span>
-                <p class="text-zinc-400 font-sans text-xs">Keeps keyword assets compartmentalized while inheriting root parent domain authority.</p>
-              </div>
-              <div class="p-4 rounded-xl bg-zinc-900/90 border border-zinc-800">
-                <span class="text-emerald-400 font-bold block mb-2">🔄 Sequential Cross Links</span>
-                <p class="text-zinc-400 font-sans text-xs">Child silos link circularly: Silo A ➔ Silo B ➔ Silo C ➔ Root Google Site Homepage.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mode 3 View (Hidden by default) -->
-          <div class="arch-view pt-6 hidden" data-view="separate">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono">
-              <div class="p-4 rounded-xl bg-zinc-900/90 border border-zinc-800">
-                <span class="text-sky-400 font-bold block mb-2">📁 Standalone Folders</span>
-                <p class="text-zinc-400 font-sans text-xs">Creates independent Drive root hierarchies for each target market or franchise location.</p>
-              </div>
-              <div class="p-4 rounded-xl bg-zinc-900/90 border border-zinc-800">
-                <span class="text-cyan-400 font-bold block mb-2">🏢 Multi-Location Chains</span>
-                <p class="text-zinc-400 font-sans text-xs">Perfect for multi-location national franchises needing clean separate client deliverables.</p>
-              </div>
-              <div class="p-4 rounded-xl bg-zinc-900/90 border border-zinc-800">
-                <span class="text-emerald-400 font-bold block mb-2">📊 Independent Master Sheets</span>
-                <p class="text-zinc-400 font-sans text-xs">Each folder produces an autonomous client dashboard and separate client-shared Google Drive link.</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- ==================== CLOUD STACKING PROCESS ==================== -->
-        <div class="mt-24 pt-16 border-t border-zinc-800/80">
-          <div class="text-center max-w-3xl mx-auto mb-16">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">
-              <i data-lucide="cloud" class="w-3.5 h-3.5"></i> Multi-Cloud Stacking Engine
-            </div>
-            <h3 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-              Cloud Stacking Process: Publish Across 8 Cloud Providers
-            </h3>
-            <p class="mt-4 text-base sm:text-lg text-zinc-400">
-              Deploy high-authority static keyword websites to Google, AWS, Microsoft, and global CDN clouds in 3 simple steps.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            
-            <!-- Connecting Line (Desktop) -->
-            <div class="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-500/20 via-sky-500/40 to-emerald-500/20 -translate-y-12 z-0"></div>
-
-            <!-- Step 1 -->
-            <div class="relative z-10 glass-panel rounded-2xl p-6 sm:p-8 border border-zinc-800 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between mb-6">
-                  <span class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono font-extrabold text-xl flex items-center justify-center">
-                    01
-                  </span>
-                  <span class="text-xs font-mono text-zinc-500 bg-zinc-900 px-2 py-1 rounded border border-zinc-800">
-                    Step 1 • Design & Content
-                  </span>
-                </div>
-                <h4 class="text-xl font-bold text-white mb-2">Pick Template or Use Own Content</h4>
-                <p class="text-sm text-zinc-400 leading-relaxed">
-                  Choose from built-in responsive templates, generate SEO-optimized geo-targeted articles with AI, or import your custom spreadsheet with the Own Content Builder.
-                </p>
-              </div>
-              <div class="mt-6 pt-4 border-t border-zinc-800 text-xs font-mono text-zinc-400 flex items-center gap-1.5">
-                <i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Responsive Niche Templates
-              </div>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="relative z-10 glass-panel rounded-2xl p-6 sm:p-8 border border-zinc-800 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between mb-6">
-                  <span class="w-12 h-12 rounded-2xl bg-sky-500/10 border border-sky-500/30 text-sky-400 font-mono font-extrabold text-xl flex items-center justify-center">
-                    02
-                  </span>
-                  <span class="text-xs font-mono text-zinc-500 bg-zinc-900 px-2 py-1 rounded border border-zinc-800">
-                    Step 2 • Cloud Targets
-                  </span>
-                </div>
-                <h4 class="text-xl font-bold text-white mb-2">Select Your 8 Target Clouds</h4>
-                <p class="text-sm text-zinc-400 leading-relaxed">
-                  Tick the providers you want: GitHub Pages, Vercel, Netlify, Cloudflare Pages, Amazon AWS S3, Backblaze B2, Firebase, and Neocities. Easy 1-time API key connection.
-                </p>
-              </div>
-              <div class="mt-6 pt-4 border-t border-zinc-800 text-xs font-mono text-zinc-400 flex items-center gap-1.5">
-                <i data-lucide="cloud" class="w-4 h-4 text-sky-400"></i> 8 High-DA Cloud Hosts Supported
-              </div>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="relative z-10 glass-panel rounded-2xl p-6 sm:p-8 border border-zinc-800 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between mb-6">
-                  <span class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono font-extrabold text-xl flex items-center justify-center">
-                    03
-                  </span>
-                  <span class="text-xs font-mono text-zinc-500 bg-zinc-900 px-2 py-1 rounded border border-zinc-800">
-                    Step 3 • Deploy & Interlink
-                  </span>
-                </div>
-                <h4 class="text-xl font-bold text-white mb-2">1-Click Multi-Cloud Publishing</h4>
-                <p class="text-sm text-zinc-400 leading-relaxed">
-                  Click build to publish static websites across all selected clouds simultaneously. Automatically generates XML/HTML sitemaps, injects Schema markup, and interlinks with your Google Stacks.
-                </p>
-              </div>
-              <div class="mt-6 pt-4 border-t border-zinc-800 text-xs font-mono text-zinc-400 flex items-center gap-1.5">
-                <i data-lucide="rocket" class="w-4 h-4 text-emerald-400"></i> Instant Live URL Delivery
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 6. PRICING SECTION ==================== -->
-    <section id="pricing" class="scroll-mt-20 py-20 md:py-28 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-14">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-4">
-            <i data-lucide="tag" class="w-3.5 h-3.5"></i> Simple, transparent plans
-          </div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Pick monthly, or pay once for life.</h2>
-          <p class="mt-4 text-base sm:text-lg text-zinc-400">Four plans for freelancers and agencies. Every plan resets its limits each month.</p>
-            <p class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-500/10 border border-amber-500/40 text-amber-300 text-sm font-semibold"><i data-lucide="timer" class="w-4 h-4"></i> Lifetime deal is for a limited time only. Pay once, use it forever.</p>
-            <div class="mt-3"><a data-link="gumroadLifetime" href="#pricing" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-black text-sm font-bold"><i data-lucide="infinity" class="w-4 h-4"></i> Get the Lifetime Deal on Gumroad</a></div>
-          <div class="mt-8 flex items-center justify-center gap-4">
-            <span class="text-sm font-medium text-zinc-300">Monthly</span>
-            <label class="relative inline-flex items-center cursor-pointer">
-              <input type="checkbox" id="pricing-toggle" class="sr-only peer" aria-label="Show lifetime prices">
-              <div class="w-14 h-7 bg-zinc-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[4px] after:bg-white after:border-zinc-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-sky-600"></div>
-            </label>
-            <div class="flex items-center gap-2">
-              <span class="text-sm font-medium text-zinc-300">Lifetime</span>
-              <span id="discount-badge" class="text-[11px] font-bold text-sky-400 bg-sky-500/10 px-2 py-0.5 rounded-full border border-sky-500/30">
-                PAY ONCE
-              </span>
-            </div>
-          </div>
-        </div>
-                        <div id="plans" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          <!-- 1. Starter Plan -->
-          <div class="glass-panel rounded-2xl p-6 border border-zinc-800 flex flex-col justify-between relative hover:border-zinc-700 transition-all">
-            <div>
-              <div class="flex justify-between items-start gap-3 mb-3">
-                <div>
-                  <h3 class="text-xl font-bold text-white">Starter</h3>
-                  <p class="text-xs text-zinc-400 mt-1">For freelancers starting with Google stacks.</p>
-                </div>
-                <div class="w-10 h-10 rounded-xl bg-zinc-800/80 border border-zinc-700 flex items-center justify-center text-sky-400 shrink-0"><i data-lucide="user" class="w-5 h-5"></i></div>
-              </div>
-              <div class="my-5">
-                <div class="flex items-baseline gap-2 flex-wrap">
-                  <span class="text-4xl font-extrabold text-white font-mono">$<span class="price-val" data-monthly="49" data-lifetime="299">49</span></span>
-                  <span class="text-zinc-400 text-xs price-period">/ month billed monthly</span>
-                </div>
-              </div>
-              <div class="space-y-3 text-sm text-zinc-300 border-t border-zinc-800 pt-5">
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span><strong>6 Google stacks</strong> / month</span></div>
-                <div class="flex items-center gap-2.5 text-zinc-500"><i data-lucide="x" class="w-4 h-4 text-zinc-600 shrink-0"></i><span>Batch Builder</span></div>
-                <div class="flex items-center gap-2.5 text-zinc-500"><i data-lucide="x" class="w-4 h-4 text-zinc-600 shrink-0"></i><span>Cloud websites</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span data-month-only><strong>1 PC</strong> license</span><span data-life-only class="hidden"><strong>1 device</strong> activation</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span>Built-in <strong>AI writing tools</strong></span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span class="text-white font-semibold">White-label Brand Reports (PDF &amp; Excel)</span></div>
-                <div data-life-only class="hidden flex items-center gap-2.5 text-sky-400 font-medium"><i data-lucide="sparkles" class="w-4 h-4 shrink-0 text-sky-400"></i><span>Lifetime access &amp; lifetime updates</span></div>
-              </div>
-            </div>
-            <div class="mt-6 pt-5 border-t border-zinc-800">
-              <a data-buy="Starter" href="#pricing" class="w-full py-3 rounded-xl text-center text-sm block transition-all text-white font-semibold bg-zinc-800 hover:bg-zinc-700 border border-zinc-700">Choose Starter</a>
-            </div>
-          </div>
-
-          <!-- 2. Pro Plan -->
-          <div class="glass-panel rounded-2xl p-6 border border-zinc-800 flex flex-col justify-between relative hover:border-zinc-700 transition-all">
-            <div>
-              <div class="flex justify-between items-start gap-3 mb-3">
-                <div>
-                  <h3 class="text-xl font-bold text-white">Pro</h3>
-                  <p class="text-xs text-zinc-400 mt-1">Google stacks plus cloud authority websites.</p>
-                </div>
-                <div class="w-10 h-10 rounded-xl bg-zinc-800/80 border border-zinc-700 flex items-center justify-center text-sky-400 shrink-0"><i data-lucide="briefcase" class="w-5 h-5"></i></div>
-              </div>
-              <div class="my-5">
-                <div class="flex items-baseline gap-2 flex-wrap">
-                  <span class="text-4xl font-extrabold text-white font-mono">$<span class="price-val" data-monthly="99" data-lifetime="449">99</span></span>
-                  <span class="text-zinc-400 text-xs price-period">/ month billed monthly</span>
-                </div>
-              </div>
-              <div class="space-y-3 text-sm text-zinc-300 border-t border-zinc-800 pt-5">
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span><strong>12 Google stacks</strong> / month</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span>Batch Builder: <strong>3 clients</strong> at once</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span><strong>30 cloud websites</strong> / month</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span data-month-only><strong>50 pages</strong> per site</span><span data-life-only class="hidden"><strong>30 pages</strong> per site</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span data-month-only><strong>1 PC</strong> license</span><span data-life-only class="hidden"><strong>1 device</strong> activation</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span>Built-in <strong>AI writing tools</strong></span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span class="text-white font-semibold">White-label Brand Reports (PDF &amp; Excel)</span></div>
-                <div data-life-only class="hidden flex items-center gap-2.5 text-sky-400 font-medium"><i data-lucide="sparkles" class="w-4 h-4 shrink-0 text-sky-400"></i><span>Lifetime access &amp; lifetime updates</span></div>
-              </div>
-            </div>
-            <div class="mt-6 pt-5 border-t border-zinc-800">
-              <a data-buy="Pro" href="#pricing" class="w-full py-3 rounded-xl text-center text-sm block transition-all text-white font-semibold bg-zinc-800 hover:bg-zinc-700 border border-zinc-700">Choose Pro</a>
-            </div>
-          </div>
-
-          <!-- 3. Agency Plan (Most Popular) -->
-          <div class="glass-panel rounded-2xl p-6 border-2 border-sky-500/80 shadow-2xl shadow-sky-950/60 bg-gradient-to-b from-[#161622] to-[#0e0e15] flex flex-col justify-between relative scale-[1.02] z-10">
-            <div class="absolute -top-3.5 left-6 px-3 py-1 rounded-full bg-gradient-to-r from-sky-400 to-cyan-300 text-black text-[11px] font-extrabold uppercase tracking-wider shadow-lg">Most popular</div>
-            <div>
-              <div class="flex justify-between items-start gap-3 mb-3">
-                <div>
-                  <h3 class="text-xl font-bold text-white">Agency</h3>
-                  <p class="text-xs text-zinc-400 mt-1">High-volume stacks for scaling digital agencies.</p>
-                </div>
-                <div class="w-10 h-10 rounded-xl bg-zinc-800/80 border border-zinc-700 flex items-center justify-center text-sky-400 shrink-0"><i data-lucide="building-2" class="w-5 h-5"></i></div>
-              </div>
-              <div class="my-5">
-                <div class="flex items-baseline gap-2 flex-wrap">
-                  <span class="text-4xl font-extrabold text-white font-mono">$<span class="price-val" data-monthly="199" data-lifetime="999">199</span></span>
-                  <span class="text-zinc-400 text-xs price-period">/ month billed monthly</span>
-                </div>
-              </div>
-              <div class="space-y-3 text-sm text-zinc-300 border-t border-zinc-800 pt-5">
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span data-month-only><strong>70 Google stacks</strong> / month</span><span data-life-only class="hidden"><strong>50 Google stacks</strong> / month</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span>Batch Builder: <strong>5 clients</strong> at once</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span><strong>100 cloud websites</strong> / month</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span><strong>100 pages</strong> per site</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span data-month-only><strong>1 PC</strong> license</span><span data-life-only class="hidden"><strong>2 device</strong> activations</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span>Built-in <strong>AI writing tools</strong></span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span class="text-white font-semibold">White-label Brand Reports (PDF &amp; Excel)</span></div>
-                <div data-life-only class="hidden flex items-center gap-2.5 text-sky-400 font-medium"><i data-lucide="sparkles" class="w-4 h-4 shrink-0 text-sky-400"></i><span>Lifetime access &amp; lifetime updates</span></div>
-              </div>
-            </div>
-            <div class="mt-6 pt-5 border-t border-zinc-800">
-              <a data-buy="Agency" href="#pricing" class="w-full py-3 rounded-xl text-center text-sm block transition-all btn-glow-primary text-white font-bold shadow-xl shadow-sky-500/20">Choose Agency</a>
-            </div>
-          </div>
-
-          <!-- 4. Ultimate Plan -->
-          <div class="glass-panel rounded-2xl p-6 border border-zinc-800 flex flex-col justify-between relative hover:border-zinc-700 transition-all">
-            <div>
-              <div class="flex justify-between items-start gap-3 mb-3">
-                <div>
-                  <h3 class="text-xl font-bold text-white">Ultimate</h3>
-                  <p class="text-xs text-zinc-400 mt-1">Maximum limits for one power user.</p>
-                </div>
-                <div class="w-10 h-10 rounded-xl bg-zinc-800/80 border border-zinc-700 flex items-center justify-center text-sky-400 shrink-0"><i data-lucide="crown" class="w-5 h-5"></i></div>
-              </div>
-              <div class="my-5">
-                <div class="flex items-baseline gap-2 flex-wrap">
-                  <span class="text-4xl font-extrabold text-white font-mono">$<span class="price-val" data-monthly="399" data-lifetime="1,499">399</span></span>
-                  <span class="text-zinc-400 text-xs price-period">/ month billed monthly</span>
-                </div>
-              </div>
-              <div class="space-y-3 text-sm text-zinc-300 border-t border-zinc-800 pt-5">
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span><strong>100 Google stacks</strong> / month</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span>Batch Builder: <strong>10 clients</strong> at once</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span><strong>200 cloud websites</strong> / month</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span><strong>200 pages</strong> per site</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span data-month-only><strong>1 PC</strong> license</span><span data-life-only class="hidden"><strong>1 device</strong> activation</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span>Built-in <strong>AI writing tools</strong></span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span class="text-white font-semibold">White-label Brand Reports (PDF &amp; Excel)</span></div>
-                <div data-life-only class="hidden flex items-center gap-2.5 text-sky-400 font-medium"><i data-lucide="sparkles" class="w-4 h-4 shrink-0 text-sky-400"></i><span>Lifetime access &amp; lifetime updates</span></div>
-              </div>
-            </div>
-            <div class="mt-6 pt-5 border-t border-zinc-800">
-              <a data-buy="Ultimate" href="#pricing" class="w-full py-3 rounded-xl text-center text-sm block transition-all text-white font-semibold bg-zinc-800 hover:bg-zinc-700 border border-zinc-700">Choose Ultimate</a>
-            </div>
-          </div>
-
-          <!-- Lifetime terms note (Lifetime only) -->
-          <div data-life-only class="hidden sm:col-span-2 xl:col-span-4 rounded-xl border border-zinc-800 bg-zinc-900/60 px-5 py-4 text-xs sm:text-sm text-zinc-400 flex items-start gap-3">
-            <i data-lucide="info" class="w-4 h-4 text-sky-400 shrink-0 mt-0.5"></i>
-            <span><strong class="text-zinc-200">Lifetime plans</strong> include lifetime updates to the G-Stack Studio desktop app. New paid add-ons or separate products released later are not included and will be charged separately. G-Stack Studio is a Windows desktop app: <strong class="text-zinc-200">no web dashboard is included</strong>.</span>
-          </div>
-
-          <!-- 5. Lifetime Ultimate 5-Devices Plan (Lifetime Only) -->
-          <div data-life-only class="hidden sm:col-span-2 xl:col-span-4 glass-panel rounded-2xl p-6 sm:p-8 border-2 border-amber-400/70 grid grid-cols-1 lg:grid-cols-3 gap-6 items-center shadow-2xl shadow-amber-950/30 bg-gradient-to-br from-[#181611] to-[#0d0d12]">
-            <div>
-              <span class="inline-block text-[11px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-amber-400 text-black shadow-md">5 Licenses · 5 PCs</span>
-              <h3 class="text-2xl font-bold text-white mt-3">Ultimate Agency Lifetime</h3>
-              <div class="text-4xl font-extrabold text-white font-mono mt-2">$3,999 <span class="text-xs text-zinc-400 font-sans font-normal">one-time payment</span></div>
-              <p class="text-xs text-zinc-400 mt-2 leading-relaxed">Our highest-capacity lifetime license for agencies and large-scale SEO operations. The monthly limits below are the <strong class="text-zinc-200">agency total, shared across all 5 PCs</strong>.</p>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-zinc-300">
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span><strong>200 Google Stacks</strong> per month</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span>Batch Builder: <strong>30 clients</strong> per run</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span><strong>400 Cloud Websites</strong> per month</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span>Up to <strong>400 pages</strong> per website</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span>AI-powered content generation</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span class="text-white font-semibold">White-label agency reports</span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i><span><strong>5 licenses / 5 PCs</strong></span></div>
-                <div class="flex items-center gap-2.5"><i data-lucide="sparkles" class="w-4 h-4 text-amber-400 shrink-0"></i><span class="text-amber-300 font-medium">Lifetime access &amp; lifetime updates</span></div>
-            </div>
-            <div>
-              <a data-link="gumroadLifetime" href="#pricing" class="btn-glow-primary w-full py-4 rounded-xl text-center text-sm font-bold text-white block shadow-lg">Get Ultimate Agency Lifetime ($3,999)</a>
-              <p class="text-center text-[11px] text-zinc-500 mt-2">Instant key delivery &middot; 30-day money-back guarantee</p>
-            </div>
-          </div>
-        </div>
-        <p class="mt-6 text-center text-xs text-zinc-500">Limits reset every month on every plan, monthly or lifetime. Use your own Google, cloud and AI accounts. Prices in USD.</p>
-        <div class="mt-10 glass-panel rounded-2xl border border-emerald-500/30 p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <!-- Security Column -->
           <div>
-            <div class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold">Teams &amp; resellers</div>
-            <h3 class="text-xl sm:text-2xl font-bold text-white mt-2">Need 10 or more licenses, or a white-label version?</h3>
-            <p class="text-sm text-zinc-400 mt-2 max-w-2xl">Message us on WhatsApp for team pricing and white-label options. We reply with a quote for your number of seats.</p>
-          </div>
-          <div class="flex flex-col items-start md:items-center gap-2 shrink-0">
-            <a data-link="whatsapp" href="#contact" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#1FA855] hover:bg-[#1b9a4d] text-white text-sm font-bold"><i data-lucide="message-circle" class="w-5 h-5"></i> Chat on WhatsApp</a>
-            <span data-link-text="whatsappText" class="text-xs font-mono text-zinc-500 select-all"></span>
-          </div>
-        </div>
-        
-
-        <!-- Pakistan local bank payment -->
-        <div class="mt-6 p-6 rounded-2xl glass-panel border border-emerald-500/40 flex flex-col md:flex-row md:items-center justify-between gap-5">
-          <div>
-            <div class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold">🇵🇰 Pakistan</div>
-            <h3 class="text-xl sm:text-2xl font-bold text-white mt-2">Pay from a Pakistani bank account</h3>
-            <p class="text-sm text-zinc-400 mt-2 max-w-2xl">No card needed. Message us on WhatsApp with the plan you want; we send the bank details and activate your license as soon as the transfer arrives.</p>
-          </div>
-          <a href="https://wa.me/923028981089?text=Hi%2C%20I%20want%20to%20buy%20G-Stack%20Studio%20and%20pay%20from%20a%20Pakistani%20bank%20%28local%20transfer%29." target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#1FA855] hover:bg-[#1b9a4d] text-white text-sm font-bold shrink-0"><i data-lucide="message-circle" class="w-5 h-5"></i> Pay via local bank</a>
-        </div>
-
-                <!-- ==================== DETAILED FEATURE MATRIX ==================== -->
-        <div id="compare" class="mt-16 scroll-mt-20">
-          <div class="text-center max-w-3xl mx-auto mb-10">
-            <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Compare Plan Features &amp; Limits</h3>
-            <p class="text-xs sm:text-sm text-zinc-400 mt-2">All plans include the complete Google Stack engine, AI writing, and white-label reporting. Limits reset on the 1st of every month.</p>
-          </div>
-          <div class="glass-panel rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl">
-            <div class="overflow-x-auto">
-              <table class="w-full text-left border-collapse text-xs min-w-[640px]">
-                <thead>
-                  <tr class="bg-zinc-950/90 border-b border-zinc-800 text-zinc-300">
-                    <th class="p-4 sm:p-5 font-semibold text-sm">Feature / Limit</th>
-                    <th class="p-4 sm:p-5 font-semibold text-center text-sm">Starter</th>
-                    <th class="p-4 sm:p-5 font-semibold text-center text-sm">Pro</th>
-                    <th class="p-4 sm:p-5 font-semibold text-center text-sm text-sky-400 bg-sky-500/10">Agency</th>
-                    <th class="p-4 sm:p-5 font-semibold text-center text-sm">Ultimate</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-zinc-800 text-zinc-300">
-                  <tr class="bg-zinc-900/40 font-semibold text-zinc-400 uppercase text-[10px] tracking-wider"><td colspan="5" class="p-3 pl-5">Pricing &amp; Billing</td></tr>
-                  <tr><td class="p-4 pl-5">Monthly Subscription</td><td class="p-4 text-center font-mono font-bold text-white">$49 / mo</td><td class="p-4 text-center font-mono font-bold text-white">$99 / mo</td><td class="p-4 text-center font-mono font-bold text-sky-400 bg-sky-500/5">$199 / mo</td><td class="p-4 text-center font-mono font-bold text-white">$399 / mo</td></tr>
-                  <tr><td class="p-4 pl-5">Lifetime License (Pay Once)</td><td class="p-4 text-center font-mono font-bold text-white">$299</td><td class="p-4 text-center font-mono font-bold text-white">$449</td><td class="p-4 text-center font-mono font-bold text-sky-400 bg-sky-500/5">$999</td><td class="p-4 text-center font-mono font-bold text-white">$1,499</td></tr>
-                  <tr><td class="p-4 pl-5">Ultimate Agency Lifetime (5 PCs)</td><td class="p-4 text-center text-zinc-600">—</td><td class="p-4 text-center text-zinc-600">—</td><td class="p-4 text-center text-zinc-600">—</td><td class="p-4 text-center font-mono font-bold text-amber-400">$3,999</td></tr>
-                  <tr class="bg-zinc-900/40 font-semibold text-zinc-400 uppercase text-[10px] tracking-wider"><td colspan="5" class="p-3 pl-5">Monthly Output Limits (Reset Monthly)</td></tr>
-                  <tr><td class="p-4 pl-5">Google Stacks / month (Monthly Plan)</td><td class="p-4 text-center font-mono">6</td><td class="p-4 text-center font-mono">12</td><td class="p-4 text-center font-mono text-sky-400 bg-sky-500/5">70</td><td class="p-4 text-center font-mono">100</td></tr>
-                  <tr><td class="p-4 pl-5">Google Stacks / month (Lifetime Plan)</td><td class="p-4 text-center font-mono">6</td><td class="p-4 text-center font-mono">12</td><td class="p-4 text-center font-mono text-sky-400 bg-sky-500/5">50</td><td class="p-4 text-center font-mono">100</td></tr>
-                  <tr><td class="p-4 pl-5">Batch Builder (Clients at once)</td><td class="p-4 text-center text-zinc-600">—</td><td class="p-4 text-center font-mono">3</td><td class="p-4 text-center font-mono text-sky-400 bg-sky-500/5">5</td><td class="p-4 text-center font-mono">10</td></tr>
-                  <tr><td class="p-4 pl-5">Cloud Websites / month</td><td class="p-4 text-center text-zinc-600">—</td><td class="p-4 text-center font-mono">30</td><td class="p-4 text-center font-mono text-sky-400 bg-sky-500/5">100</td><td class="p-4 text-center font-mono">200</td></tr>
-                  <tr><td class="p-4 pl-5">Pages per Cloud Website (Monthly)</td><td class="p-4 text-center text-zinc-600">—</td><td class="p-4 text-center font-mono">50</td><td class="p-4 text-center font-mono text-sky-400 bg-sky-500/5">100</td><td class="p-4 text-center font-mono">200</td></tr>
-                  <tr><td class="p-4 pl-5">Pages per Cloud Website (Lifetime)</td><td class="p-4 text-center text-zinc-600">—</td><td class="p-4 text-center font-mono">30</td><td class="p-4 text-center font-mono text-sky-400 bg-sky-500/5">100</td><td class="p-4 text-center font-mono">200</td></tr>
-                  <tr><td class="p-4 pl-5">PC / Device Activations (Monthly)</td><td class="p-4 text-center font-mono">1 PC</td><td class="p-4 text-center font-mono">1 PC</td><td class="p-4 text-center font-mono text-sky-400 bg-sky-500/5">1 PC</td><td class="p-4 text-center font-mono">1 PC</td></tr>
-                  <tr><td class="p-4 pl-5">Device Activations (Lifetime)</td><td class="p-4 text-center font-mono">1 device</td><td class="p-4 text-center font-mono">1 device</td><td class="p-4 text-center font-mono text-sky-400 bg-sky-500/5 font-bold">2 devices</td><td class="p-4 text-center font-mono">1 device</td></tr>
-                  <tr class="bg-zinc-900/40 font-semibold text-zinc-400 uppercase text-[10px] tracking-wider"><td colspan="5" class="p-3 pl-5">Core Features Included Across All Plans</td></tr>
-                  <tr><td class="p-4 pl-5">Complete Google Stack Assets (Drive, Docs, Sheets, Slides, Forms, MyMaps, Calendar, PDF)</td><td class="p-4 text-center text-emerald-400">✓</td><td class="p-4 text-center text-emerald-400">✓</td><td class="p-4 text-center text-emerald-400 bg-sky-500/5">✓</td><td class="p-4 text-center text-emerald-400">✓</td></tr>
-                  <tr><td class="p-4 pl-5">Built-in AI Article &amp; Content Writer (OpenAI, OpenRouter, Custom API)</td><td class="p-4 text-center text-emerald-400">✓</td><td class="p-4 text-center text-emerald-400">✓</td><td class="p-4 text-center text-emerald-400 bg-sky-500/5">✓</td><td class="p-4 text-center text-emerald-400">✓</td></tr>
-                  <tr><td class="p-4 pl-5"><strong>White-Label Brand Reports</strong> (Client-Ready PDF &amp; Formatted Excel with all Live URLs)</td><td class="p-4 text-center text-emerald-400 font-bold">✓</td><td class="p-4 text-center text-emerald-400 font-bold">✓</td><td class="p-4 text-center text-emerald-400 font-bold bg-sky-500/5">✓</td><td class="p-4 text-center text-emerald-400 font-bold">✓</td></tr>
-                  <tr><td class="p-4 pl-5"><strong>Agency Brand Kit</strong> (Custom Logo, Company Name, Brand Colors &amp; Custom Disclaimers)</td><td class="p-4 text-center text-emerald-400 font-bold">✓</td><td class="p-4 text-center text-emerald-400 font-bold">✓</td><td class="p-4 text-center text-emerald-400 font-bold bg-sky-500/5">✓</td><td class="p-4 text-center text-emerald-400 font-bold">✓</td></tr>
-                  <tr><td class="p-4 pl-5">In-App Academy Video Tutorials &amp; Live Step-by-Step Training</td><td class="p-4 text-center text-emerald-400">✓</td><td class="p-4 text-center text-emerald-400">✓</td><td class="p-4 text-center text-emerald-400 bg-sky-500/5">✓</td><td class="p-4 text-center text-emerald-400">✓</td></tr>
-                  <tr><td class="p-4 pl-5">Automatic Software Updates &amp; New Asset Templates</td><td class="p-4 text-center text-emerald-400">✓</td><td class="p-4 text-center text-emerald-400">✓</td><td class="p-4 text-center text-emerald-400 bg-sky-500/5">✓</td><td class="p-4 text-center text-emerald-400">✓</td></tr>
-                  <tr><td class="p-4 pl-5">Cloud Providers (GitHub Pages, Netlify, Vercel, Cloudflare, S3, Neocities, Firebase, B2)</td><td class="p-4 text-center text-zinc-600">—</td><td class="p-4 text-center text-emerald-400">✓</td><td class="p-4 text-center text-emerald-400 bg-sky-500/5">✓</td><td class="p-4 text-center text-emerald-400">✓</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ==================== ROI CALCULATOR (was pricing page) ==================== -->
-    <div class="py-10 md:py-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- ==================== INTERACTIVE ROI CALCULATOR ==================== -->
-      <section id="calculator" class="mb-24 py-12 px-6 sm:px-12 rounded-3xl glass-panel border border-sky-500/30 relative">
-        <div class="max-w-4xl mx-auto">
-          <div class="text-center mb-10">
-            <span class="text-xs font-mono uppercase tracking-wider text-sky-400 font-bold bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">
-              Agency Profit & Time Math
+            <span class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+              Local Desktop Privacy
             </span>
-            <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-3">
-              Calculate Your Agency Savings & Profit Margins
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">
+              Your Google Accounts. Your Cloud Storage.
             </h2>
-            <p class="text-xs sm:text-sm text-zinc-400 mt-2">
-              See how many billable hours G-Stack Studio saves your team every single month.
+            <p class="text-zinc-300 text-sm sm:text-base mt-4 leading-relaxed">
+              G-Stack Studio executes locally on your Windows PC. Tokens are stored in your application folder (<code class="text-sky-300 font-mono">token.json</code>). No intermediary web server ever intercepts your Google login, API access keys, or client project documents.
             </p>
+            <div class="mt-6 flex items-center gap-4">
+              <a href="security.html" class="text-sm font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1.5">
+                Review our full Security Architecture <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            
-            <!-- Controls -->
-            <div class="space-y-6 bg-zinc-950/70 p-6 rounded-2xl border border-zinc-800">
-              <div>
-                <div class="flex justify-between items-center mb-2">
-                  <label for="client-slider" class="text-xs font-semibold text-zinc-300">Clients Stacked Per Month</label>
-                  <span id="client-count" class="text-base font-bold font-mono text-sky-400">10</span>
-                </div>
-                <input type="range" id="client-slider" min="1" max="50" value="10" class="w-full accent-sky-500 cursor-pointer">
-                <div class="flex justify-between text-[10px] text-zinc-500 font-mono mt-1">
-                  <span>1 Client</span>
-                  <span>25 Clients</span>
-                  <span>50 Clients</span>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between items-center mb-2">
-                  <label for="hourly-rate-input" class="text-xs font-semibold text-zinc-300">Agency Billable / VA Hourly Rate ($)</label>
-                  <span class="text-xs text-zinc-500">USD</span>
-                </div>
-                <div class="relative">
-                  <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-zinc-500">$</span>
-                  <input type="number" id="hourly-rate-input" value="125" class="w-full pl-8 pr-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-mono text-sm focus:outline-none focus:border-sky-500">
-                </div>
-              </div>
-
-              <div class="text-[11px] text-zinc-400 leading-relaxed pt-2 border-t border-zinc-800/80">
-                * Based on verified benchmarks: Manual Google stack assembly takes an average of <strong>8.5 hours</strong> per client vs. <strong>120 seconds</strong> with G-Stack Studio.
-              </div>
+          <!-- Video Academy Preview -->
+          <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-zinc-800">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono text-zinc-400 uppercase">Academy Feature Video</span>
+              <span class="text-xs font-mono text-red-400 flex items-center gap-1"><i data-lucide="play-circle" class="w-3.5 h-3.5"></i> 2 Mins</span>
             </div>
-
-            <!-- Calculated Output Stats -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="p-6 rounded-2xl bg-zinc-900/90 border border-zinc-800 flex flex-col justify-between">
-                <span class="text-xs text-zinc-400 font-medium">Labor Hours Saved / Mo</span>
-                <div id="hours-saved" class="text-3xl sm:text-4xl font-black text-sky-400 font-mono mt-3">
-                  85 hrs
-                </div>
-                <span class="text-[11px] text-zinc-500 mt-2">Recovered team capacity</span>
-              </div>
-
-              <div class="p-6 rounded-2xl bg-gradient-to-br from-sky-950/60 to-zinc-900 border border-sky-500/40 flex flex-col justify-between shadow-xl">
-                <span class="text-xs text-zinc-300 font-medium">Estimated Monthly Value Saved</span>
-                <div id="value-generated" class="text-3xl sm:text-4xl font-black text-emerald-400 font-mono mt-3">
-                  $10,625
-                </div>
-                <span class="text-[11px] text-emerald-300/80 mt-2">Direct agency margin gain</span>
-              </div>
+            <div class="relative aspect-video rounded-2xl overflow-hidden border border-zinc-800 bg-black mb-4">
+              <iframe 
+                class="w-full h-full" 
+                src="https://www.youtube-nocookie.com/embed/dIm7r9vOhRw" 
+                title="Software Activation &amp; 1-Month Free Transfer Policy" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+              </iframe>
             </div>
-
+            <div class="text-xs text-zinc-300 font-semibold">Software Activation &amp; 1-Month Free Transfer Walkthrough</div>
+            <a href="tutorials.html" class="text-xs text-sky-400 hover:text-sky-300 font-medium inline-block mt-2">
+              Browse all 6 video training lessons &rarr;
+            </a>
           </div>
+
         </div>
-      </section>
-
       </div>
-    </div>
+    </section>
 
-    <!-- ==================== 7. INTERACTIVE FAQ SECTION ==================== -->
-    <section id="faq" class="scroll-mt-20 py-20 md:py-28 relative border-t border-white/5 bg-[#0a0a0f]">
+    <!-- SECTION 5: COMPACT FAQ -->
+    <section class="py-16 bg-[#0c0c11] border-t border-zinc-800/80">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-4">
-            <i data-lucide="help-circle" class="w-3.5 h-3.5"></i> Frequently Asked Questions
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Everything You Need to Know About G-Stack Studio.
+        <div class="text-center mb-12">
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white">
+            Frequently Asked Questions
           </h2>
-          <p class="mt-4 text-base text-zinc-400">
-            Have questions about Google OAuth compliance, indexing, or white-labeling? Find the answers below.
-          </p>
         </div>
 
-        <!-- Accordion Container -->
-        <div class="space-y-4">
-          
-          <!-- FAQ 1 -->
-          <div class="faq-item glass-panel rounded-2xl border border-zinc-800 overflow-hidden">
-            <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between text-base font-semibold text-white focus:outline-none">
-              <span>Does G-Stack Studio build into my own Google Drive space?</span>
-              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-400 transition-transform duration-300"></i>
-            </button>
-            <div class="accordion-content px-6 pb-6 text-sm text-zinc-300 leading-relaxed">
-              Yes, absolutely. G-Stack Studio interacts directly with the Google account you authorize during the 1-click OAuth connection. The entire 20-asset ecosystem (Drive folders, Docs, Sheets, Slides and MyMaps) is created directly inside your or your client's designated Google Drive. There is zero server middleman and zero vendor lock-in.
-            </div>
-          </div>
-
-          <!-- FAQ 2 -->
-          <div class="faq-item glass-panel rounded-2xl border border-zinc-800 overflow-hidden">
-            <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between text-base font-semibold text-white focus:outline-none">
-              <span>Are Google Cloud assets and links dofollow and indexed?</span>
-              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-400 transition-transform duration-300"></i>
-            </button>
-            <div class="accordion-content px-6 pb-6 text-sm text-zinc-300 leading-relaxed">
-              Google Cloud assets enjoy the highest natural domain authority and crawl priority on the internet. Because the assets are hosted on Google's own subdomains (drive.google.com, sites.google.com, docs.google.com), Googlebot indexes them rapidly. Furthermore, the mathematical circular linking structure (linking Docs to Sheets to Sites and back) pushes crawl spiders through the entire entity network without dead ends.
-            </div>
-          </div>
-
-          <!-- FAQ 3 -->
-          <div class="faq-item glass-panel rounded-2xl border border-zinc-800 overflow-hidden">
-            <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between text-base font-semibold text-white focus:outline-none">
-              <span>Can I white-label the reports with my agency logo and branding?</span>
-              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-400 transition-transform duration-300"></i>
-            </button>
-            <div class="accordion-content px-6 pb-6 text-sm text-zinc-300 leading-relaxed">
-              Yes. Every plan can set up agency branding profiles. When a stack completes, the software generates a formatted, executive-ready Excel workbook (.xlsx) stamped with your agency's logo, contact info, brand colors, and public asset URLs ready to email directly to your client.
-            </div>
-          </div>
-
-          <!-- FAQ 4 -->
-          <div class="faq-item glass-panel rounded-2xl border border-zinc-800 overflow-hidden">
-            <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between text-base font-semibold text-white focus:outline-none">
-              <span>Is this safe and compliant with Google Terms of Service?</span>
-              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-400 transition-transform duration-300"></i>
-            </button>
-            <div class="accordion-content px-6 pb-6 text-sm text-zinc-300 leading-relaxed">
-              G-Stack Studio is 100% compliant with the official Google API Services User Data Policy. It operates via official Google Cloud OAuth 2.0 endpoints using published REST APIs for Drive, Docs, Sheets, and Calendar. It does NOT use scraping bots, headless browser exploits, or unauthorized private endpoints.
-            </div>
-          </div>
-
-          <!-- FAQ 5 -->
-          <div class="faq-item glass-panel rounded-2xl border border-zinc-800 overflow-hidden">
-            <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between text-base font-semibold text-white focus:outline-none">
-              <span>Where are my Google credentials and OAuth tokens stored?</span>
-              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-400 transition-transform duration-300"></i>
-            </button>
-            <div class="accordion-content px-6 pb-6 text-sm text-zinc-300 leading-relaxed">
-              Your security is our top priority. G-Stack Studio is an offline desktop client. When you log in with Google, the authorization token file (<code class="text-sky-300 font-mono">token.json</code>) is saved strictly in your local computer's operating system storage. We have zero cloud databases that receive or process your Google tokens.
-            </div>
-          </div>
-
-          <!-- FAQ 6 -->
-          <div class="faq-item glass-panel rounded-2xl border border-zinc-800 overflow-hidden">
-            <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between text-base font-semibold text-white focus:outline-none">
-              <span>How does the Batch Multi-Project Builder work?</span>
-              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-400 transition-transform duration-300"></i>
-            </button>
-            <div class="accordion-content px-6 pb-6 text-sm text-zinc-300 leading-relaxed">
-              In Agency Pro, you can upload a CSV containing 5, 10, or 50 client rows with their respective business details, keywords, and target URLs. The engine executes them in a multi-threaded background queue, pacing requests according to Google API quotas to ensure 100% completion without rate limit errors.
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 7.5. CONTACT & SUPPORT SECTION ==================== -->
-    <section id="contact" class="scroll-mt-20 py-20 md:py-28 relative border-t border-white/5 bg-[#0b0b10]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-4">
-            <i data-lucide="message-square" class="w-3.5 h-3.5"></i> Dedicated Human Support
-          </div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            How Can We Help Your Agency Scale?
-          </h2>
-          <p class="mt-4 text-base sm:text-lg text-zinc-400">
-            Have questions about Google OAuth scopes, custom batch queues, or licensing? Our team is here for you.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-6xl mx-auto">
-          
-          <!-- Left: talk to us on WhatsApp (7 cols) -->
-          <div class="lg:col-span-7 glass-panel rounded-3xl p-6 sm:p-10 border border-emerald-500/30 relative flex flex-col justify-center">
-            <h3 class="text-2xl font-bold text-white flex items-center gap-2">
-              <i data-lucide="message-circle" class="w-6 h-6 text-emerald-400"></i> Talk to us on WhatsApp
-            </h3>
-            <p class="text-sm text-zinc-400 mt-3">Sales, team licenses, white-label, local bank payment in Pakistan, or help with setup: message us and a real person replies.</p>
-            <div class="mt-6 flex flex-col sm:flex-row gap-3">
-              <a data-link="whatsapp" href="#contact" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#1FA855] hover:bg-[#1b9a4d] text-white text-sm font-bold"><i data-lucide="message-circle" class="w-5 h-5"></i> Chat on WhatsApp</a>
-              <a data-link="youtube" href="#videos" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-red-500/60 text-zinc-200 text-sm font-semibold"><i data-lucide="play-circle" class="w-5 h-5 text-red-500"></i> Setup videos</a>
-            </div>
-            <span data-link-text="whatsappText" class="mt-4 text-xs font-mono text-zinc-500 select-all"></span>
-          </div>
-
-          <!-- Right: other channels (5 cols) -->
-          <div class="lg:col-span-5 space-y-6">
-            <a data-link="whatsapp" href="#contact" class="glass-panel rounded-2xl p-6 border border-zinc-800 hover:border-emerald-500/50 flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0"><i data-lucide="message-circle" class="w-5 h-5"></i></div>
-              <div><h4 class="text-sm font-bold text-white">WhatsApp</h4><p class="text-xs text-zinc-400 mt-1">Sales, team licenses, local bank payment and setup help.</p><span data-link-text="whatsappText" class="text-xs font-mono text-emerald-400 font-semibold block mt-2"></span></div>
-            </a>
-            <a data-link="facebook" data-hide-empty href="#contact" class="glass-panel rounded-2xl p-6 border border-zinc-800 hover:border-sky-500/50 flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center shrink-0"><i data-lucide="users" class="w-5 h-5"></i></div>
-              <div><h4 class="text-sm font-bold text-white">Facebook</h4><p class="text-xs text-zinc-400 mt-1">Updates, tips and community questions.</p></div>
-            </a>
-            <a data-link="linkedin" data-hide-empty href="#contact" class="glass-panel rounded-2xl p-6 border border-zinc-800 hover:border-sky-500/50 flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-300 flex items-center justify-center shrink-0"><i data-lucide="briefcase" class="w-5 h-5"></i></div>
-              <div><h4 class="text-sm font-bold text-white">LinkedIn</h4><p class="text-xs text-zinc-400 mt-1">Connect with the founder.</p></div>
-            </a>
-            <a data-link="youtube" href="#videos" class="glass-panel rounded-2xl p-6 border border-zinc-800 hover:border-red-500/50 flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 flex items-center justify-center shrink-0"><i data-lucide="play-circle" class="w-5 h-5"></i></div>
-              <div><h4 class="text-sm font-bold text-white">YouTube tutorials</h4><p class="text-xs text-zinc-400 mt-1">Step-by-step setup and stack building videos.</p></div>
-            </a>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 8. CLOSING CTA BANNER ==================== -->
-    <section class="py-20 relative overflow-hidden">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="relative rounded-3xl p-8 sm:p-14 bg-gradient-to-r from-sky-950/70 via-zinc-900 to-sky-900/60 border border-sky-500/30 overflow-hidden shadow-2xl">
-          
-          <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-sky-500/10 blur-3xl pointer-events-none"></div>
-
-          <div class="relative z-10 max-w-2xl">
-            <span class="text-xs font-mono uppercase tracking-wider text-sky-400 font-bold bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">
-              Immediate Software Access
-            </span>
-            <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mt-4">
-              Ready to Build Google Stacks & Cloud Stacks in 3 Minutes?
-            </h2>
-            <p class="mt-4 text-base sm:text-lg text-zinc-300">
-              Join 450+ forward-thinking SEO agencies who replaced hours of manual grunt work with 1-click Google Drive entity stacking and 8-cloud static website deployment.
+        <div class="space-y-4 text-xs sm:text-sm">
+          <div class="glass-panel rounded-2xl p-6 border border-zinc-800">
+            <h3 class="font-bold text-white mb-2">What operating systems are supported?</h3>
+            <p class="text-zinc-300 leading-relaxed">
+              G-Stack Studio is built natively for 64-bit Windows 10 and Windows 11. It operates as a portable desktop application with zero heavy database installations required.
             </p>
-
-            <div class="mt-8 flex flex-col sm:flex-row items-center gap-4">
-              <a href="#pricing" class="btn-glow-primary w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white flex items-center justify-center gap-2 shadow-xl">
-                <i data-lucide="zap" class="w-5 h-5"></i>
-                Claim Your Agency License
-              </a>
-              <a href="#contact" class="w-full sm:w-auto px-6 py-4 rounded-xl text-sm font-semibold text-zinc-300 hover:text-white bg-zinc-900/80 hover:bg-zinc-800 border border-zinc-700 text-center transition-colors">
-                Book a Live VIP Demo
-              </a>
-            </div>
-
-            <div class="mt-6 flex items-center gap-4 text-xs text-zinc-400 font-medium">
-              <span class="flex items-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Instant License Key Delivery</span>
-              <span class="flex items-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Windows & macOS Compatible</span>
-            </div>
           </div>
+
+          <div class="glass-panel rounded-2xl p-6 border border-zinc-800">
+            <h3 class="font-bold text-white mb-2">What is the difference between Monthly and Lifetime licenses?</h3>
+            <p class="text-zinc-300 leading-relaxed">
+              Monthly plans are recurring subscriptions that can be cancelled anytime. Lifetime deals are one-time payments providing perpetual software access. On both plan types, your stack and cloud site limits reset every 30 days.
+            </p>
+          </div>
+
+          <div class="glass-panel rounded-2xl p-6 border border-zinc-800">
+            <h3 class="font-bold text-white mb-2">Does the Starter plan include Cloud Stacking?</h3>
+            <p class="text-zinc-300 leading-relaxed">
+              No. Starter (both Monthly $49 and Lifetime $299) is strictly dedicated to Google Entity Stacks (all 20 asset types). If you require multi-cloud static website generation across AWS, Netlify, and Cloudflare, choose Pro ($99/mo or $449 Lifetime) or higher.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CALL TO ACTION -->
+    <section class="py-16 bg-gradient-to-b from-[#09090b] to-[#121217] border-t border-zinc-800">
+      <div class="max-w-5xl mx-auto px-4 text-center">
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white">
+          Automate Your SEO Stacking Workflow Today.
+        </h2>
+        <p class="mt-4 text-zinc-400 text-sm sm:text-base max-w-2xl mx-auto">
+          Reclaim 8+ hours of tedious manual clicking on every client campaign. Instant license delivery to your email.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="pricing.html" class="btn-glow-primary px-8 py-4 rounded-xl font-bold text-white text-sm inline-flex items-center gap-2">
+            View Monthly Pricing ($49/mo)
+          </a>
+          <a href="lifetime-deals.html" class="px-8 py-4 rounded-xl font-bold text-white bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-sm inline-flex items-center gap-2">
+            Explore Lifetime Deals ($299 once)
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ==================== 9. FOOTER ==================== -->
-  <footer class="border-t border-zinc-800 bg-[#070709] text-zinc-400 text-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-      <div class="grid grid-cols-1 md:grid-cols-5 gap-10">
-        
-        <!-- Brand Info -->
-        <div class="md:col-span-2 space-y-4">
-          <a href="index.html" class="flex items-center gap-3">
-            <img src="img/logo.png" alt="G-Stack Studio logo" class="w-8 h-8 rounded-lg object-contain" width="64" height="64">
-            <span class="text-lg font-bold text-white tracking-tight">G-Stack <span class="text-sky-400">Studio</span></span>
-          </a>
-          <p class="text-xs text-zinc-400 leading-relaxed pr-6">
-            The industry standard automated Google Cloud entity stacking suite. Engineered for high-growth SEO agencies, local consultants, and enterprise brands seeking unassailable local search visibility.
-          </p>
-          <div class="text-xs font-mono text-zinc-500">
-            Compliant with Google API Services User Data Policy
-          </div>
-        </div>
-
-        <!-- Navigation Columns -->
+  <!-- ==================== GLOBAL FOOTER ==================== -->
+  <footer class="bg-[#070709] border-t border-zinc-800/80 py-16 text-zinc-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
         <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-zinc-200 mb-4 font-mono">Platform</h4>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider font-mono">Product</h4>
           <ul class="space-y-2.5 text-xs">
-            <li><a href="#features" class="hover:text-sky-400 transition-colors">20 Google Cloud Assets</a></li>
-            <li><a href="#features" class="hover:text-sky-400 transition-colors">Silo Architecture Modes</a></li>
-            <li><a href="#features" class="hover:text-sky-400 transition-colors">Circular Interlinking</a></li>
-            <li><a href="#features" class="hover:text-sky-400 transition-colors">White-Label Engine</a></li>
-            <li><a href="#pricing" class="hover:text-sky-400 transition-colors">Pricing & Plans</a></li>
+            <li><a href="features.html" class="hover:text-white transition-colors">Features Overview</a></li>
+            <li><a href="google-stack.html" class="hover:text-white transition-colors">Google Stack Engine</a></li>
+            <li><a href="cloud-stacking.html" class="hover:text-white transition-colors">Cloud Stacking</a></li>
+            <li><a href="agency-tools.html" class="hover:text-white transition-colors">Agency Tools</a></li>
+            <li><a href="how-it-works.html" class="hover:text-white transition-colors">How It Works</a></li>
           </ul>
         </div>
-
         <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-zinc-200 mb-4 font-mono">Resources</h4>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider font-mono">Resources</h4>
           <ul class="space-y-2.5 text-xs">
-            <li><a href="#features" class="hover:text-sky-400 transition-colors">Documentation</a></li>
-            <li><a href="#pricing" class="hover:text-sky-400 transition-colors">Agency ROI Calculator</a></li>
-            <li><a href="#contact" class="hover:text-sky-400 transition-colors">Priority Help Desk</a></li>
-            <li><a href="#contact" class="hover:text-sky-400 transition-colors">VIP Agency Onboarding</a></li>
+            <li><a href="tutorials.html" class="hover:text-white transition-colors">Video Tutorials</a></li>
+            <li><a href="security.html" class="hover:text-white transition-colors">Security &amp; OAuth</a></li>
+            <li><a data-link="youtube" href="https://www.youtube.com/@gstackstudio" target="_blank" rel="noopener" class="hover:text-white transition-colors">Official YouTube</a></li>
+            <li><a data-link="whatsapp" href="https://wa.me/923028981089" target="_blank" rel="noopener" class="hover:text-white transition-colors">WhatsApp Support</a></li>
           </ul>
         </div>
-
         <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-zinc-200 mb-4 font-mono">Legal & Privacy</h4>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider font-mono">Commercial</h4>
           <ul class="space-y-2.5 text-xs">
-            <li><a href="privacy.html" class="hover:text-sky-400 transition-colors">Privacy Policy</a></li>
-            <li><a href="privacy.html#google-oauth" class="hover:text-sky-400 transition-colors">Google OAuth Data Disclosures</a></li>
-            <li><a href="terms.html" class="hover:text-sky-400 transition-colors">Terms of Service</a></li>
-            <li><a href="terms.html#license" class="hover:text-sky-400 transition-colors">Software License Agreement</a></li>
+            <li><a href="pricing.html" class="hover:text-white transition-colors">Monthly Subscriptions</a></li>
+            <li><a href="lifetime-deals.html" class="hover:text-white transition-colors">Lifetime Master Deals</a></li>
+            <li><a href="reseller-program.html" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Reseller Program</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact Sales</a></li>
           </ul>
         </div>
-
+        <div>
+          <h4 class="text-white font-bold mb-4 text-xs uppercase tracking-wider font-mono">Legal &amp; Trust</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="privacy.html#oauth" class="hover:text-white transition-colors">OAuth User Data Policy</a></li>
+            <li><a href="terms.html#refunds" class="hover:text-white transition-colors">30-Day Refund Policy</a></li>
+          </ul>
+        </div>
       </div>
 
-      <!-- Bottom Disclaimer & Copyright -->
-      <div class="mt-12 pt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-        <div>
-          &copy; 2026 G-Stack Studio. All rights reserved.
-        </div>
-        <div class="text-[11px] text-zinc-500 max-w-xl text-center sm:text-right">
-          Disclaimer: Google, Google Drive, Google Sites, Google Sheets, Google Docs, and Google MyMaps are trademarks of Google LLC. G-Stack Studio is an independent automation software and is not affiliated, sponsored, or endorsed by Google LLC.
+      <div class="pt-8 border-t border-zinc-800/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+        <p>&copy; 2026 G-Stack Studio. All rights reserved. Windows desktop software for SEO agencies.</p>
+        <div class="flex items-center gap-2 text-zinc-500">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>Desktop Pipeline: Operational</span>
         </div>
       </div>
     </div>
@@ -2285,6 +642,7 @@
 
   <!-- Scripts -->
   <script src="js/links.js"></script>
+  <script src="js/pricing-data.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
